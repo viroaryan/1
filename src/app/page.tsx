@@ -46,9 +46,9 @@ export default function HomePage() {
         {/* Subtle Ambient Light Glow */}
         <div className="absolute top-12 left-1/2 -translate-x-1/2 w-[700px] h-[500px] atmospheric-bloom opacity-40 pointer-events-none" />
 
-        <div className="relative max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 xl:gap-16 items-center">
+        <div className="relative max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
           {/* Left Column: Typography & Intent */}
-          <div className="lg:col-span-7 space-y-6 text-left">
+          <div className="lg:col-span-6 xl:col-span-6 space-y-6 text-left">
             {/* Apple-style Minimal Pill Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-black/[0.08] shadow-xs text-charcoal">
               <span className="w-2 h-2 rounded-full bg-emerald-500" />
@@ -63,7 +63,7 @@ export default function HomePage() {
               <span className="text-brand font-normal">Beautiful.</span>
             </h1>
 
-            <p className="text-base sm:text-xl text-charcoal-soft font-normal max-w-xl leading-relaxed">
+            <p className="text-base sm:text-lg lg:text-xl text-charcoal-soft font-normal max-w-xl leading-relaxed">
               A browser built for a quieter web. An independent Android browser powered by Mozilla&apos;s open-source GeckoView engine, modified to strip away tracking dossiers and commercial telemetry.
             </p>
 
@@ -105,43 +105,21 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right Column: Solid Static Android Phone Mockup + Floating 3D Nirvana Token */}
-          <div className="lg:col-span-5 relative flex flex-col items-center justify-center">
-            <div className="relative z-10 w-full max-w-[340px] flex justify-center">
+          {/* Right Column: Studio Showcase (Phone Mockup + 3D Rotating Nirvana Token with Proper Spacing) */}
+          <div className="lg:col-span-6 xl:col-span-6 flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-10 xl:gap-12 pt-6 lg:pt-0">
+            {/* Phone Mockup — Scaled & Centered with Zero Edge Overflow */}
+            <div className="shrink-0 flex justify-center">
               <PhoneMockup
                 src="/assets/screenshots/home.jpeg"
                 alt="Nirvana Browser Home Screen"
-                caption="Official Nirvana 1.0.2 home screen with shortcut hubs & noise-free cards"
+                caption="Official Nirvana 1.0.2 · Noise-Free Hubs"
                 priority
               />
-
-              {/* Floating 3D Rotating Nirvana Coin (Uiverse black-rabbit-68 with Nirvana Emblem) */}
-              <div className="hidden sm:flex absolute -bottom-5 -left-10 lg:-left-12 xl:-left-16 z-20 items-center gap-3 p-3 pl-3.5 pr-4 rounded-3xl bg-white/95 backdrop-blur-xl border border-black/[0.08] shadow-float pointer-events-auto transition-all duration-300 hover:scale-105">
-                <Nirvana3DCoin size={70} />
-                <div className="text-left space-y-0.5">
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                    <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-charcoal">
-                      Nirvana Token
-                    </span>
-                  </div>
-                  <p className="text-[10px] text-charcoal-muted font-medium leading-tight">
-                    GeckoView Core 153.0
-                  </p>
-                </div>
-              </div>
             </div>
 
-            {/* Mobile 3D Coin Badge */}
-            <div className="sm:hidden flex items-center gap-3 mt-6 p-3 px-4 rounded-2xl bg-white/90 border border-black/[0.08] shadow-xs">
-              <Nirvana3DCoin size={48} />
-              <div className="text-left">
-                <div className="text-xs font-semibold text-charcoal flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                  Nirvana 3D Core
-                </div>
-                <div className="text-[11px] text-charcoal-muted">Autonomous · Zero Telemetry</div>
-              </div>
+            {/* Authentic 3D Rotating Nirvana Coin — Generous Spacing, Full 180px Scale */}
+            <div className="shrink-0 flex justify-center">
+              <Nirvana3DCoin size={180} showCaption={true} />
             </div>
           </div>
         </div>
