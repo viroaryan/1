@@ -34,6 +34,7 @@ import FounderProfileCard from "@/components/ui/FounderProfileCard";
 import TeamMemberUiverseCard from "@/components/ui/TeamMemberUiverseCard";
 import SocialCubeWidget from "@/components/ui/SocialCubeWidget";
 import EcosystemWaveCard from "@/components/ui/EcosystemWaveCard";
+import Nirvana3DCoin from "@/components/ui/Nirvana3DCoin";
 
 export default function HomePage() {
   return (
@@ -41,11 +42,11 @@ export default function HomePage() {
       {/* =========================================================================
           SCREEN 01: MODERN MINIMALIST (APPLE / SF PRO) HERO
       ========================================================================= */}
-      <section className="relative min-h-[88vh] flex items-center justify-center px-6 sm:px-12 py-16 overflow-hidden">
+      <section className="relative min-h-[88vh] flex items-center justify-center px-6 sm:px-10 lg:px-14 xl:px-16 py-16 lg:py-20 overflow-hidden">
         {/* Subtle Ambient Light Glow */}
         <div className="absolute top-12 left-1/2 -translate-x-1/2 w-[700px] h-[500px] atmospheric-bloom opacity-40 pointer-events-none" />
 
-        <div className="relative max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="relative max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 xl:gap-16 items-center">
           {/* Left Column: Typography & Intent */}
           <div className="lg:col-span-7 space-y-6 text-left">
             {/* Apple-style Minimal Pill Badge */}
@@ -104,15 +105,43 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right Column: Solid Static Android Phone Mockup */}
-          <div className="lg:col-span-5 relative flex justify-center items-center">
-            <div className="relative z-10">
+          {/* Right Column: Solid Static Android Phone Mockup + Floating 3D Nirvana Token */}
+          <div className="lg:col-span-5 relative flex flex-col items-center justify-center">
+            <div className="relative z-10 w-full max-w-[340px] flex justify-center">
               <PhoneMockup
                 src="/assets/screenshots/home.jpeg"
                 alt="Nirvana Browser Home Screen"
                 caption="Official Nirvana 1.0.2 home screen with shortcut hubs & noise-free cards"
                 priority
               />
+
+              {/* Floating 3D Rotating Nirvana Coin (Uiverse black-rabbit-68 with Nirvana Emblem) */}
+              <div className="hidden sm:flex absolute -bottom-5 -left-10 lg:-left-12 xl:-left-16 z-20 items-center gap-3 p-3 pl-3.5 pr-4 rounded-3xl bg-white/95 backdrop-blur-xl border border-black/[0.08] shadow-float pointer-events-auto transition-all duration-300 hover:scale-105">
+                <Nirvana3DCoin size={70} />
+                <div className="text-left space-y-0.5">
+                  <div className="flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                    <span className="text-[11px] font-mono font-semibold uppercase tracking-wider text-charcoal">
+                      Nirvana Token
+                    </span>
+                  </div>
+                  <p className="text-[10px] text-charcoal-muted font-medium leading-tight">
+                    GeckoView Core 153.0
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile 3D Coin Badge */}
+            <div className="sm:hidden flex items-center gap-3 mt-6 p-3 px-4 rounded-2xl bg-white/90 border border-black/[0.08] shadow-xs">
+              <Nirvana3DCoin size={48} />
+              <div className="text-left">
+                <div className="text-xs font-semibold text-charcoal flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                  Nirvana 3D Core
+                </div>
+                <div className="text-[11px] text-charcoal-muted">Autonomous · Zero Telemetry</div>
+              </div>
             </div>
           </div>
         </div>
