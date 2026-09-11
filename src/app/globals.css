@@ -1071,5 +1071,131 @@ body {
   fill: white;
 }
 
+/* =========================================================================
+   UIVERSE LIQUID WAVE CARD (fast-octopus-78 by MikeAndrewDesigner)
+========================================================================= */
+.e-card {
+  margin: 0 auto;
+  background: #111116;
+  box-shadow: 0px 8px 28px -9px rgba(0, 0, 0, 0.45);
+  position: relative;
+  width: 100%;
+  max-width: 270px;
+  height: 350px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.e-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 40px -10px rgba(91, 66, 243, 0.4), 0 4px 16px 0 rgba(0, 221, 235, 0.25);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.e-card .wave {
+  position: absolute;
+  width: 540px;
+  height: 700px;
+  opacity: 0.65;
+  left: 50%;
+  top: 0;
+  margin-left: -270px;
+  margin-top: -70%;
+  background: linear-gradient(744deg, #af40ff, #5b42f3 60%, #00ddeb);
+  border-radius: 40%;
+  animation: cardWave 55s infinite linear;
+  pointer-events: none;
+}
+
+.e-card .wave:nth-child(2),
+.e-card .wave:nth-child(3) {
+  top: 210px;
+}
+
+.e-card.playing .wave {
+  border-radius: 40%;
+  animation: cardWave 3000ms infinite linear;
+}
+
+.e-card.playing .wave:nth-child(2) {
+  animation-duration: 4000ms;
+}
+
+.e-card .wave:nth-child(2) {
+  animation-duration: 50s;
+}
+
+.e-card.playing .wave:nth-child(3) {
+  animation-duration: 5000ms;
+}
+
+.e-card .wave:nth-child(3) {
+  animation-duration: 45s;
+}
+
+/* Theme Color Variants for Ecosystem */
+.e-card.theme-emerald .wave {
+  background: linear-gradient(744deg, #059669, #0284c7 60%, #00ddeb);
+}
+.e-card.theme-emerald:hover {
+  box-shadow: 0 20px 40px -10px rgba(5, 150, 105, 0.4), 0 4px 16px 0 rgba(0, 221, 235, 0.25);
+}
+
+.e-card.theme-amber .wave {
+  background: linear-gradient(744deg, #d97706, #ec4899 60%, #8b5cf6);
+}
+.e-card.theme-amber:hover {
+  box-shadow: 0 20px 40px -10px rgba(217, 119, 6, 0.4), 0 4px 16px 0 rgba(236, 72, 153, 0.25);
+}
+
+.e-card.theme-lavender .wave {
+  background: linear-gradient(744deg, #7c3aed, #3b82f6 60%, #06b6d4);
+}
+.e-card.theme-lavender:hover {
+  box-shadow: 0 20px 40px -10px rgba(124, 58, 237, 0.4), 0 4px 16px 0 rgba(6, 182, 212, 0.25);
+}
+
+.e-card .icon {
+  width: 3.2em;
+  margin-top: 0;
+  padding-bottom: 0.5em;
+}
+
+.e-card .infotop {
+  text-align: center;
+  font-size: 16px;
+  position: absolute;
+  top: 2.2em;
+  left: 0;
+  right: 0;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.e-card .name {
+  font-size: 13px;
+  font-weight: 400;
+  position: relative;
+  text-transform: none;
+}
+
+@keyframes cardWave {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 
 
