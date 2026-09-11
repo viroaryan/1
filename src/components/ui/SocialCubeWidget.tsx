@@ -1,11 +1,16 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
 export default function SocialCubeWidget() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="uiverse-social-cube py-6">
-      <div className="main">
+      <div
+        className={`main ${isOpen ? "is-open" : ""}`}
+        onClick={() => setIsOpen(!isOpen)}
+      >
         {/* Card 1: Instagram */}
         <a
           href="https://instagram.com/viro.coder.aryan"
@@ -310,18 +315,14 @@ export default function SocialCubeWidget() {
         </a>
 
         {/* Center Hover Label */}
-        <p className="text">
-          HOVER
-          <br />
-          <br />
-          FOR
-          <br />
-          <br />
-          SOCIAL
-        </p>
+        <div className="text" aria-hidden="true">
+          <span>HOVER</span>
+          <span>FOR</span>
+          <span>SOCIAL</span>
+        </div>
 
         {/* Glowing Pastel Background Mesh */}
-        <div className="main_back"></div>
+        <div className="main_back" aria-hidden="true"></div>
       </div>
     </div>
   );
