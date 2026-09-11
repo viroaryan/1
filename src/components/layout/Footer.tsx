@@ -16,7 +16,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="relative bg-[#F2F1EC] text-charcoal pt-24 pb-16 overflow-hidden border-t border-black/[0.06]">
+    <footer className="relative bg-white/50 backdrop-blur-md text-charcoal pt-24 pb-16 overflow-hidden border-t border-black/[0.06]">
       {/* Soft atmospheric ambient light in footer background */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[360px] atmospheric-bloom opacity-50" />
       <div className="absolute -bottom-24 right-0 w-[500px] h-[300px] atmospheric-peach opacity-30" />

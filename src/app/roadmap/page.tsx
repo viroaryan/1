@@ -104,7 +104,7 @@ export default function RoadmapPage() {
   ];
 
   return (
-    <div className="pt-32 pb-24 px-6 sm:px-12 bg-[#FAFAFA] min-h-screen">
+    <div className="pt-32 pb-24 px-6 sm:px-12 bg-transparent min-h-screen">
       <div className="max-w-4xl mx-auto space-y-12 text-left">
         {/* Header */}
         <div className="space-y-4">
@@ -207,3 +207,4 @@ export default function RoadmapPage() {
     </div>
   );
 }
+

@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#F7F7F3",
+  themeColor: "#ffe8f3",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -88,7 +88,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`scroll-smooth ${inter.variable}`}>
-      <body className="min-h-screen flex flex-col bg-[#F7F7F3] text-charcoal font-sans antialiased selection:bg-[#FDE4D2] selection:text-charcoal">
+      <body className="min-h-screen flex flex-col bg-transparent text-charcoal font-sans antialiased selection:bg-[#FDE4D2] selection:text-charcoal relative">
+        {/* Uiverse Rotating Pastel Aurora Backdrop */}
+        <div className="aurora-bg-mesh" aria-hidden="true" />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
@@ -96,3 +98,4 @@ export default function RootLayout({
     </html>
   );
 }
+

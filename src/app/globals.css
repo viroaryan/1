@@ -20,7 +20,7 @@
 }
 
 html {
-  background-color: var(--bg-ivory);
+  background-color: #ffe8f3;
   color: var(--text-charcoal);
   font-family: var(--font-sans);
   scroll-behavior: smooth;
@@ -29,11 +29,82 @@ html {
 }
 
 body {
-  background-color: var(--bg-ivory);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffe8f3, #d9f3ff);
   color: var(--text-charcoal);
   overflow-x: hidden;
   selection-background-color: #FEE4D6;
   selection-color: #111111;
+  position: relative;
+}
+
+/* =========================================================================
+   Uiverse Ethereal Aurora Rotating Background (ariba_9087 Pattern)
+========================================================================= */
+.aurora-bg-mesh {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.2),
+    rgba(0, 0, 0, 0.08)
+  );
+}
+
+.aurora-bg-mesh::before,
+.aurora-bg-mesh::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    #ff9aa2, /* Soft pink */
+    #ffb7b2, /* Light peach */
+    #ffdac1, /* Pastel yellow */
+    #e2f0cb, /* Mint green */
+    #a2e4ff, /* Baby blue */
+    #c9afff, /* Lavender */
+    #ffb7b2,
+    #ff9aa2
+  );
+  transform: translate(-50%, -50%);
+  animation: rotate 10s linear infinite;
+  filter: blur(50px);
+  opacity: 0.85;
+  will-change: transform;
+}
+
+.aurora-bg-mesh::after {
+  animation: rotate-reverse 10s linear infinite;
+}
+
+/* Rotating animations */
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes rotate-reverse {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
 }
 
 ::selection {

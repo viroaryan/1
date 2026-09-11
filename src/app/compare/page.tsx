@@ -212,7 +212,7 @@ export default function CompareMasterPage() {
   };
 
   return (
-    <div className="pt-32 pb-24 px-4 sm:px-8 lg:px-12 bg-[#FAFAFA] min-h-screen">
+    <div className="pt-32 pb-24 px-4 sm:px-8 lg:px-12 bg-transparent min-h-screen">
       <div className="max-w-7xl mx-auto space-y-12 text-left">
         {/* Header */}
         <div className="max-w-3xl space-y-4">
@@ -342,3 +342,4 @@ export default function CompareMasterPage() {
     </div>
   );
 }
+

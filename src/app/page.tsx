@@ -119,7 +119,7 @@ export default function HomePage() {
       {/* =========================================================================
           SCREEN 01.5: MODERN SAAS DASHBOARD SHOWCASE (RICH GRAPHIC ASSET)
       ========================================================================= */}
-      <section className="py-16 px-6 sm:px-12 bg-white border-y border-black/[0.06]">
+      <section className="py-16 px-6 sm:px-12 bg-transparent border-y border-black/[0.06]">
         <div className="max-w-6xl mx-auto space-y-8 text-center">
           <div className="space-y-2">
             <span className="text-xs font-mono uppercase tracking-wider text-brand font-semibold">
@@ -151,7 +151,7 @@ export default function HomePage() {
       {/* =========================================================================
           SCREEN 02 & 03: THE PROBLEM — DIGITAL ATMOSPHERE AUDIT
       ========================================================================= */}
-      <section className="py-24 sm:py-32 px-6 sm:px-12 bg-[#F7F7F3] border-b border-black/[0.06]">
+      <section className="py-24 sm:py-32 px-6 sm:px-12 bg-transparent border-b border-black/[0.06]">
         <div className="max-w-5xl mx-auto space-y-10 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-black/[0.06] text-xs font-medium text-charcoal-muted">
             <span className="w-1.5 h-1.5 rounded-full bg-rose-500" />
@@ -195,7 +195,7 @@ export default function HomePage() {
       {/* =========================================================================
           SCREEN 04: SILENCE — LESS NOISE. MORE WEB.
       ========================================================================= */}
-      <section className="py-28 sm:py-36 px-6 sm:px-12 text-center flex flex-col items-center justify-center bg-white border-b border-black/[0.06]">
+      <section className="py-28 sm:py-36 px-6 sm:px-12 text-center flex flex-col items-center justify-center bg-transparent border-b border-black/[0.06]">
         <div className="max-w-3xl mx-auto space-y-5">
           <span className="text-xs font-mono uppercase tracking-wider text-brand font-semibold">
             The Calm Computing Manifesto
@@ -213,7 +213,7 @@ export default function HomePage() {
       {/* =========================================================================
           SCREEN 05 & 06: MEET NIRVANA — THE ENGINE & DEFENSE MATRIX
       ========================================================================= */}
-      <section className="py-24 sm:py-32 px-6 sm:px-12 bg-[#F7F7F3] border-b border-black/[0.06]">
+      <section className="py-24 sm:py-32 px-6 sm:px-12 bg-transparent border-b border-black/[0.06]">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5 space-y-6">
             <span className="text-xs font-mono uppercase tracking-wider text-brand font-semibold">
@@ -293,7 +293,7 @@ export default function HomePage() {
       {/* =========================================================================
           SCREEN 07: CAPABILITIES BENTO GRID (WITH RICH VISUAL CARDS)
       ========================================================================= */}
-      <section className="py-24 px-6 sm:px-12 bg-white border-b border-black/[0.06]">
+      <section className="py-24 px-6 sm:px-12 bg-transparent border-b border-black/[0.06]">
         <div className="max-w-7xl mx-auto space-y-10">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
@@ -451,7 +451,7 @@ export default function HomePage() {
       {/* =========================================================================
           SCREEN 08: INTERACTIVE PROTECTION DEMO
       ========================================================================= */}
-      <section className="py-24 sm:py-32 px-6 sm:px-12 bg-[#F7F7F3] border-b border-black/[0.06]">
+      <section className="py-24 sm:py-32 px-6 sm:px-12 bg-transparent border-b border-black/[0.06]">
         <div className="max-w-5xl mx-auto space-y-8 text-center">
           <div>
             <span className="text-xs font-mono uppercase tracking-wider text-brand font-semibold">
@@ -472,7 +472,7 @@ export default function HomePage() {
       {/* =========================================================================
           SCREEN 09: REAL BROWSER UI GALLERY (HORIZONTAL ON DESKTOP)
       ========================================================================= */}
-      <section className="py-24 px-6 sm:px-12 bg-white border-b border-black/[0.06]">
+      <section className="py-24 px-6 sm:px-12 bg-transparent border-b border-black/[0.06]">
         <div className="max-w-7xl mx-auto space-y-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
@@ -556,7 +556,7 @@ export default function HomePage() {
       {/* =========================================================================
           SCREEN 10: ERGONOMICS — BUILT FOR YOUR HAND
       ========================================================================= */}
-      <section className="py-24 px-6 sm:px-12 bg-[#F7F7F3] border-b border-black/[0.06]">
+      <section className="py-24 px-6 sm:px-12 bg-transparent border-b border-black/[0.06]">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
             <span className="text-xs font-mono uppercase tracking-wider text-brand font-semibold">
@@ -611,7 +611,7 @@ export default function HomePage() {
       {/* =========================================================================
           SCREEN 11: DECOUPLED SEARCH SWITCHER
       ========================================================================= */}
-      <section className="py-24 px-6 sm:px-12 bg-white border-b border-black/[0.06]">
+      <section className="py-24 px-6 sm:px-12 bg-transparent border-b border-black/[0.06]">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div>
             <span className="text-xs font-mono uppercase tracking-wider text-brand font-semibold">
@@ -632,7 +632,7 @@ export default function HomePage() {
       {/* =========================================================================
           SCREEN 16: OPEN SOURCE STORY — BUILT ON OPEN SOURCE
       ========================================================================= */}
-      <section className="py-24 px-6 sm:px-12 bg-[#F7F7F3] border-b border-black/[0.06]">
+      <section className="py-24 px-6 sm:px-12 bg-transparent border-b border-black/[0.06]">
         <div className="max-w-5xl mx-auto rounded-3xl apple-card-light p-8 sm:p-12 text-left space-y-8">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-black/[0.06] pb-6">
             <div>
@@ -681,7 +681,7 @@ export default function HomePage() {
       {/* =========================================================================
           SCREEN 17: COMPARISON MATRIX
       ========================================================================= */}
-      <section className="py-24 px-6 sm:px-12 bg-white border-b border-black/[0.06]">
+      <section className="py-24 px-6 sm:px-12 bg-transparent border-b border-black/[0.06]">
         <div className="max-w-5xl mx-auto space-y-8 text-center">
           <div>
             <span className="text-xs font-mono uppercase tracking-wider text-brand font-semibold">
@@ -700,7 +700,7 @@ export default function HomePage() {
             <div className="overflow-x-auto">
               <table className="w-full text-xs font-mono">
                 <thead>
-                  <tr className="bg-[#F7F7F3] text-charcoal border-b border-black/[0.06]">
+                  <tr className="bg-white/80 backdrop-blur-sm text-charcoal border-b border-black/[0.06]">
                     <th className="p-3.5 sm:p-4 font-semibold">Dimension</th>
                     <th className="p-3.5 sm:p-4 font-semibold text-brand">Nirvana (Android)</th>
                     <th className="p-3.5 sm:p-4 font-semibold">Google Chrome</th>
@@ -757,7 +757,7 @@ export default function HomePage() {
       {/* =========================================================================
           SCREEN 18: NIRVANA ECOSYSTEM
       ========================================================================= */}
-      <section className="py-24 px-6 sm:px-12 bg-[#F7F7F3] border-b border-black/[0.06]">
+      <section className="py-24 px-6 sm:px-12 bg-transparent border-b border-black/[0.06]">
         <div className="max-w-7xl mx-auto space-y-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
@@ -775,66 +775,63 @@ export default function HomePage() {
               href="/products"
               className="text-xs font-medium text-charcoal-muted hover:text-charcoal flex items-center gap-1"
             >
-              Explore ecosystem roadmap <ChevronRight className="w-4 h-4" />
+              <span>Explore full laboratory ecosystem</span>
+              <ChevronRight className="w-3.5 h-3.5" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                name: "Nirvana Browser",
-                status: "AVAILABLE",
-                statusColor: "bg-emerald-50 text-emerald-700 border border-emerald-200",
-                desc: "Our primary product. Quiet, GeckoView-powered Android browser with native uBlock Origin.",
-                href: "/browser",
-                badge: "Flagship",
+                title: "Perl Search",
+                desc: "Zero-tracking, decoupled privacy search engine aggregator.",
+                status: "Prototype Active",
+                badgeColor: "bg-emerald-50 text-emerald-700 border-emerald-200",
+                href: "/products/perl",
               },
               {
-                name: "Nirvana Focus",
-                status: "TESTING",
-                statusColor: "bg-amber-50 text-amber-700 border border-amber-200",
-                desc: "Ultra-lightweight, single-tab disposable browser for instant distraction-free searches.",
-                href: "/products/focus",
-                badge: "Disposable",
+                title: "Nivro Store",
+                desc: "Curated open-source Android app repository with verified hashes.",
+                status: "Lab Alpha",
+                badgeColor: "bg-indigo-50 text-indigo-700 border-indigo-200",
+                href: "/products/nivro",
               },
               {
-                name: "Nirvana OpenStore",
-                status: "IN DEV",
-                statusColor: "bg-sky-50 text-sky-700 border border-sky-200",
-                desc: "Lightweight curated hub (~30MB) discovering trusted F-Droid and open-source applications.",
+                title: "OpenStore",
+                desc: "Community marketplace for verified privacy extensions and scripts.",
+                status: "Architecture",
+                badgeColor: "bg-amber-50 text-amber-700 border-amber-200",
                 href: "/products/openstore",
-                badge: "Catalog Hub",
               },
               {
-                name: "Nirvana Nivro & Perl",
-                status: "EXPERIMENTAL",
-                statusColor: "bg-purple-50 text-purple-700 border border-purple-200",
-                desc: "Future privacy-native browser concepts and peer-to-peer WebRTC lightweight communications.",
-                href: "/products",
-                badge: "NextGen",
+                title: "Nirvana Focus",
+                desc: "Ultra-minimal single-session disposable privacy browser companion.",
+                status: "Roadmap 2026",
+                badgeColor: "bg-purple-50 text-purple-700 border-purple-200",
+                href: "/products/focus",
               },
             ].map((p, i) => (
-              <div
+              <Link
                 key={i}
+                href={p.href}
                 className="p-6 rounded-3xl apple-card-light flex flex-col justify-between space-y-4 text-left"
               >
-                <div className="space-y-3">
+                <div className="space-y-2">
                   <div className="flex items-center justify-between">
-                    <span className="text-base font-semibold text-charcoal">{p.name}</span>
-                    <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full font-medium ${p.statusColor}`}>
+                    <span className="text-xs font-mono uppercase tracking-wider text-charcoal font-semibold">
+                      {p.title}
+                    </span>
+                    <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full border ${p.badgeColor}`}>
                       {p.status}
                     </span>
                   </div>
                   <p className="text-xs text-charcoal-muted leading-relaxed">{p.desc}</p>
                 </div>
-                <Link
-                  href={p.href}
-                  className="text-xs font-medium text-brand flex items-center justify-between hover:underline pt-3 border-t border-black/[0.06]"
-                >
-                  <span>Explore {p.badge}</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
+                <div className="text-xs text-brand font-medium flex items-center gap-1">
+                  <span>Learn more</span>
+                  <ArrowRight className="w-3 h-3" />
+                </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -843,7 +840,7 @@ export default function HomePage() {
       {/* =========================================================================
           SCREEN 19: TEAM SECTION
       ========================================================================= */}
-      <section className="py-24 px-6 sm:px-12 bg-white border-b border-black/[0.06]">
+      <section className="py-24 px-6 sm:px-12 bg-transparent border-b border-black/[0.06]">
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center space-y-2">
             <span className="text-xs font-mono uppercase tracking-wider text-brand font-semibold">
@@ -920,7 +917,7 @@ export default function HomePage() {
       {/* =========================================================================
           SCREEN 20: COMMUNITY — BUILD WITH US
       ========================================================================= */}
-      <section className="py-24 px-6 sm:px-12 bg-[#F7F7F3] border-b border-black/[0.06]">
+      <section className="py-24 px-6 sm:px-12 bg-transparent border-b border-black/[0.06]">
         <div className="max-w-5xl mx-auto text-center space-y-8">
           <div>
             <span className="text-xs font-mono uppercase tracking-wider text-brand font-semibold">
@@ -983,7 +980,7 @@ export default function HomePage() {
       {/* =========================================================================
           SCREEN 21 & 22: FINAL DOWNLOAD CTA
       ========================================================================= */}
-      <section className="relative py-32 sm:py-44 px-6 sm:px-12 bg-white text-center flex flex-col items-center justify-center overflow-hidden">
+      <section className="relative py-32 sm:py-44 px-6 sm:px-12 bg-transparent text-center flex flex-col items-center justify-center overflow-hidden">
         <div className="absolute w-[700px] h-[350px] atmospheric-bloom opacity-40 pointer-events-none" />
 
         <div className="relative max-w-2xl mx-auto space-y-6">
@@ -1033,3 +1030,4 @@ export default function HomePage() {
     </div>
   );
 }
+

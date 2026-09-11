@@ -68,7 +68,7 @@ export default function ExtensionsFeaturePage() {
   ];
 
   return (
-    <div className="pt-28 pb-24 px-6 sm:px-12 bg-[#F7F7F3] min-h-screen">
+    <div className="pt-28 pb-24 px-6 sm:px-12 bg-transparent min-h-screen">
       <div className="max-w-5xl mx-auto space-y-16">
         {/* Header */}
         <div className="space-y-4 text-left">
@@ -152,3 +152,4 @@ export default function ExtensionsFeaturePage() {
     </div>
   );
 }
+

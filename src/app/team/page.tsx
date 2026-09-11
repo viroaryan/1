@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function TeamPage() {
   return (
-    <div className="pt-32 pb-24 px-6 sm:px-12 bg-[#FAFAFA] min-h-screen">
+    <div className="pt-32 pb-24 px-6 sm:px-12 bg-transparent min-h-screen">
       <div className="max-w-6xl mx-auto space-y-16 text-left">
         {/* Header */}
         <div className="max-w-3xl space-y-4">
@@ -99,3 +99,4 @@ export default function TeamPage() {
     </div>
   );
 }
+

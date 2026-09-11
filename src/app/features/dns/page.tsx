@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function DnsFeaturePage() {
   return (
-    <div className="pt-28 pb-24 px-6 sm:px-12 bg-[#F7F7F3] min-h-screen">
+    <div className="pt-28 pb-24 px-6 sm:px-12 bg-transparent min-h-screen">
       <div className="max-w-4xl mx-auto space-y-16">
         <div className="space-y-4 text-left">
           <div className="inline-flex items-center gap-2 micro-label text-brand">
@@ -62,3 +62,4 @@ export default function DnsFeaturePage() {
     </div>
   );
 }
+

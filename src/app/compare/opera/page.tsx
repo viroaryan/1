@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function OperaComparisonPage() {
   return (
-    <div className="pt-28 pb-24 px-6 sm:px-12 bg-[#F7F7F3] min-h-screen">
+    <div className="pt-28 pb-24 px-6 sm:px-12 bg-transparent min-h-screen">
       <div className="max-w-4xl mx-auto space-y-12 text-left">
         <Link
           href="/compare"
@@ -54,3 +54,4 @@ export default function OperaComparisonPage() {
     </div>
   );
 }
+
