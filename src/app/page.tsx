@@ -32,6 +32,7 @@ import ProtectionDemo from "@/components/ui/ProtectionDemo";
 import SearchEngineSwitcher from "@/components/ui/SearchEngineSwitcher";
 import FounderProfileCard from "@/components/ui/FounderProfileCard";
 import TeamMemberUiverseCard from "@/components/ui/TeamMemberUiverseCard";
+import SocialCubeWidget from "@/components/ui/SocialCubeWidget";
 
 export default function HomePage() {
   return (
@@ -931,48 +932,15 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            <a
-              href="https://github.com/viroaryan"
-              target="_blank"
-              rel="noreferrer"
-              className="p-6 rounded-3xl apple-card-light flex flex-col items-center gap-3 text-center"
-            >
-              <Github className="w-5 h-5 text-charcoal" />
-              <span className="text-xs font-semibold text-charcoal">GitHub</span>
-              <span className="text-[10px] font-mono text-charcoal-muted">View Code</span>
-            </a>
-
-            <a
-              href="https://t.me/nirvanabrowser"
-              target="_blank"
-              rel="noreferrer"
-              className="p-6 rounded-3xl apple-card-light flex flex-col items-center gap-3 text-center"
-            >
-              <Send className="w-5 h-5 text-[#0284C7]" />
-              <span className="text-xs font-semibold text-charcoal">Telegram</span>
-              <span className="text-[10px] font-mono text-charcoal-muted">Community Chat</span>
-            </a>
-
-            <a
-              href="https://instagram.com/viro.coder.aryan"
-              target="_blank"
-              rel="noreferrer"
-              className="p-6 rounded-3xl apple-card-light flex flex-col items-center gap-3 text-center"
-            >
-              <Instagram className="w-5 h-5 text-pink-500" />
-              <span className="text-xs font-semibold text-charcoal">Instagram</span>
-              <span className="text-[10px] font-mono text-charcoal-muted">Design Updates</span>
-            </a>
-
-            <Link
-              href="/coffee"
-              className="p-6 rounded-3xl apple-card-light flex flex-col items-center gap-3 text-center"
-            >
-              <HeartHandshake className="w-5 h-5 text-[#D97706]" />
-              <span className="text-xs font-semibold text-charcoal">Support</span>
-              <span className="text-[10px] font-mono text-charcoal-muted">Buy a Coffee</span>
-            </Link>
+          {/* Uiverse Interactive Social Matrix Cube */}
+          <div className="flex flex-col items-center justify-center py-4">
+            <SocialCubeWidget />
+            <div className="inline-flex items-center gap-2 mt-4 px-4 py-1.5 rounded-full bg-white/70 backdrop-blur-md border border-black/[0.08] shadow-xs">
+              <span className="w-2 h-2 rounded-full bg-brand animate-pulse" />
+              <span className="text-xs font-mono text-charcoal font-medium">
+                Hover or tap to unlock Nirvana community channels
+              </span>
+            </div>
           </div>
         </div>
       </section>
