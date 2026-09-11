@@ -35,6 +35,7 @@ import TeamMemberUiverseCard from "@/components/ui/TeamMemberUiverseCard";
 import SocialCubeWidget from "@/components/ui/SocialCubeWidget";
 import EcosystemWaveCard from "@/components/ui/EcosystemWaveCard";
 import Nirvana3DCoin from "@/components/ui/Nirvana3DCoin";
+import { UiverseQuoteCard, QuoteCardColorVariant } from "@/components/ui/UiverseQuoteCard";
 
 export default function HomePage() {
   return (
@@ -161,42 +162,77 @@ export default function HomePage() {
           SCREEN 02 & 03: THE PROBLEM — DIGITAL ATMOSPHERE AUDIT
       ========================================================================= */}
       <section className="py-24 sm:py-32 px-6 sm:px-12 bg-transparent border-b border-black/[0.06]">
-        <div className="max-w-5xl mx-auto space-y-10 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-black/[0.06] text-xs font-medium text-charcoal-muted">
-            <span className="w-1.5 h-1.5 rounded-full bg-rose-500" />
-            <span>Digital Atmosphere Audit</span>
+        <div className="max-w-7xl mx-auto space-y-12 text-center">
+          <div className="space-y-4 max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 backdrop-blur-md border border-black/[0.06] text-xs font-semibold text-charcoal-muted shadow-xs">
+              <span className="w-2 h-2 rounded-full bg-rose-500 animate-pulse" />
+              <span>Digital Atmosphere Audit</span>
+            </div>
+
+            <h2 className="text-3xl sm:text-5xl font-semibold tracking-tight text-charcoal leading-tight">
+              The modern web got loud.
+            </h2>
+
+            <p className="text-base sm:text-lg text-charcoal-soft leading-relaxed">
+              Every page you visit today triggers dozens of invisible auction bid requests, third-party cookies, intrusive overlay popups, sticky autoplay videos, and battery-draining telemetry scripts.
+            </p>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-semibold tracking-tight text-charcoal leading-tight">
-            The modern web got loud.
-          </h2>
-
-          <p className="text-base sm:text-lg text-charcoal-soft max-w-2xl mx-auto leading-relaxed">
-            Every page you visit today triggers dozens of invisible auction bid requests, third-party cookies, intrusive overlay popups, sticky autoplay videos, and battery-draining telemetry scripts.
-          </p>
-
-          {/* Minimalist Metric Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5 pt-4">
+          {/* Uiverse Quote Card Grid (6 Unique Colors) */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 justify-items-center pt-2">
             {[
-              { title: "Cross-Site Trackers", count: "40+ / page", icon: EyeOff },
-              { title: "Fingerprinting", count: "Canvas & Audio", icon: Lock },
-              { title: "Autoplay Video Ads", count: "Bandwidth Theft", icon: Flame },
-              { title: "Cookie Consent Walls", count: "Dark Patterns", icon: Sliders },
-              { title: "Unnecessary Telemetry", count: "Device Logging", icon: Shield },
-              { title: "RAM Degradation", count: "Script Bloat", icon: Zap },
-            ].map((item, i) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={i}
-                  className="p-4 rounded-2xl apple-card-light text-left space-y-2"
-                >
-                  <Icon className="w-4 h-4 text-rose-600" />
-                  <div className="text-xs font-semibold text-charcoal">{item.title}</div>
-                  <div className="text-[11px] font-mono text-charcoal-muted">{item.count}</div>
-                </div>
-              );
-            })}
+              {
+                cardName: "Tracker Threat",
+                bodyText: "Cross-Site Trackers",
+                authorTitle: "- 40+ Intercepted",
+                authorSubtitle: "Per Single Page",
+                colorVariant: "lime" as QuoteCardColorVariant,
+              },
+              {
+                cardName: "Identity Leak",
+                bodyText: "Device Fingerprinting",
+                authorTitle: "- Canvas & Audio",
+                authorSubtitle: "Hardware Spoofed",
+                colorVariant: "coral" as QuoteCardColorVariant,
+              },
+              {
+                cardName: "Bandwidth Theft",
+                bodyText: "Autoplay Video Ads",
+                authorTitle: "- High CPU Bloat",
+                authorSubtitle: "Zero Auto-Stream",
+                colorVariant: "amber" as QuoteCardColorVariant,
+              },
+              {
+                cardName: "Dark Patterns",
+                bodyText: "Cookie Consent Walls",
+                authorTitle: "- Annoying Overlays",
+                authorSubtitle: "Auto-Declined",
+                colorVariant: "lilac" as QuoteCardColorVariant,
+              },
+              {
+                cardName: "Silent Sniffing",
+                bodyText: "Unnecessary Telemetry",
+                authorTitle: "- Device Logging",
+                authorSubtitle: "Diagnostics Severed",
+                colorVariant: "mint" as QuoteCardColorVariant,
+              },
+              {
+                cardName: "Engine Health",
+                bodyText: "RAM Degradation",
+                authorTitle: "- Script Bloat",
+                authorSubtitle: "3x Lighter Load",
+                colorVariant: "sky" as QuoteCardColorVariant,
+              },
+            ].map((item, i) => (
+              <UiverseQuoteCard
+                key={i}
+                cardName={item.cardName}
+                bodyText={item.bodyText}
+                authorTitle={item.authorTitle}
+                authorSubtitle={item.authorSubtitle}
+                colorVariant={item.colorVariant}
+              />
+            ))}
           </div>
         </div>
       </section>

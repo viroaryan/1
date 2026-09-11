@@ -1318,3 +1318,227 @@ body {
     opacity: 0.45;
   }
 }
+
+/* =========================================================================
+   UIVERSE TENDER-FLY-40 QUOTE CARD SYSTEM (6 DISTINCT COLOR THEMES)
+========================================================================= */
+
+.quote-card {
+  width: 100%;
+  max-width: 190px;
+  height: 264px;
+  position: relative;
+  border-radius: 18px;
+  font-family: inherit;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 
+    0 10px 25px -4px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  user-select: none;
+  margin: 0 auto;
+}
+
+.quote-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 
+    0 20px 32px -8px rgba(0, 0, 0, 0.16),
+    0 8px 16px -4px rgba(0, 0, 0, 0.08);
+}
+
+.quote-card .card-name {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  padding: 24px 20px 10px;
+  line-height: 15px;
+}
+
+.quote-card .quote {
+  padding-left: 20px;
+  position: relative;
+  margin-top: 4px;
+  line-height: 0;
+}
+
+.quote-card .quote svg {
+  display: block;
+}
+
+.quote-card .body-text {
+  font-size: 19px;
+  font-weight: 900;
+  padding: 0 20px;
+  position: absolute;
+  top: 72px;
+  left: 0;
+  right: 0;
+  line-height: 23px;
+  letter-spacing: -0.02em;
+}
+
+.quote-card .author {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quote-card:hover .author {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.quote-card:active {
+  transform: scale(0.98);
+}
+
+@media (hover: none) {
+  .quote-card .author {
+    opacity: 0.9;
+    transform: translateY(0);
+  }
+}
+
+.quote-card .author svg {
+  display: inline;
+  font-size: 12px;
+  transition: transform 0.25s ease;
+}
+
+.quote-card:hover .author svg {
+  transform: scale(1.15);
+}
+
+/* 1. Lime Chartreuse (Original tender-fly-40) */
+.quote-card-lime {
+  background: rgb(183, 226, 25);
+}
+.quote-card-lime .card-name {
+  color: rgb(112, 142, 16);
+}
+.quote-card-lime .quote {
+  color: rgb(223, 248, 134);
+}
+.quote-card-lime .body-text {
+  color: #3b4b0a;
+}
+.quote-card-lime .author {
+  color: rgb(105, 133, 16);
+}
+.quote-card-lime .author svg {
+  color: rgba(112, 142, 16, 0.55);
+}
+
+/* 2. Electric Coral Rose */
+.quote-card-coral {
+  background: #ff7062;
+}
+.quote-card-coral .card-name {
+  color: #8c1a10;
+}
+.quote-card-coral .quote {
+  color: #ffb8af;
+}
+.quote-card-coral .body-text {
+  color: #4a0d07;
+}
+.quote-card-coral .author {
+  color: #8c1a10;
+}
+.quote-card-coral .author svg {
+  color: rgba(140, 26, 16, 0.55);
+}
+
+/* 3. Radiant Sunflower Amber */
+.quote-card-amber {
+  background: #f7a827;
+}
+.quote-card-amber .card-name {
+  color: #7a4600;
+}
+.quote-card-amber .quote {
+  color: #ffdfa3;
+}
+.quote-card-amber .body-text {
+  color: #472900;
+}
+.quote-card-amber .author {
+  color: #7a4600;
+}
+.quote-card-amber .author svg {
+  color: rgba(122, 70, 0, 0.55);
+}
+
+/* 4. Cyber Lilac Lavender */
+.quote-card-lilac {
+  background: #a78bfa;
+}
+.quote-card-lilac .card-name {
+  color: #431f82;
+}
+.quote-card-lilac .quote {
+  color: #ddd6fe;
+}
+.quote-card-lilac .body-text {
+  color: #270c5e;
+}
+.quote-card-lilac .author {
+  color: #431f82;
+}
+.quote-card-lilac .author svg {
+  color: rgba(67, 31, 130, 0.55);
+}
+
+/* 5. Vibrant Mint Teal */
+.quote-card-mint {
+  background: #2dd4bf;
+}
+.quote-card-mint .card-name {
+  color: #06544a;
+}
+.quote-card-mint .quote {
+  color: #99f6e4;
+}
+.quote-card-mint .body-text {
+  color: #023831;
+}
+.quote-card-mint .author {
+  color: #06544a;
+}
+.quote-card-mint .author svg {
+  color: rgba(6, 84, 74, 0.55);
+}
+
+/* 6. Electric Sky Blue */
+.quote-card-sky {
+  background: #60a5fa;
+}
+.quote-card-sky .card-name {
+  color: #1e3a8a;
+}
+.quote-card-sky .quote {
+  color: #bfdbfe;
+}
+.quote-card-sky .body-text {
+  color: #112255;
+}
+.quote-card-sky .author {
+  color: #1e3a8a;
+}
+.quote-card-sky .author svg {
+  color: rgba(30, 58, 138, 0.55);
+}
+
