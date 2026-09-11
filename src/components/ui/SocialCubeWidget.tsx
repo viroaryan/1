@@ -8,7 +8,7 @@ export default function SocialCubeWidget() {
   return (
     <div className="uiverse-social-cube py-6">
       <div
-        className={`main ${isOpen ? "is-open" : ""}`}
+        className={`cube-main ${isOpen ? "is-open" : ""}`}
         onClick={() => setIsOpen(!isOpen)}
       >
         {/* Card 1: Instagram */}
@@ -18,7 +18,7 @@ export default function SocialCubeWidget() {
           rel="noopener noreferrer"
           aria-label="Instagram Profile"
           title="Instagram: @viro.coder.aryan"
-          className="card"
+          className="cube-tile"
         >
           <svg
             fillRule="nonzero"
@@ -41,7 +41,7 @@ export default function SocialCubeWidget() {
           rel="noopener noreferrer"
           aria-label="Twitter X Profile"
           title="X / Twitter"
-          className="card"
+          className="cube-tile"
         >
           <svg
             height="30px"
@@ -61,7 +61,7 @@ export default function SocialCubeWidget() {
           rel="noopener noreferrer"
           aria-label="Dribbble Portfolio"
           title="Dribbble"
-          className="card"
+          className="cube-tile"
         >
           <svg
             height="30px"
@@ -91,7 +91,7 @@ export default function SocialCubeWidget() {
           rel="noopener noreferrer"
           aria-label="CodePen Demos"
           title="CodePen"
-          className="card"
+          className="cube-tile"
         >
           <svg
             height="30px"
@@ -111,7 +111,7 @@ export default function SocialCubeWidget() {
           rel="noopener noreferrer"
           aria-label="UIverse Community"
           title="UIverse"
-          className="card"
+          className="cube-tile"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -180,7 +180,7 @@ export default function SocialCubeWidget() {
           rel="noopener noreferrer"
           aria-label="Discord Server"
           title="Discord Community"
-          className="card"
+          className="cube-tile"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -200,7 +200,7 @@ export default function SocialCubeWidget() {
           rel="noopener noreferrer"
           aria-label="GitHub Repository"
           title="GitHub: viroaryan"
-          className="card"
+          className="cube-tile"
         >
           <svg
             height="30px"
@@ -220,7 +220,7 @@ export default function SocialCubeWidget() {
           rel="noopener noreferrer"
           aria-label="Telegram Channel"
           title="Telegram: @nirvanabrowser"
-          className="card"
+          className="cube-tile"
         >
           <svg
             height="30px"
@@ -252,7 +252,7 @@ export default function SocialCubeWidget() {
           rel="noopener noreferrer"
           aria-label="Reddit Community"
           title="Reddit Community"
-          className="card"
+          className="cube-tile"
         >
           <svg
             xmlSpace="preserve"
@@ -315,14 +315,14 @@ export default function SocialCubeWidget() {
         </a>
 
         {/* Center Hover Label */}
-        <div className="text" aria-hidden="true">
+        <div className="cube-text" aria-hidden="true">
           <span>HOVER</span>
           <span>FOR</span>
           <span>SOCIAL</span>
         </div>
 
         {/* Glowing Pastel Background Mesh */}
-        <div className="main_back" aria-hidden="true"></div>
+        <div className="cube-back" aria-hidden="true"></div>
       </div>
     </div>
   );

@@ -23,7 +23,7 @@ export default function FounderProfileCard({
   telegram = "https://t.me/nirvanabrowser",
 }: FounderProfileCardProps) {
   return (
-    <div className="card">
+    <div className="card-uiverse">
       <a href={email} className="mail" aria-label={`Email ${name}`}>
         <svg
           xmlns="http://www.w3.org/2000/svg"

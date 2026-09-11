@@ -36,7 +36,7 @@ export default function TeamMemberUiverseCard({
       : "";
 
   return (
-    <div className={`card card-uiverse ${themeClass}`}>
+    <div className={`card-uiverse ${themeClass}`}>
       <a href={email} className="mail" aria-label={`Email ${name}`}>
         <svg
           xmlns="http://www.w3.org/2000/svg"

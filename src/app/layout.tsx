@@ -87,7 +87,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`scroll-smooth ${inter.variable}`}>
+    <html lang="en" className={inter.variable}>
       <body className="min-h-screen flex flex-col bg-transparent text-charcoal font-sans antialiased selection:bg-[#FDE4D2] selection:text-charcoal relative">
         {/* Uiverse Rotating Pastel Aurora Backdrop */}
         <div className="aurora-bg-mesh" aria-hidden="true" />

@@ -23,7 +23,6 @@ html {
   background-color: #ffe8f3;
   color: var(--text-charcoal);
   font-family: var(--font-sans);
-  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -41,7 +40,7 @@ body {
 }
 
 /* =========================================================================
-   Uiverse Ethereal Aurora Rotating Background (ariba_9087 Pattern)
+   Ethereal Pastel Aurora Mesh Background (GPU-Optimized & 120 FPS Static)
 ========================================================================= */
 .aurora-bg-mesh {
   position: fixed;
@@ -51,60 +50,14 @@ body {
   overflow: hidden;
   z-index: -1;
   pointer-events: none;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.2),
-    rgba(0, 0, 0, 0.08)
-  );
-}
-
-.aurora-bg-mesh::before,
-.aurora-bg-mesh::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 200%;
-  height: 200%;
-  background: conic-gradient(
-    from 0deg,
-    #ff9aa2, /* Soft pink */
-    #ffb7b2, /* Light peach */
-    #ffdac1, /* Pastel yellow */
-    #e2f0cb, /* Mint green */
-    #a2e4ff, /* Baby blue */
-    #c9afff, /* Lavender */
-    #ffb7b2,
-    #ff9aa2
-  );
-  transform: translate(-50%, -50%);
-  animation: rotate 10s linear infinite;
-  filter: blur(50px);
-  opacity: 0.85;
-  will-change: transform;
-}
-
-.aurora-bg-mesh::after {
-  animation: rotate-reverse 10s linear infinite;
-}
-
-/* Rotating animations */
-@keyframes rotate {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
-
-@keyframes rotate-reverse {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(-360deg);
-  }
+  background:
+    radial-gradient(ellipse 70% 55% at 5% 10%, rgba(255, 154, 162, 0.45) 0%, transparent 60%),
+    radial-gradient(ellipse 65% 50% at 92% 8%, rgba(162, 228, 255, 0.5) 0%, transparent 60%),
+    radial-gradient(ellipse 75% 60% at 50% 45%, rgba(255, 218, 193, 0.4) 0%, transparent 65%),
+    radial-gradient(ellipse 70% 55% at 8% 90%, rgba(226, 240, 203, 0.45) 0%, transparent 60%),
+    radial-gradient(ellipse 75% 60% at 92% 90%, rgba(201, 175, 255, 0.5) 0%, transparent 65%),
+    linear-gradient(135deg, #ffe8f3 0%, #ffdac1 25%, #e2f0cb 50%, #d9f3ff 75%, #c9afff 100%);
+  background-attachment: fixed;
 }
 
 ::selection {
@@ -339,24 +292,17 @@ body {
   border-color: rgba(244, 63, 94, 0.4);
 }
 
-/* Multi-Chromatic Aurora Borealis Glow (Hero & Special Badges) */
+/* Multi-Chromatic Aurora Glow (Hero & Badges - Static GPU Optimized) */
 .aurora-glow-field {
-  background: conic-gradient(
-    from 180deg at 50% 50%,
-    rgba(242, 101, 34, 0.18) 0deg,
-    rgba(157, 141, 241, 0.2) 90deg,
-    rgba(56, 189, 248, 0.18) 180deg,
-    rgba(16, 185, 129, 0.18) 270deg,
-    rgba(242, 101, 34, 0.18) 360deg
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(242, 101, 34, 0.16) 0%,
+    rgba(157, 141, 241, 0.18) 35%,
+    rgba(56, 189, 248, 0.14) 65%,
+    transparent 100%
   );
-  filter: blur(50px);
   border-radius: 9999px;
-  animation: slowRotate 24s linear infinite;
-}
-
-@keyframes slowRotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  pointer-events: none;
 }
 
 /* Atmospheric Gradients */
@@ -644,7 +590,6 @@ body {
 /* =========================================================================
    Uiverse Interactive Profile Card (Smit-Prajapati Style)
 ========================================================================= */
-.card,
 .card-uiverse {
   width: 100%;
   max-width: 280px;
@@ -658,7 +603,6 @@ body {
   margin: 0 auto;
 }
 
-.card .mail,
 .card-uiverse .mail {
   position: absolute;
   right: 1.5rem;
@@ -670,19 +614,16 @@ body {
   padding: 4px;
 }
 
-.card .mail svg,
 .card-uiverse .mail svg {
   stroke: #fbb9b6;
   stroke-width: 2.5px;
   transition: stroke 0.3s ease;
 }
 
-.card .mail:hover svg,
 .card-uiverse .mail:hover svg {
   stroke: #f55d56;
 }
 
-.card .profile-pic,
 .card-uiverse .profile-pic {
   position: absolute;
   width: calc(100% - 6px);
@@ -696,7 +637,6 @@ body {
   transition: all 0.5s ease-in-out 0.2s, z-index 0.5s ease-in-out 0.2s;
 }
 
-.card .profile-pic img,
 .card-uiverse .profile-pic img {
   -o-object-fit: cover;
   object-fit: cover;
@@ -707,7 +647,6 @@ body {
   transition: all 0.5s ease-in-out 0s;
 }
 
-.card .profile-pic svg,
 .card-uiverse .profile-pic svg {
   width: 100%;
   height: 100%;
@@ -719,7 +658,6 @@ body {
   transition: all 0.5s ease-in-out 0s;
 }
 
-.card .bottom,
 .card-uiverse .bottom {
   position: absolute;
   bottom: 3px;
@@ -734,7 +672,6 @@ body {
   transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
 
-.card .bottom .content,
 .card-uiverse .bottom .content {
   position: absolute;
   bottom: 0;
@@ -743,7 +680,6 @@ body {
   height: 165px;
 }
 
-.card .bottom .content .name,
 .card-uiverse .bottom .content .name {
   display: block;
   font-size: 1.15rem;
@@ -751,7 +687,6 @@ body {
   font-weight: bold;
 }
 
-.card .bottom .content .role,
 .card-uiverse .bottom .content .role {
   display: block;
   font-size: 0.7rem;
@@ -763,7 +698,6 @@ body {
   letter-spacing: 0.05em;
 }
 
-.card .bottom .content .about-me,
 .card-uiverse .bottom .content .about-me {
   display: block;
   font-size: 0.78rem;
@@ -772,7 +706,6 @@ body {
   line-height: 1.35;
 }
 
-.card .bottom .bottom-bottom,
 .card-uiverse .bottom .bottom-bottom {
   position: absolute;
   bottom: 0.85rem;
@@ -783,14 +716,12 @@ body {
   justify-content: space-between;
 }
 
-.card .bottom .bottom-bottom .social-links-container,
 .card-uiverse .bottom .bottom-bottom .social-links-container {
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
 
-.card .bottom .bottom-bottom .social-links-container svg,
 .card-uiverse .bottom .bottom-bottom .social-links-container svg {
   height: 18px;
   width: 18px;
@@ -799,15 +730,12 @@ body {
   transition: all 0.2s ease;
 }
 
-.card .bottom .bottom-bottom .social-links-container a:hover svg,
 .card-uiverse .bottom .bottom-bottom .social-links-container a:hover svg,
-.card .bottom .bottom-bottom .social-links-container svg:hover,
 .card-uiverse .bottom .bottom-bottom .social-links-container svg:hover {
   fill: #f55d56;
   transform: scale(1.2);
 }
 
-.card .bottom .bottom-bottom .button,
 .card-uiverse .bottom .bottom-bottom .button {
   background: white;
   color: #fbb9b6;
@@ -824,25 +752,21 @@ body {
   text-decoration: none;
 }
 
-.card .bottom .bottom-bottom .button:hover,
 .card-uiverse .bottom .bottom-bottom .button:hover {
   background: #f55d56;
   color: white;
 }
 
-.card:hover,
 .card-uiverse:hover {
   border-top-left-radius: 55px;
 }
 
-.card:hover .bottom,
 .card-uiverse:hover .bottom {
   top: 20%;
   border-radius: 80px 29px 29px 29px;
   transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
 }
 
-.card:hover .profile-pic,
 .card-uiverse:hover .profile-pic {
   width: 95px;
   height: 95px;
@@ -856,13 +780,11 @@ body {
   transition: all 0.5s ease-in-out, z-index 0.5s ease-in-out 0.1s;
 }
 
-.card:hover .profile-pic:hover,
 .card-uiverse:hover .profile-pic:hover {
   transform: scale(1.2);
   border-radius: 12px;
 }
 
-.card:hover .profile-pic img,
 .card-uiverse:hover .profile-pic img {
   transform: scale(2);
   -o-object-position: 0px 15px;
@@ -870,7 +792,6 @@ body {
   transition: all 0.5s ease-in-out 0.5s;
 }
 
-.card:hover .profile-pic svg,
 .card-uiverse:hover .profile-pic svg {
   transform: scale(2.2);
   transition: all 0.5s ease-in-out 0.5s;
@@ -905,6 +826,7 @@ body {
 
 /* =========================================================================
    UIVERSE INTERACTIVE SOCIAL CUBE (smooth-crab-52 by Praashoo7)
+   Bulletproof CSS Grid (3x3), High-Performance, Zero Collision
 ========================================================================= */
 .uiverse-social-cube {
   position: relative;
@@ -914,27 +836,32 @@ body {
   padding: 1.5rem 0;
 }
 
-.uiverse-social-cube .main {
+/* 3x3 Rigid Grid Container */
+.uiverse-social-cube .cube-main {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   width: 180px;
   height: 180px;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
   border-radius: 20px;
-  transition: width 0.35s cubic-bezier(0.34, 1.3, 0.64, 1),
-              height 0.35s cubic-bezier(0.34, 1.3, 0.64, 1);
   isolation: isolate;
+  transition: width 0.3s cubic-bezier(0.34, 1.3, 0.64, 1),
+              height 0.3s cubic-bezier(0.34, 1.3, 0.64, 1),
+              gap 0.3s cubic-bezier(0.34, 1.3, 0.64, 1),
+              padding 0.3s cubic-bezier(0.34, 1.3, 0.64, 1);
+  gap: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  user-select: none;
 }
 
 /* Outer seamless card glow & pastel gradient in resting state */
-.uiverse-social-cube .main_back {
+.uiverse-social-cube .cube-back {
   position: absolute;
   inset: 0;
-  width: 180px;
-  height: 180px;
+  width: 100%;
+  height: 100%;
   border-radius: 20px;
   background: linear-gradient(135deg, #a2e4ff 0%, #ffdac1 25%, #ffb5d2 55%, #c9afff 80%, #03a9f4 100%);
   z-index: 1;
@@ -943,12 +870,13 @@ body {
     0 16px 36px -8px rgba(17, 17, 25, 0.09),
     0 4px 12px -2px rgba(17, 17, 25, 0.04),
     0 0 0 1px rgba(255, 255, 255, 0.95);
-  transition: opacity 0.35s ease-in-out, transform 0.35s ease-in-out;
+  transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
   pointer-events: none;
+  opacity: 1;
 }
 
 /* Center typographic label in resting state */
-.uiverse-social-cube .text {
+.uiverse-social-cube .cube-text {
   position: absolute;
   inset: 0;
   display: flex;
@@ -963,80 +891,88 @@ body {
   text-align: center;
   z-index: 5;
   pointer-events: none;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
   line-height: 1.4;
+  opacity: 1;
 }
 
-/* 9 Cards inside the grid */
-.uiverse-social-cube .card {
+/* 9 Tile Links inside the 3x3 grid */
+.uiverse-social-cube .cube-tile {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
+  width: 100%;
+  height: 100%;
   background: transparent;
   border: none;
-  transition: all 0.35s cubic-bezier(0.34, 1.3, 0.64, 1);
   cursor: pointer;
   box-sizing: border-box;
   z-index: 2;
   text-decoration: none;
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s cubic-bezier(0.34, 1.3, 0.64, 1);
 }
 
-/* Outer corner clips in resting state to match the 20px card border-radius */
-.uiverse-social-cube .card:nth-child(1) { border-top-left-radius: 20px; }
-.uiverse-social-cube .card:nth-child(2) { border-radius: 0; }
-.uiverse-social-cube .card:nth-child(3) { border-top-right-radius: 20px; }
-.uiverse-social-cube .card:nth-child(4) { border-radius: 0; }
-.uiverse-social-cube .card:nth-child(5) { border-radius: 0; }
-.uiverse-social-cube .card:nth-child(6) { border-radius: 0; }
-.uiverse-social-cube .card:nth-child(7) { border-bottom-left-radius: 20px; }
-.uiverse-social-cube .card:nth-child(8) { border-radius: 0; }
-.uiverse-social-cube .card:nth-child(9) { border-bottom-right-radius: 20px; }
+/* Corner radius in resting state */
+.uiverse-social-cube .cube-tile:nth-child(1) { border-top-left-radius: 20px; }
+.uiverse-social-cube .cube-tile:nth-child(2) { border-radius: 0; }
+.uiverse-social-cube .cube-tile:nth-child(3) { border-top-right-radius: 20px; }
+.uiverse-social-cube .cube-tile:nth-child(4) { border-radius: 0; }
+.uiverse-social-cube .cube-tile:nth-child(5) { border-radius: 0; }
+.uiverse-social-cube .cube-tile:nth-child(6) { border-radius: 0; }
+.uiverse-social-cube .cube-tile:nth-child(7) { border-bottom-left-radius: 20px; }
+.uiverse-social-cube .cube-tile:nth-child(8) { border-radius: 0; }
+.uiverse-social-cube .cube-tile:nth-child(9) { border-bottom-right-radius: 20px; }
 
-/* Hidden icons in resting state */
-.uiverse-social-cube .card svg {
+/* Strictly hidden icons in resting state */
+.uiverse-social-cube .cube-tile svg {
   opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
   transform: scale(0.65);
-  transition: all 0.25s cubic-bezier(0.34, 1.3, 0.64, 1);
+  transition: opacity 0.2s ease, transform 0.25s cubic-bezier(0.34, 1.3, 0.64, 1);
 }
 
-.uiverse-social-cube .card .instagram { fill: #cc39a4; }
-.uiverse-social-cube .card .twitter { fill: #03a9f4; }
-.uiverse-social-cube .card .dribble { fill: #ffb5d2; }
-.uiverse-social-cube .card .codepen { fill: black; }
-.uiverse-social-cube .card .discord { fill: #8c9eff; }
-.uiverse-social-cube .card .github { fill: black; }
-.uiverse-social-cube .card .telegram { fill: #29b6f6; }
+.uiverse-social-cube .cube-tile .instagram { fill: #cc39a4; }
+.uiverse-social-cube .cube-tile .twitter { fill: #03a9f4; }
+.uiverse-social-cube .cube-tile .dribble { fill: #ffb5d2; }
+.uiverse-social-cube .cube-tile .codepen { fill: black; }
+.uiverse-social-cube .cube-tile .discord { fill: #8c9eff; }
+.uiverse-social-cube .cube-tile .github { fill: black; }
+.uiverse-social-cube .cube-tile .telegram { fill: #29b6f6; }
 
 /* =========================================================================
-   EXPANDED STATE (Hover on Desktop OR Click/Tap Toggle)
+   EXPANDED STATE (Hover on Desktop OR Click/Tap Toggle on Mobile)
 ========================================================================= */
-.uiverse-social-cube .main:hover,
-.uiverse-social-cube .main.is-open {
+.uiverse-social-cube .cube-main:hover,
+.uiverse-social-cube .cube-main.is-open {
   width: 216px;
   height: 216px;
+  gap: 6px;
+  padding: 6px;
   cursor: pointer;
 }
 
-.uiverse-social-cube .main:hover .main_back,
-.uiverse-social-cube .main.is-open .main_back {
+.uiverse-social-cube .cube-main:hover .cube-back,
+.uiverse-social-cube .cube-main.is-open .cube-back {
   opacity: 0;
   transform: scale(0.92);
+  pointer-events: none;
 }
 
-.uiverse-social-cube .main:hover .text,
-.uiverse-social-cube .main.is-open .text {
+.uiverse-social-cube .cube-main:hover .cube-text,
+.uiverse-social-cube .cube-main.is-open .cube-text {
   opacity: 0;
+  visibility: hidden;
   transform: scale(0.85);
   pointer-events: none;
 }
 
-.uiverse-social-cube .main:hover .card,
-.uiverse-social-cube .main.is-open .card {
-  margin: 4px;
-  border-radius: 14px;
+.uiverse-social-cube .cube-main:hover .cube-tile,
+.uiverse-social-cube .cube-main.is-open .cube-tile {
+  border-radius: 12px !important;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -1045,91 +981,93 @@ body {
   z-index: 10;
 }
 
-.uiverse-social-cube .main:hover .card svg,
-.uiverse-social-cube .main.is-open .card svg {
+.uiverse-social-cube .cube-main:hover .cube-tile svg,
+.uiverse-social-cube .cube-main.is-open .cube-tile svg {
   opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
   transform: scale(1);
 }
 
-/* Individual Card Hover Dynamics */
-.uiverse-social-cube .card:nth-child(1):hover {
+/* Individual Tile Hover Dynamics */
+.uiverse-social-cube .cube-tile:nth-child(1):hover {
   background-color: #cc39a4 !important;
   transform: scale(1.08);
 }
-.uiverse-social-cube .card:nth-child(1):hover .instagram {
+.uiverse-social-cube .cube-tile:nth-child(1):hover .instagram {
   fill: white !important;
 }
 
-.uiverse-social-cube .card:nth-child(2):hover {
+.uiverse-social-cube .cube-tile:nth-child(2):hover {
   background-color: #03a9f4 !important;
   transform: scale(1.08);
 }
-.uiverse-social-cube .card:nth-child(2):hover .twitter {
+.uiverse-social-cube .cube-tile:nth-child(2):hover .twitter {
   fill: white !important;
 }
 
-.uiverse-social-cube .card:nth-child(3):hover {
+.uiverse-social-cube .cube-tile:nth-child(3):hover {
   background-color: #ffb5d2 !important;
   transform: scale(1.08);
 }
-.uiverse-social-cube .card:nth-child(3):hover .dribble {
+.uiverse-social-cube .cube-tile:nth-child(3):hover .dribble {
   fill: white !important;
 }
 
-.uiverse-social-cube .card:nth-child(4):hover {
+.uiverse-social-cube .cube-tile:nth-child(4):hover {
   background-color: #1e1f26 !important;
   transform: scale(1.08);
 }
-.uiverse-social-cube .card:nth-child(4):hover .codepen {
+.uiverse-social-cube .cube-tile:nth-child(4):hover .codepen {
   fill: white !important;
 }
 
-.uiverse-social-cube .card:nth-child(5):hover {
+.uiverse-social-cube .cube-tile:nth-child(5):hover {
   background-image: linear-gradient(#bf66ff, #6248ff, #00ddeb) !important;
   transform: scale(1.08);
 }
-.uiverse-social-cube .card:nth-child(5):hover .uiverse #paint0_linear_501_142 stop,
-.uiverse-social-cube .card:nth-child(5):hover .uiverse #paint1_linear_501_142 stop,
-.uiverse-social-cube .card:nth-child(5):hover .uiverse #paint2_linear_501_142 stop {
+.uiverse-social-cube .cube-tile:nth-child(5):hover .uiverse #paint0_linear_501_142 stop,
+.uiverse-social-cube .cube-tile:nth-child(5):hover .uiverse #paint1_linear_501_142 stop,
+.uiverse-social-cube .cube-tile:nth-child(5):hover .uiverse #paint2_linear_501_142 stop {
   stop-color: white !important;
 }
 
-.uiverse-social-cube .card:nth-child(6):hover {
+.uiverse-social-cube .cube-tile:nth-child(6):hover {
   background-color: #8c9eff !important;
   transform: scale(1.08);
 }
-.uiverse-social-cube .card:nth-child(6):hover .discord {
+.uiverse-social-cube .cube-tile:nth-child(6):hover .discord {
   fill: white !important;
 }
 
-.uiverse-social-cube .card:nth-child(7):hover {
+.uiverse-social-cube .cube-tile:nth-child(7):hover {
   background-color: black !important;
   transform: scale(1.08);
 }
-.uiverse-social-cube .card:nth-child(7):hover .github {
+.uiverse-social-cube .cube-tile:nth-child(7):hover .github {
   fill: white !important;
 }
 
-.uiverse-social-cube .card:nth-child(8):hover {
+.uiverse-social-cube .cube-tile:nth-child(8):hover {
   background-color: #29b6f6 !important;
   transform: scale(1.08);
 }
-.uiverse-social-cube .card:nth-child(8):hover .telegram > path:nth-of-type(1) {
+.uiverse-social-cube .cube-tile:nth-child(8):hover .telegram > path:nth-of-type(1) {
   fill: white !important;
 }
-.uiverse-social-cube .card:nth-child(8):hover .telegram > path:nth-of-type(2),
-.uiverse-social-cube .card:nth-child(8):hover .telegram > path:nth-of-type(3) {
+.uiverse-social-cube .cube-tile:nth-child(8):hover .telegram > path:nth-of-type(2),
+.uiverse-social-cube .cube-tile:nth-child(8):hover .telegram > path:nth-of-type(3) {
   fill: #29b6f6 !important;
 }
 
-.uiverse-social-cube .card:nth-child(9):hover {
+.uiverse-social-cube .cube-tile:nth-child(9):hover {
   background-color: rgb(255, 69, 0) !important;
   transform: scale(1.08);
 }
-.uiverse-social-cube .card:nth-child(9) .reddit > g circle {
+.uiverse-social-cube .cube-tile:nth-child(9) .reddit > g circle {
   fill: rgb(255, 69, 0);
 }
-.uiverse-social-cube .card:nth-child(9) .reddit > g path {
+.uiverse-social-cube .cube-tile:nth-child(9) .reddit > g path {
   fill: white;
 }
 
