@@ -1,0 +1,62 @@
+import { MetadataRoute } from "next";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = "https://nirvanabrowser.com";
+
+  const routes = [
+    "",
+    "/browser",
+    "/features",
+    "/features/privacy",
+    "/features/protection",
+    "/features/search",
+    "/features/tabs",
+    "/features/extensions",
+    "/features/passwords",
+    "/features/reading",
+    "/features/ai",
+    "/features/customization",
+    "/features/dns",
+    "/features/privacy-on-quit",
+    "/download",
+    "/compare",
+    "/compare/chrome",
+    "/compare/firefox",
+    "/compare/brave",
+    "/compare/vivaldi",
+    "/compare/opera",
+    "/compare/duckduckgo",
+    "/compare/safari",
+    "/compare/mullvad",
+    "/compare/zen",
+    "/faq",
+    "/help",
+    "/changelog",
+    "/open-source",
+    "/licenses",
+    "/mozilla-attribution",
+    "/about",
+    "/team",
+    "/join",
+    "/contribute",
+    "/suggestions",
+    "/contact",
+    "/coffee",
+    "/community",
+    "/products",
+    "/products/focus",
+    "/products/openstore",
+    "/products/nivro",
+    "/products/perl",
+    "/roadmap",
+    "/privacy",
+    "/terms",
+  ];
+
+  return routes.map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
+    changeFrequency: route === "" || route === "/changelog" ? "weekly" : "monthly",
+    priority: route === "" ? 1.0 : route.startsWith("/features") || route === "/browser" || route === "/download" ? 0.8 : 0.6,
+  }));
+}
