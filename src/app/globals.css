@@ -1217,87 +1217,65 @@ body {
   will-change: transform;
 }
 
-.coin {
-  width: 0.1em;
-  height: 1em;
-  background: linear-gradient(
-    to bottom,
-    #ffffff 0%,
-    #f1f5f9 25%,
-    #cbd5e1 50%,
-    #94a3b8 75%,
-    #ffffff 100%
-  );
-  box-shadow: 0 0 16px rgba(255, 255, 255, 0.9), inset 0 0 4px rgba(148, 163, 184, 0.4);
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  animation: rotate_4001510 7s infinite linear;
+.coin-cylinder {
+  position: relative;
   transform-style: preserve-3d;
+  animation: rotate_3d_coin 7s infinite linear;
   will-change: transform;
 }
 
-.coin .side,
-.coin:before,
-.coin:after {
-  content: "";
+/* Heads & Tails Face Discs */
+.coin-disc {
   position: absolute;
-  width: 1em;
-  height: 1em;
-  overflow: hidden;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
-  right: -0.4em;
-  left: auto;
-  text-align: center;
-  line-height: 1;
-  transform: rotateY(-90deg);
-  -moz-backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.coin .tails,
-.coin:after {
-  left: -0.4em;
-  right: auto;
-  transform: rotateY(90deg);
-}
-
-.coin:before,
-.coin:after {
-  background: linear-gradient(
-    135deg,
-    #ffffff 0%,
-    #f8fafc 40%,
-    #e2e8f0 75%,
-    #cbd5e1 100%
-  );
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  transform: rotateY(90deg);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.6);
 }
 
-.coin:after {
-  transform: rotateY(-90deg);
-}
-
-.coin .side svg,
-.coin .side .coin-svg {
+.coin-disc svg,
+.coin-disc .coin-svg {
   width: 100%;
   height: 100%;
   position: absolute;
-  left: 0;
-  top: 0;
+  inset: 0;
 }
 
-.svg_back {
-  transform: scaleX(-1);
+/* Seamless Metallic-Glass Cylindrical Edge Slices */
+.coin-edge-slice {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-sizing: border-box;
+  /* Diamond-milled titanium/platinum metallic rim */
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  background: radial-gradient(
+    circle at 35% 35%,
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(241, 245, 249, 0.92) 50%,
+    rgba(203, 213, 225, 0.88) 80%,
+    rgba(148, 163, 184, 0.95) 100%
+  );
+  box-shadow: 
+    0 0 2px rgba(100, 116, 139, 0.4),
+    inset 0 0 4px rgba(255, 255, 255, 0.9),
+    inset 0 0 8px rgba(148, 163, 184, 0.35);
+  pointer-events: none;
+  backface-visibility: visible;
+  -webkit-backface-visibility: visible;
 }
 
-@keyframes rotate_4001510 {
+/* 360-degree Continuous Y-axis Spin */
+@keyframes rotate_3d_coin {
   0% {
     transform: rotateY(0deg);
   }
