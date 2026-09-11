@@ -32,7 +32,7 @@ export default function Nirvana3DCoin({
           }}
           title="Nirvana 3D Rotating Token"
         >
-          {/* Heads: Front Face with Official Nirvana Emblem */}
+          {/* Heads: Front Face with Official Nirvana Emblem (Light Crystal Glass Aesthetic) */}
           <div className="side heads">
             <svg
               viewBox="0 0 500 500"
@@ -41,12 +41,27 @@ export default function Nirvana3DCoin({
               xmlnsXlink="http://www.w3.org/1999/xlink"
             >
               <defs>
-                <radialGradient id="headsGoldGrad" cx="35%" cy="35%" r="65%">
-                  <stop offset="0%" stopColor="#fff3c4" />
-                  <stop offset="35%" stopColor="#faa504" />
-                  <stop offset="75%" stopColor="#d97706" />
-                  <stop offset="100%" stopColor="#8c4a00" />
+                {/* Frosted Light Glass Surface */}
+                <radialGradient id="headsGlassGrad" cx="30%" cy="25%" r="75%">
+                  <stop offset="0%" stopColor="#ffffff" stopOpacity="0.98" />
+                  <stop offset="35%" stopColor="#f8fafc" stopOpacity="0.94" />
+                  <stop offset="70%" stopColor="#e2e8f0" stopOpacity="0.88" />
+                  <stop offset="95%" stopColor="#cbd5e1" stopOpacity="0.92" />
+                  <stop offset="100%" stopColor="#94a3b8" stopOpacity="0.96" />
                 </radialGradient>
+                {/* Polished Glass Rim Bevel */}
+                <linearGradient id="headsRimGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#ffffff" stopOpacity="0.98" />
+                  <stop offset="45%" stopColor="#cbd5e1" stopOpacity="0.6" />
+                  <stop offset="100%" stopColor="#ffffff" stopOpacity="0.95" />
+                </linearGradient>
+                {/* Specular Curved Watch-Glass Gloss */}
+                <linearGradient id="headsGlassGloss" x1="20%" y1="0%" x2="80%" y2="100%">
+                  <stop offset="0%" stopColor="#ffffff" stopOpacity="0.6" />
+                  <stop offset="40%" stopColor="#ffffff" stopOpacity="0.15" />
+                  <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
+                </linearGradient>
+                {/* Crisp Logo Drop Shadow on Glass */}
                 <filter
                   id="emblemShadowHeads"
                   x="-20%"
@@ -58,40 +73,53 @@ export default function Nirvana3DCoin({
                     dx="0"
                     dy="4"
                     stdDeviation="6"
-                    floodColor="#451a03"
-                    floodOpacity="0.45"
+                    floodColor="#ea580c"
+                    floodOpacity="0.25"
+                  />
+                  <feDropShadow
+                    dx="0"
+                    dy="8"
+                    stdDeviation="12"
+                    floodColor="#0f172a"
+                    floodOpacity="0.08"
                   />
                 </filter>
               </defs>
-              {/* Outer Golden Minted Base */}
+              {/* Outer Frosted Glass Disc */}
               <circle
                 cx="250"
                 cy="250"
                 r="242"
-                fill="url(#headsGoldGrad)"
-                stroke="#b45309"
-                strokeWidth="10"
+                fill="url(#headsGlassGrad)"
+                stroke="url(#headsRimGrad)"
+                strokeWidth="9"
               />
-              {/* Inner Decorative Dashed Currency Ring */}
+              {/* Inner Decorative Frosted Glass Rings */}
               <circle
                 cx="250"
                 cy="250"
-                r="220"
+                r="222"
                 fill="none"
-                stroke="#78350f"
-                strokeWidth="3.5"
-                strokeDasharray="10 8"
-                opacity="0.5"
+                stroke="#ffffff"
+                strokeWidth="2.5"
+                opacity="0.85"
               />
-              {/* Subtle Inner Highlight Disc */}
               <circle
                 cx="250"
                 cy="250"
-                r="200"
-                fill="#ffffff"
-                opacity="0.15"
+                r="218"
+                fill="none"
+                stroke="#94a3b8"
+                strokeWidth="1.5"
+                strokeDasharray="8 6"
+                opacity="0.45"
               />
-              {/* Official Nirvana Emblem */}
+              {/* Specular Curved Light Reflection Arc across Glass */}
+              <path
+                d="M 65 240 A 185 185 0 0 1 435 240 A 185 105 0 0 0 65 240 Z"
+                fill="url(#headsGlassGloss)"
+              />
+              {/* Official Nirvana Emblem (Original Vibrant Orange/White) */}
               <image
                 href="/assets/logo.png"
                 xlinkHref="/assets/logo.png"
@@ -114,12 +142,27 @@ export default function Nirvana3DCoin({
               xmlnsXlink="http://www.w3.org/1999/xlink"
             >
               <defs>
-                <radialGradient id="tailsGoldGrad" cx="35%" cy="35%" r="65%">
-                  <stop offset="0%" stopColor="#fff3c4" />
-                  <stop offset="35%" stopColor="#faa504" />
-                  <stop offset="75%" stopColor="#d97706" />
-                  <stop offset="100%" stopColor="#8c4a00" />
+                {/* Frosted Light Glass Surface */}
+                <radialGradient id="tailsGlassGrad" cx="30%" cy="25%" r="75%">
+                  <stop offset="0%" stopColor="#ffffff" stopOpacity="0.98" />
+                  <stop offset="35%" stopColor="#f8fafc" stopOpacity="0.94" />
+                  <stop offset="70%" stopColor="#e2e8f0" stopOpacity="0.88" />
+                  <stop offset="95%" stopColor="#cbd5e1" stopOpacity="0.92" />
+                  <stop offset="100%" stopColor="#94a3b8" stopOpacity="0.96" />
                 </radialGradient>
+                {/* Polished Glass Rim Bevel */}
+                <linearGradient id="tailsRimGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#ffffff" stopOpacity="0.98" />
+                  <stop offset="45%" stopColor="#cbd5e1" stopOpacity="0.6" />
+                  <stop offset="100%" stopColor="#ffffff" stopOpacity="0.95" />
+                </linearGradient>
+                {/* Specular Curved Watch-Glass Gloss */}
+                <linearGradient id="tailsGlassGloss" x1="20%" y1="0%" x2="80%" y2="100%">
+                  <stop offset="0%" stopColor="#ffffff" stopOpacity="0.6" />
+                  <stop offset="40%" stopColor="#ffffff" stopOpacity="0.15" />
+                  <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
+                </linearGradient>
+                {/* Crisp Logo Drop Shadow on Glass */}
                 <filter
                   id="emblemShadowTails"
                   x="-20%"
@@ -131,38 +174,51 @@ export default function Nirvana3DCoin({
                     dx="0"
                     dy="4"
                     stdDeviation="6"
-                    floodColor="#451a03"
-                    floodOpacity="0.45"
+                    floodColor="#ea580c"
+                    floodOpacity="0.25"
+                  />
+                  <feDropShadow
+                    dx="0"
+                    dy="8"
+                    stdDeviation="12"
+                    floodColor="#0f172a"
+                    floodOpacity="0.08"
                   />
                 </filter>
               </defs>
-              {/* Outer Golden Minted Base */}
+              {/* Outer Frosted Glass Disc */}
               <circle
                 cx="250"
                 cy="250"
                 r="242"
-                fill="url(#tailsGoldGrad)"
-                stroke="#b45309"
-                strokeWidth="10"
+                fill="url(#tailsGlassGrad)"
+                stroke="url(#tailsRimGrad)"
+                strokeWidth="9"
               />
-              {/* Inner Decorative Dashed Currency Ring */}
+              {/* Inner Decorative Frosted Glass Rings */}
               <circle
                 cx="250"
                 cy="250"
-                r="220"
+                r="222"
                 fill="none"
-                stroke="#78350f"
-                strokeWidth="3.5"
-                strokeDasharray="10 8"
-                opacity="0.5"
+                stroke="#ffffff"
+                strokeWidth="2.5"
+                opacity="0.85"
               />
-              {/* Subtle Inner Highlight Disc */}
               <circle
                 cx="250"
                 cy="250"
-                r="200"
-                fill="#ffffff"
-                opacity="0.15"
+                r="218"
+                fill="none"
+                stroke="#94a3b8"
+                strokeWidth="1.5"
+                strokeDasharray="8 6"
+                opacity="0.45"
+              />
+              {/* Specular Curved Light Reflection Arc across Glass */}
+              <path
+                d="M 65 240 A 185 185 0 0 1 435 240 A 185 105 0 0 0 65 240 Z"
+                fill="url(#tailsGlassGloss)"
               />
               {/* Official Nirvana Emblem with scaleX(-1) */}
               <image
