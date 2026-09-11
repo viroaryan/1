@@ -30,6 +30,8 @@ import {
 import PhoneMockup from "@/components/ui/PhoneMockup";
 import ProtectionDemo from "@/components/ui/ProtectionDemo";
 import SearchEngineSwitcher from "@/components/ui/SearchEngineSwitcher";
+import FounderProfileCard from "@/components/ui/FounderProfileCard";
+import TeamMemberUiverseCard from "@/components/ui/TeamMemberUiverseCard";
 
 export default function HomePage() {
   return (
@@ -855,91 +857,44 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Founder Card */}
-            <div className="p-6 rounded-3xl apple-card-light text-left space-y-4">
-              <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-black/5">
-                <Image
-                  src="/assets/founder.png"
-                  alt="Abhiraj Aryan - Founder & Team Leader"
-                  fill
-                  sizes="280px"
-                  className="object-cover object-top"
-                />
-              </div>
-              <div>
-                <div className="text-base font-semibold text-charcoal">Abhiraj Aryan</div>
-                <div className="text-xs font-mono text-brand mt-0.5">Creator & Team Leader</div>
-                <p className="text-xs text-charcoal-muted mt-2 leading-relaxed">
-                  Browser architect directing GeckoView modifications, privacy pipelines, and product strategy.
-                </p>
-              </div>
-              <div className="flex items-center gap-3 pt-2 text-charcoal-muted">
-                <a
-                  href="https://github.com/viroaryan"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-charcoal transition-colors"
-                  aria-label="Abhiraj Aryan GitHub"
-                >
-                  <Github className="w-4 h-4" />
-                </a>
-                <a
-                  href="https://instagram.com/viro.coder.aryan"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-charcoal transition-colors"
-                  aria-label="Abhiraj Aryan Instagram"
-                >
-                  <Instagram className="w-4 h-4" />
-                </a>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
+            {/* Founder Card - Uiverse Style */}
+            <FounderProfileCard
+              name="Abhiraj Aryan"
+              role="Creator & Team Leader"
+              bio="Browser architect directing GeckoView modifications, privacy pipelines, and product strategy."
+              image="/assets/founder.png"
+              github="https://github.com/viroaryan"
+              instagram="https://instagram.com/viro.coder.aryan"
+              telegram="https://t.me/nirvanabrowser"
+            />
 
             {/* Rahul Kumar Pal */}
-            <div className="p-6 rounded-3xl apple-card-light text-left space-y-4 flex flex-col justify-between">
-              <div>
-                <div className="w-14 h-14 rounded-2xl bg-purple-50 text-[#7C3AED] border border-purple-200 flex items-center justify-center font-bold text-xl mb-4">
-                  RP
-                </div>
-                <div className="text-base font-semibold text-charcoal">Rahul Kumar Pal</div>
-                <div className="text-xs font-mono text-charcoal-muted mt-0.5">Code Reviewer & QA</div>
-                <p className="text-xs text-charcoal-muted mt-2 leading-relaxed">
-                  Codebase QA, regression testing, patch verifications, and Gecko component stability.
-                </p>
-              </div>
-              <div className="text-[10px] font-mono text-charcoal-faded">Core Engineering</div>
-            </div>
+            <TeamMemberUiverseCard
+              name="Rahul Kumar Pal"
+              role="Code Reviewer & QA"
+              bio="Codebase QA, regression testing, bug remediation, and patch verification across modern Android releases."
+              initials="RP"
+              theme="lavender"
+            />
 
             {/* Shivam Giri */}
-            <div className="p-6 rounded-3xl apple-card-light text-left space-y-4 flex flex-col justify-between">
-              <div>
-                <div className="w-14 h-14 rounded-2xl bg-sky-50 text-[#0284C7] border border-sky-200 flex items-center justify-center font-bold text-xl mb-4">
-                  SG
-                </div>
-                <div className="text-base font-semibold text-charcoal">Shivam Giri</div>
-                <div className="text-xs font-mono text-charcoal-muted mt-0.5">Marketing & Outreach</div>
-                <p className="text-xs text-charcoal-muted mt-2 leading-relaxed">
-                  Community growth, open-source communication, and digital brand presence.
-                </p>
-              </div>
-              <div className="text-[10px] font-mono text-charcoal-faded">Community & Growth</div>
-            </div>
+            <TeamMemberUiverseCard
+              name="Shivam Giri"
+              role="Marketing & Outreach"
+              bio="Community growth, open-source communication, developer engagement, and digital brand storytelling."
+              initials="SG"
+              theme="sky"
+            />
 
             {/* Priyanshu Singh */}
-            <div className="p-6 rounded-3xl apple-card-light text-left space-y-4 flex flex-col justify-between">
-              <div>
-                <div className="w-14 h-14 rounded-2xl bg-emerald-50 text-[#059669] border border-emerald-200 flex items-center justify-center font-bold text-xl mb-4">
-                  PS
-                </div>
-                <div className="text-base font-semibold text-charcoal">Priyanshu Singh</div>
-                <div className="text-xs font-mono text-charcoal-muted mt-0.5">Resource Analyst</div>
-                <p className="text-xs text-charcoal-muted mt-2 leading-relaxed">
-                  Memory benchmark analysis, battery telemetry audits, and upstream release monitoring.
-                </p>
-              </div>
-              <div className="text-[10px] font-mono text-charcoal-faded">Performance & Telemetry</div>
-            </div>
+            <TeamMemberUiverseCard
+              name="Priyanshu Singh"
+              role="Resource Analyst"
+              bio="Memory benchmark analysis, battery telemetry audits, and upstream Gecko release performance tracking."
+              initials="PS"
+              theme="emerald"
+            />
           </div>
 
           {/* Join the Team Callout */}
