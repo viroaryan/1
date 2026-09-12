@@ -39,11 +39,11 @@ import { UiverseQuoteCard, QuoteCardColorVariant } from "@/components/ui/Uiverse
 
 export default function HomePage() {
   return (
-    <div className="relative overflow-hidden pt-20">
+    <div className="relative overflow-hidden pt-28 sm:pt-32">
       {/* =========================================================================
           SCREEN 01: MODERN MINIMALIST (APPLE / SF PRO) HERO
       ========================================================================= */}
-      <section className="relative min-h-[88vh] flex items-center justify-center px-6 sm:px-10 lg:px-14 xl:px-16 py-16 lg:py-20 overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center justify-center px-6 sm:px-10 lg:px-14 xl:px-16 py-20 lg:py-28 overflow-hidden">
         {/* Subtle Ambient Light Glow */}
         <div className="absolute top-12 left-1/2 -translate-x-1/2 w-[700px] h-[500px] atmospheric-bloom opacity-40 pointer-events-none" />
 

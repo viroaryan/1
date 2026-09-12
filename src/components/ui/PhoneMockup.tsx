@@ -23,7 +23,7 @@ export default function PhoneMockup({
         Enhanced with responsive dimensions and high-fidelity screen clipping
       */}
       <div
-        className="relative flex flex-col justify-start items-center h-[460px] w-[230px] sm:h-[480px] sm:w-[240px] border-4 border-black rounded-[28px] bg-gray-50 overflow-visible transition-transform duration-300 group-hover:-translate-y-1"
+        className="relative flex flex-col justify-start items-center h-[460px] w-[230px] sm:h-[480px] sm:w-[240px] border-4 border-black rounded-[28px] bg-gray-50 overflow-visible"
         style={{
           boxShadow: "7px 7px 3px 8px rgb(209, 218, 218)",
         }}
