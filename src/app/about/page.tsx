@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Globe2, HeartHandshake, Shield, Sparkles, ArrowRight, EyeOff, Terminal } from "lucide-react";
+import { HoneyAmberBackground } from "@/components/ui/AtmosphericBackground";
 
 export const metadata = {
   title: "About Nirvana — Independent Browser Laboratory",
@@ -11,8 +12,10 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="pt-32 pb-24 px-6 sm:px-12 bg-transparent min-h-screen">
-      <div className="max-w-4xl mx-auto space-y-16 text-left">
+    <div className="relative min-h-screen overflow-hidden theme-light-surface">
+      <HoneyAmberBackground />
+      <div className="relative z-10 pt-32 pb-24 px-6 sm:px-12">
+        <div className="max-w-4xl mx-auto space-y-16 text-left">
         {/* Header */}
         <div className="space-y-4">
           <div className="apple-badge">
@@ -103,6 +106,7 @@ export default function AboutPage() {
         </div>
       </div>
     </div>
+  </div>
   );
 }
 

@@ -18,6 +18,7 @@ import {
   Cpu,
   Fingerprint,
 } from "lucide-react";
+import { IrisBloomBackground } from "@/components/ui/AtmosphericBackground";
 
 export const metadata = {
   title: "All Features — Nirvana Browser Capabilities Catalog",
@@ -168,8 +169,10 @@ export default function FeaturesPage() {
   ];
 
   return (
-    <div className="pt-32 pb-24 px-6 sm:px-12 bg-transparent min-h-screen">
-      <div className="max-w-6xl mx-auto space-y-16">
+    <div className="relative min-h-screen overflow-hidden theme-light-surface">
+      <IrisBloomBackground />
+      <div className="relative z-10 pt-32 pb-24 px-6 sm:px-12">
+        <div className="max-w-6xl mx-auto space-y-16">
         {/* Header */}
         <div className="max-w-3xl space-y-4 text-left">
           <div className="apple-badge">
@@ -281,6 +284,7 @@ export default function FeaturesPage() {
         </div>
       </div>
     </div>
+  </div>
   );
 }
 

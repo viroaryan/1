@@ -13,6 +13,7 @@ import {
   Sparkles,
   Terminal,
 } from "lucide-react";
+import { EmeraldForestBackground } from "@/components/ui/AtmosphericBackground";
 
 export const metadata = {
   title: "Download Nirvana Browser — Official Android Release",
@@ -22,8 +23,10 @@ export const metadata = {
 
 export default function DownloadPage() {
   return (
-    <div className="pt-32 pb-24 px-6 sm:px-12 bg-transparent min-h-screen">
-      <div className="max-w-5xl mx-auto space-y-16 text-left">
+    <div className="relative min-h-screen overflow-hidden theme-light-surface">
+      <EmeraldForestBackground />
+      <div className="relative z-10 pt-32 pb-24 px-6 sm:px-12">
+        <div className="max-w-5xl mx-auto space-y-16 text-left">
         {/* Header */}
         <div className="max-w-3xl space-y-4">
           <div className="apple-badge">
@@ -156,6 +159,7 @@ export default function DownloadPage() {
         </div>
       </div>
     </div>
+  </div>
   );
 }
 

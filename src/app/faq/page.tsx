@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { HelpCircle, ChevronDown, ChevronUp, Search, ExternalLink } from "lucide-react";
+import { SageMatchaBackground } from "@/components/ui/AtmosphericBackground";
 
 export default function FaqPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -94,8 +95,10 @@ export default function FaqPage() {
   );
 
   return (
-    <div className="pt-28 pb-24 px-6 sm:px-12 bg-transparent min-h-screen">
-      <div className="max-w-4xl mx-auto space-y-12 text-left">
+    <div className="relative min-h-screen overflow-hidden theme-light-surface">
+      <SageMatchaBackground />
+      <div className="relative z-10 pt-28 pb-24 px-6 sm:px-12">
+        <div className="max-w-4xl mx-auto space-y-12 text-left">
         <div className="space-y-4">
           <div className="inline-flex items-center gap-2 micro-label text-brand">
             <HelpCircle className="w-3.5 h-3.5" />
@@ -186,6 +189,7 @@ export default function FaqPage() {
         </div>
       </div>
     </div>
+  </div>
   );
 }
 

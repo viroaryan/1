@@ -5,24 +5,22 @@
 @tailwind utilities;
 
 :root {
-  --bg-rose-primary: #9E122D;
-  --bg-rose-deep: #850B22;
-  --bg-rose-light: #B81938;
-  --text-white: #FFFFFF;
-  --text-rose-soft: #FFE4E8;
-  --text-rose-muted: #FFCCD5;
-  --text-muted: #FFD4DC;
+  --bg-canvas: #FAF9F5;
+  --text-charcoal: #111119;
+  --text-charcoal-deep: #0A0A0F;
+  --text-charcoal-soft: #383848;
+  --text-charcoal-muted: #5C5C70;
+  --text-charcoal-faded: #828296;
+  --border-subtle: rgba(0, 0, 0, 0.08);
   --brand-red: #F43F5E;
-  --glass-border: rgba(255, 255, 255, 0.25);
-  --glass-bg: rgba(110, 10, 30, 0.75);
   --font-serif: 'Cinzel', 'Instrument Serif', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 }
 
 html {
-  background-color: #9E122D;
-  color: #FFFFFF;
+  background-color: #FAF9F5;
+  color: var(--text-charcoal);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -32,17 +30,13 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: #9E122D;
-  color: #FFFFFF;
+  background: #FAF9F5;
+  color: var(--text-charcoal);
   overflow-x: hidden;
-  selection-background-color: #FFFFFF;
-  selection-color: #9E122D;
   position: relative;
 }
 
-/* =========================================================================
-   Rose Red Ethereal Depth Mesh Background (Slightly Lighter Vibrant Velvet Glow)
-========================================================================= */
+/* Subtle Diffused Ambient Glow */
 .aurora-bg-mesh {
   position: fixed;
   inset: 0;
@@ -52,11 +46,9 @@ body {
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(244, 63, 94, 0.45) 0%, transparent 70%),
-    radial-gradient(ellipse 70% 50% at 10% 40%, rgba(184, 25, 56, 0.5) 0%, transparent 60%),
-    radial-gradient(ellipse 70% 50% at 90% 60%, rgba(200, 30, 65, 0.45) 0%, transparent 60%),
-    radial-gradient(ellipse 80% 70% at 50% 110%, rgba(115, 8, 28, 0.75) 0%, transparent 70%),
-    linear-gradient(180deg, #A81532 0%, #9E122D 50%, #7A0A20 100%);
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(244, 179, 194, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 10% 50%, rgba(76, 108, 179, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 40% at 90% 70%, rgba(184, 169, 201, 0.06) 0%, transparent 50%);
   background-attachment: fixed;
 }
 
@@ -469,20 +461,22 @@ body {
    APPLE / SF PRO / MODERN MINIMALIST SAAS DESIGN TOKENS
 ========================================================================= */
 
-/* Floating Minimalist Pill Navigation (Rose Velvet Glass) */
+/* Floating Minimalist Pill Navigation (Obsidian Liquid Glass) */
 .apple-pill-nav {
-  background-color: rgba(95, 4, 20, 0.78);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.4), 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: rgba(18, 18, 26, 0.78);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 12px 36px -6px rgba(0, 0, 0, 0.25), 0 2px 8px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* Apple Dropdown Panel: Rose Crimson Solid Panel with White Border */
+/* Apple Dropdown Panel: Obsidian Liquid Glass with Crisp Borders */
 .apple-dropdown-panel {
-  background-color: #680516 !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
-  box-shadow: 0 24px 60px -8px rgba(0, 0, 0, 0.55), 0 8px 24px -2px rgba(0, 0, 0, 0.3) !important;
+  background-color: rgba(22, 22, 32, 0.96) !important;
+  backdrop-filter: blur(24px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 0 24px 60px -8px rgba(0, 0, 0, 0.45), 0 8px 24px -2px rgba(0, 0, 0, 0.25) !important;
   z-index: 100 !important;
 }
 
@@ -1760,124 +1754,210 @@ body {
 }
 
 /* =========================================================================
-   UNIVERSAL HIGH-CONTRAST CARD TYPOGRAPHY & SURFACE ENFORCEMENT
-   Transforms legacy white cards into radiant rose-velvet liquid glass
-   with crystal-clear high-contrast white & soft-rose typography
+   ADAPTIVE ATMOSPHERIC SURFACE SYSTEM
+   - Light Surfaces: (Coral Gloom, Honey Amber, Sage Matcha, Sky Aurora)
+     Pristine frosted pearl glass, deep obsidian typography, ultra-clean contrast.
+   - Dark Surfaces: (Iris Bloom, Sunset Plum, Emerald Forest)
+     Luminous frosted liquid glass, pure white typography, glowing badges.
 ========================================================================= */
 
-/* Any container with bg-white rendered as a card or pill */
-main .bg-white:not(.apple-btn-primary):not(.apple-btn-brand):not(.uiverse-pill-btn):not(.logo-emblem):not(img):not(svg) {
-  background: rgba(115, 8, 26, 0.72) !important;
-  backdrop-filter: blur(20px) saturate(140%) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(140%) !important;
-  border-color: rgba(255, 255, 255, 0.22) !important;
-  color: #FFFFFF !important;
-  box-shadow: 
-    0 16px 40px -10px rgba(0, 0, 0, 0.45),
-    inset 0 1px 1px rgba(255, 255, 255, 0.25) !important;
+/* 1. LIGHT SURFACE CONTEXT */
+.theme-light-surface {
+  --text-charcoal: #111119;
+  --text-charcoal-deep: #0A0A0F;
+  --text-charcoal-soft: #383848;
+  --text-charcoal-muted: #5C5C70;
+  --text-charcoal-faded: #828296;
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  color: #111119;
 }
 
-/* Ensure solid white buttons keep crisp crimson/dark text and never turn white */
-.apple-btn-primary,
-.apple-btn-primary *,
-.apple-btn-brand,
-.apple-btn-brand * {
-  color: #8B001E !important;
+.theme-light-surface h1,
+.theme-light-surface h2,
+.theme-light-surface h3,
+.theme-light-surface h4,
+.theme-light-surface h5,
+.theme-light-surface h6,
+.theme-light-surface .text-charcoal,
+.theme-light-surface .text-zinc-900,
+.theme-light-surface .text-zinc-800 {
+  color: #111119 !important;
 }
-.apple-btn-primary:hover,
-.apple-btn-primary:hover * {
+
+.theme-light-surface p,
+.theme-light-surface .text-charcoal-soft,
+.theme-light-surface .text-zinc-700,
+.theme-light-surface .text-zinc-600 {
+  color: #383848 !important;
+}
+
+.theme-light-surface .text-charcoal-muted,
+.theme-light-surface .text-zinc-500,
+.theme-light-surface .text-zinc-400 {
+  color: #5C5C70 !important;
+}
+
+/* Light Surface Cards: Frosted Pearl Glass */
+.theme-light-surface .apple-card-light,
+.theme-light-surface .liquid-glass,
+.theme-light-surface .bg-white:not(.apple-btn-primary):not(.uiverse-pill-btn):not(.logo-emblem):not(img):not(svg) {
+  background: rgba(255, 255, 255, 0.82) !important;
+  backdrop-filter: blur(20px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(160%) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 
+    0 16px 36px -8px rgba(0, 0, 0, 0.07),
+    0 4px 12px 0 rgba(0, 0, 0, 0.03),
+    inset 0 1px 1px rgba(255, 255, 255, 0.9) !important;
+  color: #111119 !important;
+}
+
+.theme-light-surface .apple-card-light:hover,
+.theme-light-surface .liquid-glass:hover {
+  border-color: rgba(0, 0, 0, 0.16) !important;
+  box-shadow: 0 24px 50px -10px rgba(0, 0, 0, 0.12) !important;
+}
+
+.theme-light-surface .apple-badge {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  color: #111119 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+}
+.theme-light-surface .apple-badge * {
+  color: #111119 !important;
+}
+
+.theme-light-surface [class*="bg-zinc-"],
+.theme-light-surface [class*="bg-black/"] {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  color: #111119 !important;
+}
+
+.theme-light-surface .apple-btn-primary,
+.theme-light-surface .apple-btn-brand {
+  background-color: #111119 !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  box-shadow: 0 10px 24px -4px rgba(0, 0, 0, 0.25) !important;
+}
+.theme-light-surface .apple-btn-primary *,
+.theme-light-surface .apple-btn-brand * {
+  color: #FFFFFF !important;
+}
+.theme-light-surface .apple-btn-primary:hover *,
+.theme-light-surface .apple-btn-primary:hover {
   color: #0b3d16 !important;
 }
-.apple-btn-brand:hover,
-.apple-btn-brand:hover * {
-  color: #FFFFFF !important;
+
+.theme-light-surface .apple-btn-ghost {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  color: #111119 !important;
 }
-.apple-btn-ghost,
-.apple-btn-ghost * {
+.theme-light-surface .apple-btn-ghost:hover {
+  background-color: #FFFFFF !important;
+  border-color: rgba(0, 0, 0, 0.25) !important;
+}
+
+/* 2. DARK / VIBRANT SURFACE CONTEXT */
+.theme-dark-surface {
+  --text-charcoal: #FFFFFF;
+  --text-charcoal-deep: #FFFFFF;
+  --text-charcoal-soft: #F2F0F4;
+  --text-charcoal-muted: #E0DEE8;
+  --text-charcoal-faded: #C8C5D4;
+  --border-subtle: rgba(255, 255, 255, 0.18);
+  color: #FFFFFF;
+}
+
+.theme-dark-surface h1,
+.theme-dark-surface h2,
+.theme-dark-surface h3,
+.theme-dark-surface h4,
+.theme-dark-surface h5,
+.theme-dark-surface h6,
+.theme-dark-surface .text-charcoal,
+.theme-dark-surface .text-zinc-900,
+.theme-dark-surface .text-zinc-800,
+.theme-dark-surface th {
   color: #FFFFFF !important;
 }
 
-/* Sub-containers with bg-zinc-*, bg-black/* */
-main [class*="bg-zinc-"] {
-  background-color: rgba(255, 255, 255, 0.08) !important;
+.theme-dark-surface p,
+.theme-dark-surface .text-charcoal-soft,
+.theme-dark-surface .text-zinc-700,
+.theme-dark-surface .text-zinc-600 {
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
+.theme-dark-surface .text-charcoal-muted,
+.theme-dark-surface .text-zinc-500,
+.theme-dark-surface .text-zinc-400,
+.theme-dark-surface td {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+
+/* Dark Surface Cards: Frosted Liquid Glass */
+.theme-dark-surface .apple-card-light,
+.theme-dark-surface .liquid-glass,
+.theme-dark-surface .bg-white:not(.apple-btn-primary):not(.uiverse-pill-btn):not(.logo-emblem):not(img):not(svg) {
+  background: rgba(255, 255, 255, 0.12) !important;
+  backdrop-filter: blur(20px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(160%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  box-shadow: 
+    0 20px 48px -10px rgba(0, 0, 0, 0.45),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25) !important;
+  color: #FFFFFF !important;
+}
+
+.theme-dark-surface .apple-badge {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+}
+.theme-dark-surface .apple-badge * {
+  color: #FFFFFF !important;
+}
+
+.theme-dark-surface [class*="bg-zinc-"],
+.theme-dark-surface [class*="bg-black/"] {
+  background-color: rgba(255, 255, 255, 0.1) !important;
   border-color: rgba(255, 255, 255, 0.18) !important;
   color: #FFFFFF !important;
 }
-main [class*="bg-zinc-"] * {
-  color: #FFFFFF !important;
+
+.theme-dark-surface .apple-btn-primary {
+  background-color: #FFFFFF !important;
+  color: #111119 !important;
+  box-shadow: 0 10px 28px -4px rgba(0, 0, 0, 0.4) !important;
 }
-main [class*="border-zinc-"] {
-  border-color: rgba(255, 255, 255, 0.18) !important;
-}
-main [class*="divide-zinc-"] > * + * {
-  border-color: rgba(255, 255, 255, 0.14) !important;
-}
-main [class*="bg-black/"],
-main [class*="bg-black/"] * {
-  background-color: rgba(255, 255, 255, 0.08) !important;
-  color: #FFFFFF !important;
-}
-main [class*="border-black/"] {
-  border-color: rgba(255, 255, 255, 0.18) !important;
+.theme-dark-surface .apple-btn-primary * {
+  color: #111119 !important;
 }
 
-/* Universal Typography within cards and surfaces */
-.uiverse-blob-card .text-charcoal,
-.sazzad-card .text-charcoal,
-.apple-card-light .text-zinc-900,
-.apple-card-light .text-charcoal,
-.apple-card-dark .text-white,
-.liquid-glass .text-white,
-main .text-charcoal,
-main .text-zinc-900,
-main .text-zinc-800,
-main h1,
-main h2,
-main h3,
-main h4,
-main h5,
-main h6,
-main th {
+.theme-dark-surface .apple-btn-ghost {
+  background-color: rgba(255, 255, 255, 0.14) !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
   color: #FFFFFF !important;
 }
 
-.uiverse-blob-card .text-charcoal-muted,
-.sazzad-card .text-charcoal-muted,
-.apple-card-light .text-zinc-600,
-.apple-card-light .text-zinc-500,
-.apple-card-light .text-charcoal-muted,
-.apple-card-dark .text-white\/70,
-.liquid-glass .text-rose-100\/80,
-main .text-charcoal-muted,
-main .text-zinc-600,
-main .text-zinc-500,
-main td {
-  color: #FFE4E8 !important;
+/* Universal Code blocks */
+code {
+  font-family: var(--font-mono);
 }
-
-.uiverse-blob-card .text-charcoal-soft,
-.sazzad-card .text-charcoal-soft,
-.apple-card-light .text-zinc-700,
-.apple-card-light .text-charcoal-soft,
-main .text-charcoal-soft,
-main .text-zinc-700,
-main p {
-  color: #FFF0F2 !important;
+.theme-light-surface code {
+  background-color: rgba(0, 0, 0, 0.06) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  color: #111119 !important;
 }
-
-.uiverse-blob-card .text-charcoal-faded,
-.sazzad-card .text-charcoal-faded,
-.apple-card-light .text-zinc-400,
-main .text-charcoal-faded,
-main .text-zinc-400 {
-  color: #FFCCD5 !important;
-}
-
-/* Code blocks inside cards */
-main code {
+.theme-dark-surface code {
+  background-color: rgba(0, 0, 0, 0.45) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
   color: #FFFFFF !important;
-  background-color: rgba(0, 0, 0, 0.35) !important;
-  border-color: rgba(255, 255, 255, 0.15) !important;
 }
 
 

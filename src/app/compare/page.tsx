@@ -13,6 +13,7 @@ import {
   Shield,
   ArrowRight,
 } from "lucide-react";
+import { CoralGloomBackground } from "@/components/ui/AtmosphericBackground";
 
 interface ComparisonRow {
   category: string;
@@ -74,30 +75,30 @@ export default function CompareMasterPage() {
       nirvanaStatus: "yes",
       chrome: "Disabled on Android",
       chromeStatus: "no",
-      firefox: "Supported Addons",
+      firefox: "Supported Addons (AMO)",
       firefoxStatus: "yes",
-      brave: "Shields Only (No WebExt)",
+      brave: "Built-in Shields Only",
       braveStatus: "partial",
-      mullvad: "Desktop Only (No Mobile)",
-      mullvadStatus: "no",
-      zen: "Desktop Only (No Mobile)",
-      zenStatus: "no",
+      mullvad: "Pre-installed Extensions Only",
+      mullvadStatus: "partial",
+      zen: "Full Gecko Addons",
+      zenStatus: "yes",
     },
     {
-      category: "extensions",
-      criterion: "Ad Blocking Default",
-      nirvana: "uBlock Origin Enabled",
+      category: "privacy",
+      criterion: "Built-in Ad & Script Blocking",
+      nirvana: "uBlock Origin Pre-bundled",
       nirvanaStatus: "yes",
-      chrome: "None (Manifest V3 Limits)",
+      chrome: "None (Google Ads Preserved)",
       chromeStatus: "no",
-      firefox: "ETP (Requires Extension)",
+      firefox: "Enhanced Tracking Protection",
       firefoxStatus: "partial",
-      brave: "Brave Shields Built-in",
+      brave: "Brave Shields Native",
       braveStatus: "yes",
-      mullvad: "uBlock Origin Pre-bundled",
+      mullvad: "DNS-level Ad Blocking",
       mullvadStatus: "yes",
-      zen: "Requires User Install",
-      zenStatus: "partial",
+      zen: "Configurable Tracking Shields",
+      zenStatus: "yes",
     },
     {
       category: "platform",
@@ -117,16 +118,16 @@ export default function CompareMasterPage() {
     },
     {
       category: "platform",
-      criterion: "Underlying Engine",
+      criterion: "Rendering Engine",
       nirvana: "GeckoView 153 (Independent)",
       nirvanaStatus: "yes",
-      chrome: "Blink (Google Chromium)",
+      chrome: "Blink / Chromium",
       chromeStatus: "partial",
-      firefox: "Gecko (Mozilla)",
+      firefox: "GeckoView 153",
       firefoxStatus: "yes",
-      brave: "Blink (Google Chromium)",
+      brave: "Blink / Chromium",
       braveStatus: "partial",
-      mullvad: "Gecko (Mozilla/Tor Base)",
+      mullvad: "Gecko (Tor-hardened)",
       mullvadStatus: "yes",
       zen: "Gecko (Mozilla Base)",
       zenStatus: "yes",
@@ -189,31 +190,33 @@ export default function CompareMasterPage() {
   const renderBadge = (status: "yes" | "partial" | "no", text: string) => {
     if (status === "yes") {
       return (
-        <span className="inline-flex items-center gap-1.5 text-emerald-300 font-medium">
-          <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-          <span className="text-emerald-100">{text}</span>
+        <span className="inline-flex items-center gap-1.5 text-emerald-800 font-semibold">
+          <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0 stroke-[2.5]" />
+          <span>{text}</span>
         </span>
       );
     }
     if (status === "partial") {
       return (
-        <span className="inline-flex items-center gap-1.5 text-amber-300 font-medium">
-          <Minus className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-          <span className="text-amber-100">{text}</span>
+        <span className="inline-flex items-center gap-1.5 text-amber-800 font-semibold">
+          <Minus className="w-3.5 h-3.5 text-amber-600 shrink-0 stroke-[2.5]" />
+          <span>{text}</span>
         </span>
       );
     }
     return (
-      <span className="inline-flex items-center gap-1.5 text-rose-200/70">
-        <X className="w-3.5 h-3.5 text-rose-300/60 shrink-0" />
-        <span className="text-rose-200/80">{text}</span>
+      <span className="inline-flex items-center gap-1.5 text-rose-700 font-medium">
+        <X className="w-3.5 h-3.5 text-rose-600 shrink-0 stroke-[2.5]" />
+        <span>{text}</span>
       </span>
     );
   };
 
   return (
-    <div className="pt-32 pb-24 px-4 sm:px-8 lg:px-12 bg-transparent min-h-screen">
-      <div className="max-w-7xl mx-auto space-y-12 text-left">
+    <div className="relative min-h-screen overflow-hidden theme-light-surface">
+      <CoralGloomBackground />
+      <div className="relative z-10 pt-32 pb-24 px-4 sm:px-8 lg:px-12">
+        <div className="max-w-7xl mx-auto space-y-12 text-left">
         {/* Header */}
         <div className="max-w-3xl space-y-4">
           <div className="apple-badge">
@@ -340,6 +343,7 @@ export default function CompareMasterPage() {
         </div>
       </div>
     </div>
+  </div>
   );
 }
 

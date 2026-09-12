@@ -16,9 +16,9 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="relative bg-[#700617] text-white pt-24 pb-16 overflow-hidden border-t border-white/15">
+    <footer className="relative bg-[#0E0E16] text-white pt-24 pb-16 overflow-hidden border-t border-white/10">
       {/* Soft atmospheric ambient light in footer background */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[360px] bg-red-600/15 blur-3xl pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[360px] bg-indigo-500/10 blur-3xl pointer-events-none" />
       <div className="absolute -bottom-24 right-0 w-[500px] h-[300px] bg-rose-500/10 blur-3xl pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-6 sm:px-10 lg:px-12">

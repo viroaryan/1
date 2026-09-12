@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Clock, Shield, Sparkles, Zap, Wrench, CheckCircle2 } from "lucide-react";
+import { CoralGloomBackground } from "@/components/ui/AtmosphericBackground";
 
 export default function ChangelogPage() {
   const [activeFilter, setActiveFilter] = useState<string>("ALL");
@@ -93,8 +94,10 @@ export default function ChangelogPage() {
   const filters = ["ALL", "UI", "PRIVACY", "PERFORMANCE", "SECURITY", "FIXES"];
 
   return (
-    <div className="pt-28 pb-24 px-6 sm:px-12 bg-transparent min-h-screen">
-      <div className="max-w-4xl mx-auto space-y-12 text-left">
+    <div className="relative min-h-screen overflow-hidden theme-light-surface">
+      <CoralGloomBackground />
+      <div className="relative z-10 pt-28 pb-24 px-6 sm:px-12">
+        <div className="max-w-4xl mx-auto space-y-12 text-left">
         <div className="space-y-4">
           <div className="inline-flex items-center gap-2 micro-label text-brand">
             <Clock className="w-3.5 h-3.5" />
@@ -198,6 +201,7 @@ export default function ChangelogPage() {
         </div>
       </div>
     </div>
+  </div>
   );
 }
 
