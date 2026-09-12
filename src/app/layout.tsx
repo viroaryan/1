@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#ffe8f3",
+  themeColor: "#8B001E",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -88,8 +88,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="min-h-screen flex flex-col bg-transparent text-charcoal font-sans antialiased selection:bg-[#FDE4D2] selection:text-charcoal relative">
-        {/* Uiverse Rotating Pastel Aurora Backdrop */}
+      <body className="min-h-screen flex flex-col bg-[#8B001E] text-white font-sans antialiased selection:bg-white selection:text-[#8B001E] relative">
+        {/* Rose Red Velvet Depth Mesh Backdrop */}
         <div className="aurora-bg-mesh" aria-hidden="true" />
         <Navbar />
         <main className="flex-1">{children}</main>

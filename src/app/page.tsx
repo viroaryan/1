@@ -50,21 +50,21 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
           {/* Left Column: Typography & Intent */}
           <div className="lg:col-span-6 xl:col-span-6 space-y-6 text-left">
-            {/* Apple-style Minimal Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-black/[0.08] shadow-xs text-charcoal">
-              <span className="w-2 h-2 rounded-full bg-emerald-500" />
-              <span className="text-xs font-medium tracking-tight text-charcoal">
+            {/* Apple/Hermes-style Minimal Pill Badge */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 shadow-xs text-white">
+              <span className="w-2 h-2 rounded-full bg-emerald-400" />
+              <span className="text-xs font-mono tracking-wider uppercase text-white/90">
                 Nirvana Browser · Android 16 Ready · GeckoView 153.0.4
               </span>
             </div>
 
-            {/* Apple/SF Pro Clean Typography */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-semibold tracking-tight text-charcoal leading-[1.04]">
+            {/* Hermes-style High-Contrast Serif Display Typography */}
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white font-serif-display uppercase leading-[1.04]">
               Private. Fast. <br />
-              <span className="text-brand font-normal">Beautiful.</span>
+              <span className="text-white/80 font-normal">Beautiful.</span>
             </h1>
 
-            <p className="text-base sm:text-lg lg:text-xl text-charcoal-soft font-normal max-w-xl leading-relaxed">
+            <p className="text-base sm:text-lg lg:text-xl text-rose-100/90 font-normal max-w-xl leading-relaxed">
               A browser built for a quieter web. An independent Android browser powered by Mozilla&apos;s open-source GeckoView engine, modified to strip away tracking dossiers and commercial telemetry.
             </p>
 
@@ -74,7 +74,7 @@ export default function HomePage() {
                 href="https://play.google.com/store/apps/details?id=org.nirvana"
                 target="_blank"
                 rel="noreferrer"
-                className="apple-btn-primary px-7 py-3.5 rounded-full text-xs font-medium tracking-wide inline-flex items-center gap-2.5 shadow-xs"
+                className="apple-btn-primary px-7 py-3.5 rounded-full text-xs font-mono uppercase tracking-wider inline-flex items-center gap-2.5 shadow-md"
               >
                 <Download className="w-4 h-4" />
                 <span>Download for Android</span>
@@ -83,7 +83,7 @@ export default function HomePage() {
 
               <Link
                 href="/browser"
-                className="apple-btn-ghost px-6 py-3.5 rounded-full text-xs font-medium tracking-wide inline-flex items-center gap-2"
+                className="apple-btn-ghost px-6 py-3.5 rounded-full text-xs font-mono uppercase tracking-wider inline-flex items-center gap-2"
               >
                 <span>Explore Browser</span>
                 <ArrowRight className="w-4 h-4" />
@@ -91,18 +91,18 @@ export default function HomePage() {
             </div>
 
             {/* Micro verification badges */}
-            <div className="pt-2 flex flex-wrap items-center gap-4 text-xs text-charcoal-muted">
-              <span className="flex items-center gap-1.5 font-medium">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                GeckoView 153.0.4 Upstream Engine
+            <div className="pt-2 flex flex-wrap items-center gap-4 text-xs font-mono uppercase tracking-wide text-white/70">
+              <span className="flex items-center gap-1.5 font-medium text-white/90">
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                GeckoView Upstream
               </span>
-              <span className="hidden sm:inline text-black/20">·</span>
-              <span className="flex items-center gap-1.5 font-medium">
-                <ShieldCheck className="w-3.5 h-3.5 text-brand" />
+              <span className="hidden sm:inline text-white/30">·</span>
+              <span className="flex items-center gap-1.5 font-medium text-white/90">
+                <ShieldCheck className="w-3.5 h-3.5 text-rose-300" />
                 uBlock Origin Native
               </span>
-              <span className="hidden sm:inline text-black/20">·</span>
-              <span className="font-medium">100% Free & Open Source</span>
+              <span className="hidden sm:inline text-white/30">·</span>
+              <span className="font-medium text-white/90">Open Source • MPL 2.0</span>
             </div>
           </div>
 
