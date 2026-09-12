@@ -998,7 +998,7 @@ export default function HomePage() {
             <div className="inline-flex items-center gap-2 mt-4 px-4 py-1.5 rounded-full bg-white/70 backdrop-blur-md border border-black/[0.08] shadow-xs">
               <span className="w-2 h-2 rounded-full bg-brand animate-pulse" />
               <span className="text-xs font-mono text-charcoal font-medium">
-                Hover or tap to unlock Nirvana community channels
+                Official Channels · Instagram · GitHub · Telegram · Google Play
               </span>
             </div>
           </div>

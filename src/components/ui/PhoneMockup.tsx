@@ -18,36 +18,38 @@ export default function PhoneMockup({
 }: PhoneMockupProps) {
   return (
     <div className={`relative flex flex-col items-center group ${className}`}>
-      {/* Outer Phone Hardware Chasis — Solid Static Apple Frame */}
-      <div className="relative w-[220px] sm:w-[240px] md:w-[250px] rounded-[40px] p-2.5 bg-gradient-to-b from-[#EAEAE6] via-[#D8D7D2] to-[#BCBBB5] shadow-[0_20px_50px_-12px_rgba(17,17,25,0.12),0_4px_12px_-2px_rgba(17,17,25,0.04)] border border-white/80">
-        {/* Inner Black Bezel */}
-        <div className="relative rounded-[32px] overflow-hidden bg-[#111115] p-1.5 border border-black/40">
-          {/* Top Camera Punch Hole & Speaker */}
-          <div className="absolute top-2.5 left-1/2 -translate-x-1/2 z-20 flex items-center justify-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-[#050508] border border-white/10 shadow-inner flex items-center justify-center">
-              <div className="w-1 h-1 rounded-full bg-[#1a2b40]/80" />
-            </div>
-          </div>
+      {/* 
+        Heavy Bulldog 3D Smartphone Device Mockup (by mobinkakei on Uiverse)
+        Enhanced with responsive dimensions and high-fidelity screen clipping
+      */}
+      <div
+        className="relative flex flex-col justify-start items-center h-[460px] w-[230px] sm:h-[480px] sm:w-[240px] border-4 border-black rounded-[28px] bg-gray-50 overflow-visible transition-transform duration-300 group-hover:-translate-y-1"
+        style={{
+          boxShadow: "7px 7px 3px 8px rgb(209, 218, 218)",
+        }}
+      >
+        {/* Top Speaker / Dynamic Notch Bar */}
+        <span className="border border-black bg-black w-24 h-2.5 rounded-br-xl rounded-bl-xl z-20 shrink-0" />
 
-          {/* Screen Display Area */}
-          <div className="relative w-full aspect-[9/19.5] rounded-[26px] overflow-hidden bg-white shadow-inner">
-            <Image
-              src={src}
-              alt={alt}
-              fill
-              sizes="(max-width: 768px) 300px, 360px"
-              className="object-cover object-top"
-              priority={priority}
-            />
+        {/* Side Hardware Button 1 (Top Right - Power/Volume) */}
+        <span className="absolute -right-[9px] top-20 border-4 border-black h-9 rounded-md bg-black z-10" />
 
-            {/* Subtle glass reflection highlight across the glass screen */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.06] to-transparent pointer-events-none" />
-          </div>
+        {/* Side Hardware Button 2 (Bottom Right - Volume Down / Action) */}
+        <span className="absolute -right-[9px] bottom-48 border-4 border-black h-12 rounded-md bg-black z-10" />
 
-          {/* Bottom Home Indicator Gesture Bar */}
-          <div className="w-full flex justify-center py-1.5">
-            <div className="w-28 h-1 bg-white/30 rounded-full" />
-          </div>
+        {/* Screen Display Container — Perfectly Fitted Inside Bezel */}
+        <div className="relative w-full flex-1 rounded-[22px] overflow-hidden bg-[#111116] m-1 mb-2">
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            sizes="(max-width: 768px) 240px, 280px"
+            className="object-cover object-top"
+            priority={priority}
+          />
+
+          {/* Subtle Screen Reflection Glare */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.05] to-transparent pointer-events-none" />
         </div>
       </div>
 
