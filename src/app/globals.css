@@ -480,41 +480,116 @@ body {
   z-index: 100 !important;
 }
 
-/* Apple Minimalist Light Card: Static, Solid, No Hover Zoom */
+/* Apple Minimalist Light Card: Enhanced with Uiverse Soft Aurora Depth */
 .apple-card-light {
+  position: relative;
   background-color: #FFFFFF;
-  border: 1px solid rgba(17, 17, 25, 0.07);
-  box-shadow: 0 1px 3px rgba(17, 17, 25, 0.02), 0 6px 20px -4px rgba(17, 17, 25, 0.04);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(17, 17, 25, 0.08);
+  box-shadow: 
+    12px 12px 32px rgba(0, 0, 0, 0.04), 
+    -8px -8px 24px rgba(255, 255, 255, 0.9),
+    0 1px 3px rgba(17, 17, 25, 0.02);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+  z-index: 1;
+}
+.apple-card-light::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(242, 101, 34, 0.12), rgba(255, 154, 162, 0.08), transparent 70%);
+  filter: blur(20px);
+  animation: sazzad-aurora-move 8s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 0;
 }
 .apple-card-light:hover {
-  border-color: rgba(17, 17, 25, 0.15);
-  box-shadow: 0 2px 6px rgba(17, 17, 25, 0.04), 0 10px 28px -6px rgba(17, 17, 25, 0.07);
+  transform: translateY(-3px);
+  border-color: rgba(242, 101, 34, 0.25);
+  box-shadow: 
+    16px 20px 40px rgba(0, 0, 0, 0.07), 
+    -10px -10px 30px rgba(255, 255, 255, 0.95);
+}
+.apple-card-light > * {
+  position: relative;
+  z-index: 2;
 }
 
 /* Apple Minimalist Obsidian Dark Card: Sleek Contrast */
 .apple-card-dark {
+  position: relative;
   background-color: #111116;
   border: 1px solid rgba(255, 255, 255, 0.09);
   box-shadow: 0 14px 40px -10px rgba(0, 0, 0, 0.35);
   color: #FFFFFF;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+  z-index: 1;
+}
+.apple-card-dark::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(242, 101, 34, 0.22), rgba(255, 45, 85, 0.12), transparent 70%);
+  filter: blur(24px);
+  animation: sazzad-aurora-move 7s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 0;
 }
 .apple-card-dark:hover {
-  border-color: rgba(255, 255, 255, 0.18);
-  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.45);
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.48);
+}
+.apple-card-dark > * {
+  position: relative;
+  z-index: 2;
 }
 
-/* Apple Vapor / Soft Mist Surface Card */
+/* Apple Vapor / Soft Mist Surface Card: Sazzad Dual Glow */
 .apple-card-mist {
-  background: linear-gradient(150deg, #FAFAF8 0%, #F2F1EC 100%);
-  border: 1px solid rgba(17, 17, 25, 0.06);
-  box-shadow: 0 1px 4px rgba(17, 17, 25, 0.02), 0 8px 24px -6px rgba(17, 17, 25, 0.04);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  background: linear-gradient(150deg, rgba(250, 250, 248, 0.95) 0%, rgba(242, 241, 236, 0.9) 100%);
+  border: 1px solid rgba(17, 17, 25, 0.08);
+  box-shadow: 
+    14px 14px 36px rgba(0, 0, 0, 0.05),
+    -10px -10px 28px rgba(255, 255, 255, 0.85);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+  z-index: 1;
+}
+.apple-card-mist::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.14), rgba(14, 165, 233, 0.1), transparent 70%);
+  filter: blur(22px);
+  animation: blob-bounce 7s infinite ease;
+  pointer-events: none;
+  z-index: 0;
 }
 .apple-card-mist:hover {
-  border-color: rgba(17, 17, 25, 0.14);
-  box-shadow: 0 2px 8px rgba(17, 17, 25, 0.03), 0 12px 32px -6px rgba(17, 17, 25, 0.06);
+  transform: translateY(-3px);
+  border-color: rgba(139, 92, 246, 0.25);
+  box-shadow: 
+    18px 24px 45px rgba(0, 0, 0, 0.08),
+    -12px -12px 32px rgba(255, 255, 255, 0.95);
+}
+.apple-card-mist > * {
+  position: relative;
+  z-index: 2;
 }
 
 /* =========================================================================
@@ -1480,4 +1555,191 @@ body {
 .quote-card-sky .author svg {
   color: rgba(30, 58, 138, 0.55);
 }
+
+/* =========================================================================
+   UIVERSE ANIMATED CARD VARIETIES (by Aryan)
+   Variety 1: .card with .bg + .blob (Bouncing Multicolored Blob)
+   Variety 2: .sazzad-card with .sazzad-bg + .sazzad-aurora (Liquid Glass Aurora)
+========================================================================= */
+
+/* --- VARIETY 1: UIVERSE BOUNCING BLOB CARD SYSTEM --- */
+@keyframes blob-bounce {
+  0% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+  }
+  50% {
+    transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+  }
+  75% {
+    transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+  }
+  100% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+}
+
+.uiverse-blob-card {
+  position: relative;
+  border-radius: 20px;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.08), -15px -15px 40px rgba(255, 255, 255, 0.8);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.uiverse-blob-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.12), -15px -15px 40px rgba(255, 255, 255, 0.9);
+}
+
+.uiverse-blob-card > .bg,
+.uiverse-blob-card > .card-bg-inner {
+  position: absolute;
+  inset: 5px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 16px;
+  overflow: hidden;
+  outline: 2px solid rgba(255, 255, 255, 0.9);
+  pointer-events: none;
+}
+
+.uiverse-blob-card > .blob {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  opacity: 0.9;
+  filter: blur(14px);
+  animation: blob-bounce 6s infinite ease;
+  pointer-events: none;
+}
+
+/* Blob Color Themes */
+.blob-red { background-color: #ff2d55; }
+.blob-orange { background-color: #f26522; }
+.blob-amber { background-color: #f59e0b; }
+.blob-emerald { background-color: #10b981; }
+.blob-cyan { background-color: #0ea5e9; }
+.blob-purple { background-color: #8b5cf6; }
+.blob-pink { background-color: #ec4899; }
+
+/* Responsive utility wrapper for content inside blob card */
+.uiverse-blob-card > .card-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* --- VARIETY 2: UIVERSE SAZZAD AURORA CARD SYSTEM --- */
+@keyframes sazzad-aurora-move {
+  0% {
+    transform: translate(-60%, -60%) scale(1);
+  }
+  30% {
+    transform: translate(10%, -40%) scale(1.15);
+  }
+  60% {
+    transform: translate(20%, 20%) scale(1.05);
+  }
+  80% {
+    transform: translate(-40%, 10%) scale(1.2);
+  }
+  100% {
+    transform: translate(-60%, -60%) scale(1);
+  }
+}
+
+.sazzad-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow:
+    20px 20px 50px rgba(0, 0, 0, 0.08),
+    -18px -18px 45px rgba(255, 255, 255, 0.65);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  z-index: 1;
+}
+
+.sazzad-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    25px 35px 65px rgba(0, 0, 0, 0.16),
+    -20px -20px 50px rgba(255, 255, 255, 0.8);
+}
+
+/* Inner Glow Panel */
+.sazzad-bg {
+  position: absolute;
+  inset: 6px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.88),
+    rgba(245, 245, 245, 0.65)
+  );
+  border-radius: 18px;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Animated Aurora Blob */
+.sazzad-aurora {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  filter: blur(30px);
+  z-index: 1;
+  animation: sazzad-aurora-move 7s infinite ease-in-out;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+/* Aurora Color Themes */
+.aurora-ruby {
+  background: radial-gradient(circle, rgba(255, 0, 72, 0.85), rgba(255, 77, 77, 0.4), transparent);
+}
+.aurora-coral {
+  background: radial-gradient(circle, rgba(242, 101, 34, 0.85), rgba(255, 140, 66, 0.4), transparent);
+}
+.aurora-lavender {
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.85), rgba(192, 132, 252, 0.4), transparent);
+}
+.aurora-cyan {
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.85), rgba(56, 189, 248, 0.4), transparent);
+}
+.aurora-emerald {
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.85), rgba(52, 211, 153, 0.4), transparent);
+}
+.aurora-amber {
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.85), rgba(251, 191, 36, 0.4), transparent);
+}
+
+/* Content Container for Sazzad Card */
+.sazzad-card > .sazzad-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+}
+
 

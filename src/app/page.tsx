@@ -391,102 +391,118 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Feature Card 2: Rich Visual for Total Cookie Protection */}
-            <div className="rounded-3xl apple-card-light overflow-hidden flex flex-col justify-between p-7 relative">
-              <div className="space-y-2.5">
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono font-medium px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
-                    Cookie Isolation
-                  </span>
-                  <ShieldCheck className="w-5 h-5 text-emerald-600" />
+            {/* Feature Card 2: Rich Visual for Total Cookie Protection (Variety 2: Sazzad Emerald Aurora) */}
+            <div className="rounded-3xl sazzad-card overflow-hidden flex flex-col justify-between p-7 relative">
+              <div className="sazzad-bg"></div>
+              <div className="sazzad-aurora aurora-emerald"></div>
+              <div className="sazzad-content flex flex-col justify-between h-full space-y-4">
+                <div className="space-y-2.5">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-mono font-medium px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
+                      Cookie Isolation
+                    </span>
+                    <ShieldCheck className="w-5 h-5 text-emerald-600" />
+                  </div>
+                  <h4 className="text-xl font-semibold tracking-tight text-charcoal">
+                    Total Cookie Protection
+                  </h4>
+                  <p className="text-xs text-charcoal-muted leading-relaxed">
+                    Creates an isolated sandbox for every website you visit, preventing ad companies from building cross-site behavioral dossiers.
+                  </p>
                 </div>
-                <h4 className="text-xl font-semibold tracking-tight text-charcoal">
-                  Total Cookie Protection
-                </h4>
-                <p className="text-xs text-charcoal-muted leading-relaxed">
-                  Creates an isolated sandbox for every website you visit, preventing ad companies from building cross-site behavioral dossiers.
-                </p>
-              </div>
 
-              <div className="relative w-full aspect-[4/3] my-4 rounded-xl overflow-hidden border border-black/[0.06]">
-                <Image
-                  src="/assets/card_cookie_containment.jpg"
-                  alt="Cookie Partition Sandbox Vaults"
-                  fill
-                  sizes="400px"
-                  className="object-cover object-center"
-                />
-              </div>
-
-              <Link href="/features/protection" className="text-xs font-medium text-brand hover:underline flex items-center justify-between pt-2">
-                <span>View protection specs</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
-
-            {/* Feature Card 3: Password Vault */}
-            <div className="rounded-3xl apple-card-light p-7 flex flex-col justify-between space-y-4">
-              <div className="space-y-3">
-                <div className="w-10 h-10 rounded-xl bg-amber-50 text-[#D97706] border border-amber-200 flex items-center justify-center">
-                  <KeyRound className="w-5 h-5" />
+                <div className="relative w-full aspect-[4/3] my-2 rounded-xl overflow-hidden border border-black/[0.06] shadow-xs">
+                  <Image
+                    src="/assets/card_cookie_containment.jpg"
+                    alt="Cookie Partition Sandbox Vaults"
+                    fill
+                    sizes="400px"
+                    className="object-cover object-center"
+                  />
                 </div>
-                <h4 className="text-xl font-semibold tracking-tight text-charcoal">
-                  Local Password Vault
-                </h4>
-                <p className="text-xs text-charcoal-muted leading-relaxed">
-                  Stores website logins and passkeys locally using Android Keystore hardware-backed encryption with biometric fingerprint unlock.
-                </p>
-              </div>
 
-              <div className="pt-4 border-t border-black/[0.06] flex items-center justify-between text-xs">
-                <span className="text-charcoal-faded text-[11px] font-mono">SQLite + Keystore</span>
-                <Link href="/features/passwords" className="text-brand font-medium hover:underline">
-                  Vault details →
+                <Link href="/features/protection" className="text-xs font-medium text-brand hover:underline flex items-center justify-between pt-2">
+                  <span>View protection specs</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
             </div>
 
-            {/* Feature Card 4: DNS over HTTPS */}
-            <div className="rounded-3xl apple-card-light p-7 flex flex-col justify-between space-y-4">
-              <div className="space-y-3">
-                <div className="w-10 h-10 rounded-xl bg-sky-50 text-[#0284C7] border border-sky-200 flex items-center justify-center">
-                  <Globe2 className="w-5 h-5" />
+            {/* Feature Card 3: Password Vault (Variety 1: Bouncing Amber Blob) */}
+            <div className="rounded-3xl uiverse-blob-card p-7 flex flex-col justify-between relative">
+              <div className="card-bg-inner"></div>
+              <div className="blob blob-amber"></div>
+              <div className="card-content flex flex-col justify-between h-full space-y-4">
+                <div className="space-y-3">
+                  <div className="w-10 h-10 rounded-xl bg-amber-50 text-[#D97706] border border-amber-200 flex items-center justify-center shadow-xs">
+                    <KeyRound className="w-5 h-5" />
+                  </div>
+                  <h4 className="text-xl font-semibold tracking-tight text-charcoal">
+                    Local Password Vault
+                  </h4>
+                  <p className="text-xs text-charcoal-muted leading-relaxed">
+                    Stores website logins and passkeys locally using Android Keystore hardware-backed encryption with biometric fingerprint unlock.
+                  </p>
                 </div>
-                <h4 className="text-xl font-semibold tracking-tight text-charcoal">
-                  DNS over HTTPS (DoH)
-                </h4>
-                <p className="text-xs text-charcoal-muted leading-relaxed">
-                  Encrypts your domain queries through Cloudflare or NextDNS, stopping Wi-Fi snoopers and telecom providers from logging your visited domains.
-                </p>
-              </div>
 
-              <div className="pt-4 border-t border-black/[0.06] flex items-center justify-between text-xs">
-                <span className="text-charcoal-faded text-[11px] font-mono">RFC 8484 Protocol</span>
-                <Link href="/features/dns" className="text-brand font-medium hover:underline">
-                  Network details →
-                </Link>
+                <div className="pt-4 border-t border-black/[0.06] flex items-center justify-between text-xs">
+                  <span className="text-charcoal-faded text-[11px] font-mono">SQLite + Keystore</span>
+                  <Link href="/features/passwords" className="text-brand font-medium hover:underline">
+                    Vault details →
+                  </Link>
+                </div>
               </div>
             </div>
 
-            {/* Feature Card 5: Delete on Quit */}
-            <div className="rounded-3xl apple-card-light p-7 flex flex-col justify-between space-y-4">
-              <div className="space-y-3">
-                <div className="w-10 h-10 rounded-xl bg-rose-50 text-[#E11D48] border border-rose-200 flex items-center justify-center">
-                  <EyeOff className="w-5 h-5" />
+            {/* Feature Card 4: DNS over HTTPS (Variety 2: Sazzad Cyan Aurora) */}
+            <div className="rounded-3xl sazzad-card p-7 flex flex-col justify-between relative">
+              <div className="sazzad-bg"></div>
+              <div className="sazzad-aurora aurora-cyan"></div>
+              <div className="sazzad-content flex flex-col justify-between h-full space-y-4">
+                <div className="space-y-3">
+                  <div className="w-10 h-10 rounded-xl bg-sky-50 text-[#0284C7] border border-sky-200 flex items-center justify-center shadow-xs">
+                    <Globe2 className="w-5 h-5" />
+                  </div>
+                  <h4 className="text-xl font-semibold tracking-tight text-charcoal">
+                    DNS over HTTPS (DoH)
+                  </h4>
+                  <p className="text-xs text-charcoal-muted leading-relaxed">
+                    Encrypts your domain queries through Cloudflare or NextDNS, stopping Wi-Fi snoopers and telecom providers from logging your visited domains.
+                  </p>
                 </div>
-                <h4 className="text-xl font-semibold tracking-tight text-charcoal">
-                  Delete on Quit Controls
-                </h4>
-                <p className="text-xs text-charcoal-muted leading-relaxed">
-                  Automatic purging of open tabs, cookies, media cache, and site permissions upon closing the browser session.
-                </p>
-              </div>
 
-              <div className="pt-4 border-t border-black/[0.06] flex items-center justify-between text-xs">
-                <span className="text-charcoal-faded text-[11px] font-mono">Zero Disk Persistence</span>
-                <Link href="/features/privacy-on-quit" className="text-brand font-medium hover:underline">
-                  Purge settings →
-                </Link>
+                <div className="pt-4 border-t border-black/[0.06] flex items-center justify-between text-xs">
+                  <span className="text-charcoal-faded text-[11px] font-mono">RFC 8484 Protocol</span>
+                  <Link href="/features/dns" className="text-brand font-medium hover:underline">
+                    Network details →
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Feature Card 5: Delete on Quit (Variety 1: Bouncing Rose-Red Blob) */}
+            <div className="rounded-3xl uiverse-blob-card p-7 flex flex-col justify-between relative">
+              <div className="card-bg-inner"></div>
+              <div className="blob blob-red"></div>
+              <div className="card-content flex flex-col justify-between h-full space-y-4">
+                <div className="space-y-3">
+                  <div className="w-10 h-10 rounded-xl bg-rose-50 text-[#E11D48] border border-rose-200 flex items-center justify-center shadow-xs">
+                    <EyeOff className="w-5 h-5" />
+                  </div>
+                  <h4 className="text-xl font-semibold tracking-tight text-charcoal">
+                    Delete on Quit Controls
+                  </h4>
+                  <p className="text-xs text-charcoal-muted leading-relaxed">
+                    Automatic purging of open tabs, cookies, media cache, and site permissions upon closing the browser session.
+                  </p>
+                </div>
+
+                <div className="pt-4 border-t border-black/[0.06] flex items-center justify-between text-xs">
+                  <span className="text-charcoal-faded text-[11px] font-mono">Zero Disk Persistence</span>
+                  <Link href="/features/privacy-on-quit" className="text-brand font-medium hover:underline">
+                    Purge settings →
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -574,26 +590,46 @@ export default function HomePage() {
                 title: "About & Build Verification",
                 desc: "GeckoView 153.0.4, Android 16 target, MPL 2.0 notices",
               },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="shrink-0 snap-start flex flex-col items-center bg-[#FAFAF8] p-5 rounded-3xl border border-black/[0.06] w-[280px] sm:w-[320px]"
-              >
-                <div className="relative w-full aspect-[9/18] rounded-2xl overflow-hidden bg-[#111115] border border-black/10">
-                  <Image
-                    src={item.src}
-                    alt={item.title}
-                    fill
-                    sizes="300px"
-                    className="object-cover object-top"
-                  />
+            ].map((item, i) => {
+              const isEven = i % 2 === 0;
+              const blobColors = ["blob-orange", "blob-cyan", "blob-emerald", "blob-purple"];
+              const auroraColors = ["aurora-ruby", "aurora-lavender", "aurora-coral", "aurora-cyan"];
+              return (
+                <div
+                  key={i}
+                  className={`shrink-0 snap-start flex flex-col items-center p-5 rounded-3xl w-[285px] sm:w-[325px] relative overflow-hidden ${
+                    isEven ? "uiverse-blob-card" : "sazzad-card"
+                  }`}
+                >
+                  {isEven ? (
+                    <>
+                      <div className="card-bg-inner"></div>
+                      <div className={`blob ${blobColors[(i / 2) % blobColors.length]}`}></div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="sazzad-bg"></div>
+                      <div className={`sazzad-aurora ${auroraColors[Math.floor(i / 2) % auroraColors.length]}`}></div>
+                    </>
+                  )}
+                  <div className={isEven ? "card-content w-full" : "sazzad-content w-full"}>
+                    <div className="relative w-full aspect-[9/18] rounded-2xl overflow-hidden bg-[#111115] border border-black/10 shadow-sm">
+                      <Image
+                        src={item.src}
+                        alt={item.title}
+                        fill
+                        sizes="300px"
+                        className="object-cover object-top"
+                      />
+                    </div>
+                    <div className="w-full text-left pt-4 space-y-1">
+                      <div className="text-sm font-semibold text-charcoal">{item.title}</div>
+                      <div className="text-xs text-charcoal-muted leading-relaxed">{item.desc}</div>
+                    </div>
+                  </div>
                 </div>
-                <div className="w-full text-left pt-4 space-y-1">
-                  <div className="text-sm font-semibold text-charcoal">{item.title}</div>
-                  <div className="text-xs text-charcoal-muted leading-relaxed">{item.desc}</div>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -616,18 +652,26 @@ export default function HomePage() {
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              <div className="p-4 rounded-2xl apple-card-light">
-                <Smartphone className="w-5 h-5 text-brand mb-2" />
-                <div className="text-xs font-semibold text-charcoal">Bottom Toolbar Layout</div>
-                <div className="text-xs text-charcoal-muted mt-1 leading-relaxed">
-                  Natural thumb reach for navigation, tab switcher, and quick search.
+              <div className="p-5 rounded-2xl uiverse-blob-card relative">
+                <div className="card-bg-inner"></div>
+                <div className="blob blob-orange"></div>
+                <div className="card-content">
+                  <Smartphone className="w-5 h-5 text-brand mb-2" />
+                  <div className="text-xs font-semibold text-charcoal">Bottom Toolbar Layout</div>
+                  <div className="text-xs text-charcoal-muted mt-1 leading-relaxed">
+                    Natural thumb reach for navigation, tab switcher, and quick search.
+                  </div>
                 </div>
               </div>
-              <div className="p-4 rounded-2xl apple-card-light">
-                <Layers className="w-5 h-5 text-[#7C3AED] mb-2" />
-                <div className="text-xs font-semibold text-charcoal">Simple vs Expanded</div>
-                <div className="text-xs text-charcoal-muted mt-1 leading-relaxed">
-                  Choose between a compact floating bar or full-width action dock.
+              <div className="p-5 rounded-2xl sazzad-card relative">
+                <div className="sazzad-bg"></div>
+                <div className="sazzad-aurora aurora-lavender"></div>
+                <div className="sazzad-content">
+                  <Layers className="w-5 h-5 text-[#7C3AED] mb-2" />
+                  <div className="text-xs font-semibold text-charcoal">Simple vs Expanded</div>
+                  <div className="text-xs text-charcoal-muted mt-1 leading-relaxed">
+                    Choose between a compact floating bar or full-width action dock.
+                  </div>
                 </div>
               </div>
             </div>
@@ -678,23 +722,26 @@ export default function HomePage() {
           SCREEN 16: OPEN SOURCE STORY — BUILT ON OPEN SOURCE
       ========================================================================= */}
       <section className="py-24 px-6 sm:px-12 bg-transparent border-b border-black/[0.06]">
-        <div className="max-w-5xl mx-auto rounded-3xl apple-card-light p-8 sm:p-12 text-left space-y-8">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-black/[0.06] pb-6">
-            <div>
-              <span className="text-xs font-mono uppercase tracking-wider text-brand font-semibold">
-                Standing on Giants
-              </span>
-              <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight text-charcoal mt-1">
-                Built on Open Source
-              </h3>
+        <div className="max-w-5xl mx-auto rounded-3xl sazzad-card p-8 sm:p-12 text-left space-y-8 relative">
+          <div className="sazzad-bg"></div>
+          <div className="sazzad-aurora aurora-coral"></div>
+          <div className="sazzad-content space-y-8">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-black/[0.06] pb-6">
+              <div>
+                <span className="text-xs font-mono uppercase tracking-wider text-brand font-semibold">
+                  Standing on Giants
+                </span>
+                <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight text-charcoal mt-1">
+                  Built on Open Source
+                </h3>
+              </div>
+              <Link
+                href="/mozilla-attribution"
+                className="px-4 py-2 rounded-full border border-black/[0.08] text-xs font-mono uppercase tracking-wider text-charcoal hover:bg-black/[0.03] transition-colors inline-flex items-center gap-1.5"
+              >
+                Mozilla Attribution <ChevronRight className="w-3.5 h-3.5" />
+              </Link>
             </div>
-            <Link
-              href="/mozilla-attribution"
-              className="px-4 py-2 rounded-full border border-black/[0.08] text-xs font-mono uppercase tracking-wider text-charcoal hover:bg-black/[0.03] transition-colors inline-flex items-center gap-1.5"
-            >
-              Mozilla Attribution <ChevronRight className="w-3.5 h-3.5" />
-            </Link>
-          </div>
 
           <div className="space-y-4 text-sm sm:text-base text-charcoal-soft leading-relaxed">
             <p>
@@ -719,6 +766,7 @@ export default function HomePage() {
                 UI & ergonomics redesign, telemetry minimization, custom app icon system, bottom toolbar implementation, and independent distribution.
               </div>
             </div>
+          </div>
           </div>
         </div>
       </section>
@@ -955,22 +1003,26 @@ export default function HomePage() {
             />
           </div>
 
-          {/* Join the Team Callout */}
-          <div className="p-6 sm:p-8 rounded-3xl apple-card-mist flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
-            <div>
-              <h4 className="text-lg font-semibold text-charcoal">
-                We are looking for more builders.
-              </h4>
-              <p className="text-xs sm:text-sm text-charcoal-muted mt-1">
-                Gecko developers, Android engineers, UI/UX designers, and technical writers are welcome.
-              </p>
+          {/* Join the Team Callout (Variety 1: Bouncing Cyan Blob) */}
+          <div className="p-6 sm:p-8 rounded-3xl uiverse-blob-card relative text-center sm:text-left">
+            <div className="card-bg-inner"></div>
+            <div className="blob blob-cyan"></div>
+            <div className="card-content flex flex-col sm:flex-row items-center justify-between gap-6">
+              <div>
+                <h4 className="text-lg font-semibold text-charcoal">
+                  We are looking for more builders.
+                </h4>
+                <p className="text-xs sm:text-sm text-charcoal-muted mt-1">
+                  Gecko developers, Android engineers, UI/UX designers, and technical writers are welcome.
+                </p>
+              </div>
+              <Link
+                href="/join"
+                className="apple-btn-primary px-6 py-3 rounded-full text-xs font-medium tracking-wide shrink-0"
+              >
+                Join the Team →
+              </Link>
             </div>
-            <Link
-              href="/join"
-              className="apple-btn-primary px-6 py-3 rounded-full text-xs font-medium tracking-wide shrink-0"
-            >
-              Join the Team →
-            </Link>
           </div>
         </div>
       </section>
