@@ -52,31 +52,31 @@ export default function SearchEngineSwitcher() {
   const [query, setQuery] = useState("");
 
   return (
-    <div className="w-full max-w-3xl mx-auto rounded-3xl liquid-glass border border-black/[0.08] p-6 sm:p-8 shadow-float">
-      <div className="flex items-center justify-between gap-4 pb-4 border-b border-black/[0.06]">
+    <div className="w-full max-w-3xl mx-auto rounded-3xl liquid-glass border border-white/20 p-6 sm:p-8 shadow-2xl">
+      <div className="flex items-center justify-between gap-4 pb-4 border-b border-white/15">
         <div>
-          <span className="micro-label text-brand">Search Independence</span>
-          <h4 className="text-xl font-serif-display text-charcoal mt-0.5">
+          <span className="micro-label text-white/90">Search Independence</span>
+          <h4 className="text-xl font-serif-display text-white mt-0.5">
             You Choose Your Gateway to Information
           </h4>
         </div>
-        <span className="text-[11px] font-mono px-2.5 py-1 rounded-full bg-white border border-black/[0.06] text-charcoal-muted">
+        <span className="text-[11px] font-mono px-2.5 py-1 rounded-full bg-white/10 border border-white/20 text-white/90">
           No Search Monopoly
         </span>
       </div>
 
       {/* Interactive Search Bar Simulation */}
       <div className="mt-6 relative">
-        <div className="flex items-center gap-3 p-3 sm:p-4 rounded-2xl bg-white border border-black/[0.08] shadow-sm focus-within:ring-2 focus-within:ring-brand/30 transition-all">
-          <Search className="w-5 h-5 text-charcoal-muted shrink-0" />
+        <div className="flex items-center gap-3 p-3 sm:p-4 rounded-2xl bg-white/15 border border-white/25 shadow-inner focus-within:ring-2 focus-within:ring-white/50 transition-all">
+          <Search className="w-5 h-5 text-white/70 shrink-0" />
           <input
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={`Search with ${selectedEngine.name} or type URL...`}
-            className="flex-1 text-sm bg-transparent outline-none text-charcoal placeholder:text-charcoal-muted/60"
+            className="flex-1 text-sm bg-transparent outline-none text-white placeholder:text-white/60"
           />
-          <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-black/[0.04] text-charcoal-muted">
+          <span className="text-[11px] font-mono px-2.5 py-1 rounded-md bg-white/20 text-white border border-white/20">
             {selectedEngine.name}
           </span>
         </div>
@@ -92,24 +92,24 @@ export default function SearchEngineSwitcher() {
               onClick={() => setSelectedEngine(engine)}
               className={`p-4 rounded-2xl text-left transition-all duration-300 border flex flex-col justify-between gap-2 ${
                 isSelected
-                  ? "bg-white border-brand shadow-md ring-1 ring-brand/30"
-                  : "bg-white/60 hover:bg-white border-black/[0.05] hover:border-black/[0.12]"
+                  ? "bg-white/25 border-white shadow-lg ring-2 ring-white/40"
+                  : "bg-white/10 hover:bg-white/15 border-white/15 hover:border-white/30"
               }`}
             >
               <div className="flex items-center justify-between w-full">
-                <span className="text-sm font-semibold text-charcoal flex items-center gap-2">
+                <span className="text-sm font-semibold text-white flex items-center gap-2">
                   {engine.name}
-                  {isSelected && <Check className="w-4 h-4 text-brand" />}
+                  {isSelected && <Check className="w-4 h-4 text-emerald-400" />}
                 </span>
-                <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full border ${engine.color}`}>
+                <span className={`text-[10px] font-mono px-2 py-0.5 rounded-full border bg-white/10 text-white border-white/20`}>
                   {engine.badge}
                 </span>
               </div>
-              <p className="text-xs text-charcoal-muted leading-relaxed">
+              <p className="text-xs text-rose-100/90 leading-relaxed">
                 {engine.description}
               </p>
-              <div className="text-[10px] font-mono text-charcoal-faded flex items-center gap-1 pt-1 border-t border-black/[0.04]">
-                <ShieldCheck className="w-3 h-3 text-emerald-600" />
+              <div className="text-[10px] font-mono text-white/75 flex items-center gap-1 pt-1 border-t border-white/10">
+                <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
                 {engine.privacy}
               </div>
             </button>
@@ -117,7 +117,7 @@ export default function SearchEngineSwitcher() {
         })}
       </div>
 
-      <div className="mt-6 pt-4 border-t border-black/[0.06] text-xs text-charcoal-muted flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 font-mono text-[11px]">
+      <div className="mt-6 pt-4 border-t border-white/15 text-xs text-white/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 font-mono text-[11px]">
         <span>Nirvana does not index or monetize your queries.</span>
         <span>Set default or switch per tab in Settings.</span>
       </div>

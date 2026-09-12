@@ -85,51 +85,49 @@ body {
 ========================================================================= */
 
 .liquid-glass {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.65) 100%);
-  backdrop-filter: blur(20px) saturate(140%);
-  -webkit-backdrop-filter: blur(20px) saturate(140%);
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  background: rgba(75, 4, 16, 0.75);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   box-shadow: 
-    0 4px 24px -1px rgba(17, 17, 25, 0.04),
-    0 1px 3px 0 rgba(17, 17, 25, 0.02),
-    inset 0 1px 2px 0 rgba(255, 255, 255, 0.95),
-    inset 0 -1px 2px 0 rgba(17, 17, 25, 0.03);
+    0 16px 40px -10px rgba(0, 0, 0, 0.5),
+    0 4px 12px 0 rgba(0, 0, 0, 0.25),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.25);
   position: relative;
+  color: #FFFFFF;
 }
 
 .liquid-glass-nav {
-  background: linear-gradient(135deg, rgba(252, 252, 250, 0.88) 0%, rgba(247, 247, 243, 0.72) 100%);
+  background: rgba(85, 4, 18, 0.85);
   backdrop-filter: blur(24px) saturate(160%);
   -webkit-backdrop-filter: blur(24px) saturate(160%);
-  border: 1px solid rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 
-    0 12px 36px -8px rgba(17, 17, 25, 0.06),
-    0 2px 8px 0 rgba(17, 17, 25, 0.02),
-    inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.95);
+    0 12px 36px -8px rgba(0, 0, 0, 0.5),
+    inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.3);
 }
 
 /* 3D Specular Bevel & Tactile Glass Elevation */
 .liquid-glass-3d {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.7) 100%);
+  background: rgba(85, 4, 18, 0.82);
   backdrop-filter: blur(24px) saturate(150%);
   -webkit-backdrop-filter: blur(24px) saturate(150%);
-  border: 1px solid rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   box-shadow:
-    0 20px 40px -15px rgba(17, 17, 25, 0.07),
-    0 8px 16px -4px rgba(17, 17, 25, 0.03),
-    inset 0 1.5px 1px 0 rgba(255, 255, 255, 1),
-    inset 0 -1.5px 1px 0 rgba(17, 17, 25, 0.03);
+    0 20px 40px -15px rgba(0, 0, 0, 0.5),
+    0 8px 16px -4px rgba(0, 0, 0, 0.25),
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.3);
   transform: perspective(1000px) translateZ(0);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+  color: #FFFFFF;
 }
 
 .liquid-glass-3d:hover {
-  border-color: rgba(17, 17, 25, 0.16);
+  border-color: rgba(255, 255, 255, 0.45);
   box-shadow: 
-    0 18px 45px -8px rgba(17, 17, 25, 0.08),
-    0 6px 16px -2px rgba(17, 17, 25, 0.03),
-    inset 0 1.5px 1px 0 rgba(255, 255, 255, 1),
-    inset 0 -1.5px 1px 0 rgba(17, 17, 25, 0.03);
+    0 24px 50px -8px rgba(0, 0, 0, 0.65),
+    0 8px 20px -2px rgba(0, 0, 0, 0.35),
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.45);
 }
 
 /* Colored 3D Liquid Glass Card Variants with Ethereal Glow */
@@ -137,164 +135,157 @@ body {
 /* 1. Sunset Coral Glow (Primary Brand) */
 .glass-box-coral {
   position: relative;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 248, 245, 0.78) 100%);
-  border: 1px solid rgba(242, 101, 34, 0.18);
+  background: rgba(85, 4, 18, 0.85);
+  border: 1px solid rgba(255, 120, 80, 0.35);
   box-shadow: 
-    0 16px 36px -10px rgba(242, 101, 34, 0.12),
-    0 4px 12px -2px rgba(17, 17, 25, 0.03),
-    inset 0 1.5px 1px 0 rgba(255, 255, 255, 1),
-    inset 0 -1px 2px 0 rgba(242, 101, 34, 0.05);
+    0 16px 36px -10px rgba(0, 0, 0, 0.5),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
 }
 .glass-box-coral::before {
   content: '';
   position: absolute;
   inset: -1px;
   border-radius: inherit;
-  background: radial-gradient(circle at 85% 15%, rgba(242, 101, 34, 0.25), transparent 60%);
+  background: radial-gradient(circle at 85% 15%, rgba(242, 101, 34, 0.3), transparent 60%);
   pointer-events: none;
   z-index: 0;
 }
 .glass-box-coral:hover {
   box-shadow: 
-    0 24px 50px -12px rgba(242, 101, 34, 0.22),
-    0 8px 20px -4px rgba(242, 101, 34, 0.1),
-    inset 0 1.5px 1px 0 rgba(255, 255, 255, 1);
-  border-color: rgba(242, 101, 34, 0.35);
+    0 24px 50px -12px rgba(0, 0, 0, 0.65),
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.35);
+  border-color: rgba(255, 120, 80, 0.6);
 }
 
 /* 2. Lavender Bloom Glow (Ecosystem & Privacy) */
 .glass-box-lavender {
   position: relative;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.94) 0%, rgba(248, 246, 254, 0.8) 100%);
-  border: 1px solid rgba(157, 141, 241, 0.2);
+  background: rgba(85, 4, 18, 0.85);
+  border: 1px solid rgba(180, 160, 255, 0.35);
   box-shadow: 
-    0 16px 36px -10px rgba(157, 141, 241, 0.14),
-    0 4px 12px -2px rgba(17, 17, 25, 0.03),
-    inset 0 1.5px 1px 0 rgba(255, 255, 255, 1);
+    0 16px 36px -10px rgba(0, 0, 0, 0.5),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
 }
 .glass-box-lavender::before {
   content: '';
   position: absolute;
   inset: -1px;
   border-radius: inherit;
-  background: radial-gradient(circle at 85% 15%, rgba(157, 141, 241, 0.28), transparent 60%);
+  background: radial-gradient(circle at 85% 15%, rgba(157, 141, 241, 0.3), transparent 60%);
   pointer-events: none;
   z-index: 0;
 }
 .glass-box-lavender:hover {
   box-shadow: 
-    0 24px 50px -12px rgba(157, 141, 241, 0.25),
-    0 8px 20px -4px rgba(157, 141, 241, 0.12),
-    inset 0 1.5px 1px 0 rgba(255, 255, 255, 1);
-  border-color: rgba(157, 141, 241, 0.4);
+    0 24px 50px -12px rgba(0, 0, 0, 0.65),
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.35);
+  border-color: rgba(180, 160, 255, 0.6);
 }
 
 /* 3. Electric Mist Cyan Glow (Ergonomics & DNS) */
 .glass-box-cyan {
   position: relative;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.94) 0%, rgba(244, 250, 253, 0.8) 100%);
-  border: 1px solid rgba(56, 189, 248, 0.22);
+  background: rgba(85, 4, 18, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.35);
   box-shadow: 
-    0 16px 36px -10px rgba(56, 189, 248, 0.14),
-    0 4px 12px -2px rgba(17, 17, 25, 0.03),
-    inset 0 1.5px 1px 0 rgba(255, 255, 255, 1);
+    0 16px 36px -10px rgba(0, 0, 0, 0.5),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
 }
 .glass-box-cyan::before {
   content: '';
   position: absolute;
   inset: -1px;
   border-radius: inherit;
-  background: radial-gradient(circle at 85% 15%, rgba(56, 189, 248, 0.28), transparent 60%);
+  background: radial-gradient(circle at 85% 15%, rgba(56, 189, 248, 0.3), transparent 60%);
   pointer-events: none;
   z-index: 0;
 }
 .glass-box-cyan:hover {
   box-shadow: 
-    0 24px 50px -12px rgba(56, 189, 248, 0.25),
-    0 8px 20px -4px rgba(56, 189, 248, 0.12),
-    inset 0 1.5px 1px 0 rgba(255, 255, 255, 1);
-  border-color: rgba(56, 189, 248, 0.45);
+    0 24px 50px -12px rgba(0, 0, 0, 0.65),
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.35);
+  border-color: rgba(56, 189, 248, 0.6);
 }
 
 /* 4. Serene Emerald Mint Glow (Clean Web & Shield) */
 .glass-box-emerald {
   position: relative;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.94) 0%, rgba(244, 252, 247, 0.8) 100%);
-  border: 1px solid rgba(16, 185, 129, 0.2);
+  background: rgba(85, 4, 18, 0.85);
+  border: 1px solid rgba(52, 211, 153, 0.35);
   box-shadow: 
-    0 16px 36px -10px rgba(16, 185, 129, 0.12),
-    0 4px 12px -2px rgba(17, 17, 25, 0.03),
-    inset 0 1.5px 1px 0 rgba(255, 255, 255, 1);
+    0 16px 36px -10px rgba(0, 0, 0, 0.5),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
 }
 .glass-box-emerald::before {
   content: '';
   position: absolute;
   inset: -1px;
   border-radius: inherit;
-  background: radial-gradient(circle at 85% 15%, rgba(16, 185, 129, 0.25), transparent 60%);
+  background: radial-gradient(circle at 85% 15%, rgba(16, 185, 129, 0.3), transparent 60%);
   pointer-events: none;
   z-index: 0;
 }
 .glass-box-emerald:hover {
   box-shadow: 
-    0 24px 50px -12px rgba(16, 185, 129, 0.22),
-    0 8px 20px -4px rgba(16, 185, 129, 0.1),
-    inset 0 1.5px 1px 0 rgba(255, 255, 255, 1);
-  border-color: rgba(16, 185, 129, 0.4);
+    0 24px 50px -12px rgba(0, 0, 0, 0.65),
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.35);
+  border-color: rgba(52, 211, 153, 0.6);
 }
 
 /* 5. Champagne Gold / Amber Glow (Security & Vault) */
 .glass-box-amber {
   position: relative;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.94) 0%, rgba(254, 250, 242, 0.8) 100%);
-  border: 1px solid rgba(245, 158, 11, 0.2);
+  background: rgba(85, 4, 18, 0.85);
+  border: 1px solid rgba(251, 191, 36, 0.35);
   box-shadow: 
-    0 16px 36px -10px rgba(245, 158, 11, 0.12),
-    0 4px 12px -2px rgba(17, 17, 25, 0.03),
-    inset 0 1.5px 1px 0 rgba(255, 255, 255, 1);
+    0 16px 36px -10px rgba(0, 0, 0, 0.5),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
 }
 .glass-box-amber::before {
   content: '';
   position: absolute;
   inset: -1px;
   border-radius: inherit;
-  background: radial-gradient(circle at 85% 15%, rgba(245, 158, 11, 0.28), transparent 60%);
+  background: radial-gradient(circle at 85% 15%, rgba(245, 158, 11, 0.3), transparent 60%);
   pointer-events: none;
   z-index: 0;
 }
 .glass-box-amber:hover {
   box-shadow: 
-    0 24px 50px -12px rgba(245, 158, 11, 0.22),
-    0 8px 20px -4px rgba(245, 158, 11, 0.1),
-    inset 0 1.5px 1px 0 rgba(255, 255, 255, 1);
-  border-color: rgba(245, 158, 11, 0.4);
+    0 24px 50px -12px rgba(0, 0, 0, 0.65),
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.35);
+  border-color: rgba(251, 191, 36, 0.6);
 }
 
 /* 6. Ruby Rose Glow (Delete on Quit) */
 .glass-box-rose {
   position: relative;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 245, 247, 0.8) 100%);
-  border: 1px solid rgba(244, 63, 94, 0.2);
+  background: rgba(85, 4, 18, 0.85);
+  border: 1px solid rgba(244, 63, 94, 0.35);
   box-shadow: 
-    0 16px 36px -10px rgba(244, 63, 94, 0.12),
-    0 4px 12px -2px rgba(17, 17, 25, 0.03),
-    inset 0 1.5px 1px 0 rgba(255, 255, 255, 1);
+    0 16px 36px -10px rgba(0, 0, 0, 0.5),
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
 }
 .glass-box-rose::before {
   content: '';
   position: absolute;
   inset: -1px;
   border-radius: inherit;
-  background: radial-gradient(circle at 85% 15%, rgba(244, 63, 94, 0.25), transparent 60%);
+  background: radial-gradient(circle at 85% 15%, rgba(244, 63, 94, 0.3), transparent 60%);
   pointer-events: none;
   z-index: 0;
 }
 .glass-box-rose:hover {
   box-shadow: 
-    0 24px 50px -12px rgba(244, 63, 94, 0.22),
-    0 8px 20px -4px rgba(244, 63, 94, 0.1),
-    inset 0 1.5px 1px 0 rgba(255, 255, 255, 1);
-  border-color: rgba(244, 63, 94, 0.4);
+    0 24px 50px -12px rgba(0, 0, 0, 0.65),
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.35);
+  border-color: rgba(244, 63, 94, 0.6);
 }
 
 /* Multi-Chromatic Aurora Glow (Hero & Badges - Static GPU Optimized) */
@@ -1614,12 +1605,13 @@ body {
   border-radius: 20px;
   z-index: 1;
   overflow: hidden;
-  box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.08), -15px -15px 40px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
   transition: box-shadow 0.25s ease;
+  color: #FFFFFF;
 }
 
 .uiverse-blob-card:hover {
-  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.12), -15px -15px 40px rgba(255, 255, 255, 0.9);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.6);
 }
 
 .uiverse-blob-card > .bg,
@@ -1627,12 +1619,12 @@ body {
   position: absolute;
   inset: 5px;
   z-index: 2;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(85, 4, 18, 0.88);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border-radius: 16px;
   overflow: hidden;
-  outline: 2px solid rgba(255, 255, 255, 0.9);
+  outline: 1.5px solid rgba(255, 255, 255, 0.22);
   pointer-events: none;
 }
 
@@ -1665,6 +1657,7 @@ body {
   z-index: 3;
   width: 100%;
   height: 100%;
+  color: #FFFFFF;
 }
 
 
@@ -1691,36 +1684,30 @@ body {
   position: relative;
   border-radius: 24px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(70, 3, 14, 0.7);
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow:
-    20px 20px 50px rgba(0, 0, 0, 0.08),
-    -18px -18px 45px rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.5);
   transition: box-shadow 0.3s ease;
   z-index: 1;
+  color: #FFFFFF;
 }
 
 .sazzad-card:hover {
-  box-shadow:
-    25px 35px 65px rgba(0, 0, 0, 0.16),
-    -20px -20px 50px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.65);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 /* Inner Glow Panel */
 .sazzad-bg {
   position: absolute;
   inset: 6px;
-  background: linear-gradient(
-    145deg,
-    rgba(255, 255, 255, 0.88),
-    rgba(245, 245, 245, 0.65)
-  );
+  background: rgba(85, 4, 18, 0.85);
   border-radius: 18px;
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 2;
   pointer-events: none;
 }

@@ -777,58 +777,58 @@ export default function HomePage() {
       <section className="py-24 px-6 sm:px-12 bg-transparent border-b border-black/[0.06]">
         <div className="max-w-5xl mx-auto space-y-8 text-center">
           <div>
-            <span className="text-xs font-mono uppercase tracking-wider text-brand font-semibold">
+            <span className="text-xs font-mono uppercase tracking-wider text-rose-300 font-semibold">
               Radical Transparency
             </span>
-            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-charcoal mt-1">
+            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-white mt-1">
               No browser is best at everything.
             </h2>
-            <p className="text-sm sm:text-base text-charcoal-soft max-w-xl mx-auto mt-2">
+            <p className="text-sm sm:text-base text-rose-100/90 max-w-xl mx-auto mt-2">
               We don&apos;t believe in fake marketing scores. Here is an honest preview of how Nirvana compares with Chrome, Brave, and Firefox.
             </p>
           </div>
 
           {/* Comparison Matrix Table */}
-          <div className="rounded-2xl border border-black/[0.08] overflow-hidden text-left shadow-xs">
+          <div className="rounded-2xl border border-white/20 overflow-hidden text-left shadow-2xl bg-[#52030f]/80 backdrop-blur-md">
             <div className="overflow-x-auto">
               <table className="w-full text-xs font-mono">
                 <thead>
-                  <tr className="bg-white/80 backdrop-blur-sm text-charcoal border-b border-black/[0.06]">
-                    <th className="p-3.5 sm:p-4 font-semibold">Dimension</th>
-                    <th className="p-3.5 sm:p-4 font-semibold text-brand">Nirvana (Android)</th>
-                    <th className="p-3.5 sm:p-4 font-semibold">Google Chrome</th>
-                    <th className="p-3.5 sm:p-4 font-semibold">Brave Browser</th>
-                    <th className="p-3.5 sm:p-4 font-semibold">Mozilla Firefox</th>
+                  <tr className="bg-white/10 text-white border-b border-white/15">
+                    <th className="p-3.5 sm:p-4 font-semibold text-white">Dimension</th>
+                    <th className="p-3.5 sm:p-4 font-bold text-white bg-white/10">Nirvana (Android)</th>
+                    <th className="p-3.5 sm:p-4 font-semibold text-white/80">Google Chrome</th>
+                    <th className="p-3.5 sm:p-4 font-semibold text-white/80">Brave Browser</th>
+                    <th className="p-3.5 sm:p-4 font-semibold text-white/80">Mozilla Firefox</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-black/[0.05] bg-white">
-                  <tr>
-                    <td className="p-3.5 sm:p-4 font-sans font-medium text-charcoal">Browser Engine</td>
-                    <td className="p-3.5 sm:p-4 font-bold text-brand">GeckoView 153</td>
-                    <td className="p-3.5 sm:p-4 text-charcoal-muted">Blink / Chromium</td>
-                    <td className="p-3.5 sm:p-4 text-charcoal-muted">Blink / Chromium</td>
-                    <td className="p-3.5 sm:p-4 text-charcoal-muted">GeckoView 153</td>
+                <tbody className="divide-y divide-white/10">
+                  <tr className="hover:bg-white/[0.04] transition-colors">
+                    <td className="p-3.5 sm:p-4 font-sans font-medium text-white">Browser Engine</td>
+                    <td className="p-3.5 sm:p-4 font-bold text-emerald-400 bg-white/5">GeckoView 153</td>
+                    <td className="p-3.5 sm:p-4 text-white/70">Blink / Chromium</td>
+                    <td className="p-3.5 sm:p-4 text-white/70">Blink / Chromium</td>
+                    <td className="p-3.5 sm:p-4 text-white/70">GeckoView 153</td>
                   </tr>
-                  <tr>
-                    <td className="p-3.5 sm:p-4 font-sans font-medium text-charcoal">Mobile Extensions</td>
-                    <td className="p-3.5 sm:p-4 text-emerald-700 font-bold">✓ Full uBlock & Addons</td>
-                    <td className="p-3.5 sm:p-4 text-rose-600">✕ Disabled on Android</td>
-                    <td className="p-3.5 sm:p-4 text-amber-700">~ Built-in Shields Only</td>
-                    <td className="p-3.5 sm:p-4 text-emerald-700">✓ Supported Addons</td>
+                  <tr className="hover:bg-white/[0.04] transition-colors">
+                    <td className="p-3.5 sm:p-4 font-sans font-medium text-white">Mobile Extensions</td>
+                    <td className="p-3.5 sm:p-4 text-emerald-400 font-bold bg-white/5">✓ Full uBlock & Addons</td>
+                    <td className="p-3.5 sm:p-4 text-rose-300">✕ Disabled on Android</td>
+                    <td className="p-3.5 sm:p-4 text-amber-300">~ Built-in Shields Only</td>
+                    <td className="p-3.5 sm:p-4 text-emerald-400">✓ Supported Addons</td>
                   </tr>
-                  <tr>
-                    <td className="p-3.5 sm:p-4 font-sans font-medium text-charcoal">Telemetry Model</td>
-                    <td className="p-3.5 sm:p-4 text-emerald-700 font-bold">Minimized / Stripped</td>
-                    <td className="p-3.5 sm:p-4 text-rose-600">Extensive Google Ad Sync</td>
-                    <td className="p-3.5 sm:p-4 text-emerald-700">Privacy Preserving</td>
-                    <td className="p-3.5 sm:p-4 text-charcoal-muted">Standard Opt-Out</td>
+                  <tr className="hover:bg-white/[0.04] transition-colors">
+                    <td className="p-3.5 sm:p-4 font-sans font-medium text-white">Telemetry Model</td>
+                    <td className="p-3.5 sm:p-4 text-emerald-400 font-bold bg-white/5">Minimized / Stripped</td>
+                    <td className="p-3.5 sm:p-4 text-rose-300">Extensive Google Ad Sync</td>
+                    <td className="p-3.5 sm:p-4 text-emerald-400">Privacy Preserving</td>
+                    <td className="p-3.5 sm:p-4 text-white/70">Standard Opt-Out</td>
                   </tr>
-                  <tr>
-                    <td className="p-3.5 sm:p-4 font-sans font-medium text-charcoal">Desktop Version</td>
-                    <td className="p-3.5 sm:p-4 text-amber-700">~ Mobile Focused (Planned)</td>
-                    <td className="p-3.5 sm:p-4 text-emerald-700">✓ All Platforms</td>
-                    <td className="p-3.5 sm:p-4 text-emerald-700">✓ All Platforms</td>
-                    <td className="p-3.5 sm:p-4 text-emerald-700">✓ All Platforms</td>
+                  <tr className="hover:bg-white/[0.04] transition-colors">
+                    <td className="p-3.5 sm:p-4 font-sans font-medium text-white">Desktop Version</td>
+                    <td className="p-3.5 sm:p-4 text-amber-300 bg-white/5">~ Mobile Focused (Planned)</td>
+                    <td className="p-3.5 sm:p-4 text-emerald-400">✓ All Platforms</td>
+                    <td className="p-3.5 sm:p-4 text-emerald-400">✓ All Platforms</td>
+                    <td className="p-3.5 sm:p-4 text-emerald-400">✓ All Platforms</td>
                   </tr>
                 </tbody>
               </table>
