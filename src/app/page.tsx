@@ -27,14 +27,12 @@ import {
   BookOpen,
   KeyRound,
 } from "lucide-react";
-import PhoneMockup from "@/components/ui/PhoneMockup";
 import ProtectionDemo from "@/components/ui/ProtectionDemo";
 import SearchEngineSwitcher from "@/components/ui/SearchEngineSwitcher";
 import FounderProfileCard from "@/components/ui/FounderProfileCard";
 import TeamMemberUiverseCard from "@/components/ui/TeamMemberUiverseCard";
 import SocialCubeWidget from "@/components/ui/SocialCubeWidget";
 import EcosystemWaveCard from "@/components/ui/EcosystemWaveCard";
-import Nirvana3DCoin from "@/components/ui/Nirvana3DCoin";
 import { UiverseQuoteCard, QuoteCardColorVariant } from "@/components/ui/UiverseQuoteCard";
 
 export default function HomePage() {
@@ -47,9 +45,9 @@ export default function HomePage() {
         {/* Subtle Ambient Light Glow */}
         <div className="absolute top-12 left-1/2 -translate-x-1/2 w-[700px] h-[500px] atmospheric-bloom opacity-40 pointer-events-none" />
 
-        <div className="relative max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
-          {/* Left Column: Typography & Intent */}
-          <div className="lg:col-span-6 xl:col-span-6 space-y-6 text-left">
+        <div className="relative max-w-4xl mx-auto w-full text-center space-y-7">
+          {/* Centralized Typography & Intent */}
+          <div className="space-y-6">
             {/* Apple/Hermes-style Minimal Pill Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 shadow-xs text-white">
               <span className="w-2 h-2 rounded-full bg-emerald-400" />
@@ -59,22 +57,22 @@ export default function HomePage() {
             </div>
 
             {/* Hermes-style High-Contrast Serif Display Typography */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white font-serif-display uppercase leading-[1.04]">
+            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold tracking-tight text-white font-serif-display uppercase leading-[1.04]">
               Private. Fast. <br />
               <span className="text-white/80 font-normal">Beautiful.</span>
             </h1>
 
-            <p className="text-base sm:text-lg lg:text-xl text-rose-100/90 font-normal max-w-xl leading-relaxed">
+            <p className="text-lg sm:text-xl lg:text-2xl text-rose-100/90 font-normal max-w-2xl mx-auto leading-relaxed">
               A browser built for a quieter web. An independent Android browser powered by Mozilla&apos;s open-source GeckoView engine, modified to strip away tracking dossiers and commercial telemetry.
             </p>
 
             {/* CTAs */}
-            <div className="pt-2 flex flex-wrap items-center gap-3.5">
+            <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
               <a
                 href="https://play.google.com/store/apps/details?id=org.nirvana"
                 target="_blank"
                 rel="noreferrer"
-                className="apple-btn-primary px-7 py-3.5 rounded-full text-xs font-mono uppercase tracking-wider inline-flex items-center gap-2.5 shadow-md"
+                className="apple-btn-primary px-8 py-4 rounded-full text-xs font-mono uppercase tracking-wider inline-flex items-center gap-2.5 shadow-md"
               >
                 <Download className="w-4 h-4" />
                 <span>Download for Android</span>
@@ -83,7 +81,7 @@ export default function HomePage() {
 
               <Link
                 href="/browser"
-                className="apple-btn-ghost px-6 py-3.5 rounded-full text-xs font-mono uppercase tracking-wider inline-flex items-center gap-2"
+                className="apple-btn-ghost px-7 py-4 rounded-full text-xs font-mono uppercase tracking-wider inline-flex items-center gap-2"
               >
                 <span>Explore Browser</span>
                 <ArrowRight className="w-4 h-4" />
@@ -91,7 +89,7 @@ export default function HomePage() {
             </div>
 
             {/* Micro verification badges */}
-            <div className="pt-2 flex flex-wrap items-center gap-4 text-xs font-mono uppercase tracking-wide text-white/70">
+            <div className="pt-3 flex flex-wrap items-center justify-center gap-4 text-xs font-mono uppercase tracking-wide text-white/70">
               <span className="flex items-center gap-1.5 font-medium text-white/90">
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
                 GeckoView Upstream
@@ -105,58 +103,10 @@ export default function HomePage() {
               <span className="font-medium text-white/90">Open Source • MPL 2.0</span>
             </div>
           </div>
-
-          {/* Right Column: Studio Showcase (Phone Mockup + 3D Rotating Nirvana Token with Proper Spacing) */}
-          <div className="lg:col-span-6 xl:col-span-6 flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-10 xl:gap-12 pt-6 lg:pt-0">
-            {/* Phone Mockup — Scaled & Centered with Zero Edge Overflow */}
-            <div className="shrink-0 flex justify-center">
-              <PhoneMockup
-                src="/assets/screenshots/home.jpeg"
-                alt="Nirvana Browser Home Screen"
-                caption="Official Nirvana 1.0.2 · Noise-Free Hubs"
-                priority
-              />
-            </div>
-
-            {/* Authentic 3D Rotating Nirvana Coin — Generous Spacing, Full 180px Scale */}
-            <div className="shrink-0 flex justify-center">
-              <Nirvana3DCoin size={180} showCaption={true} />
-            </div>
-          </div>
         </div>
       </section>
 
-      {/* =========================================================================
-          SCREEN 01.5: MODERN SAAS DASHBOARD SHOWCASE (RICH GRAPHIC ASSET)
-      ========================================================================= */}
-      <section className="py-16 px-6 sm:px-12 bg-transparent border-y border-black/[0.06]">
-        <div className="max-w-6xl mx-auto space-y-8 text-center">
-          <div className="space-y-2">
-            <span className="text-xs font-mono uppercase tracking-wider text-brand font-semibold">
-              On-Device Telemetry & Insights
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-charcoal">
-              Granular Telemetry & Threat Visibility
-            </h2>
-            <p className="text-sm sm:text-base text-charcoal-soft max-w-xl mx-auto">
-              Know exactly what scripts, tracking requests, and third-party cookies are intercepted in real-time.
-            </p>
-          </div>
 
-          {/* High-End Studio SaaS Dashboard Graphic */}
-          <div className="relative rounded-3xl overflow-hidden border border-black/[0.08] shadow-float bg-[#111116]">
-            <div className="relative w-full aspect-[16/9] sm:aspect-[16/9]">
-              <Image
-                src="/assets/saas_browser_hero.jpg"
-                alt="Nirvana Browser Telemetry and Privacy Analytics Dashboard"
-                fill
-                sizes="(max-width: 1200px) 100vw, 1200px"
-                className="object-cover object-center"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* =========================================================================
           SCREEN 02 & 03: THE PROBLEM — DIGITAL ATMOSPHERE AUDIT
@@ -259,78 +209,69 @@ export default function HomePage() {
           SCREEN 05 & 06: MEET NIRVANA — THE ENGINE & DEFENSE MATRIX
       ========================================================================= */}
       <section className="py-24 sm:py-32 px-6 sm:px-12 bg-transparent border-b border-black/[0.06]">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-5 space-y-6">
-            <span className="text-xs font-mono uppercase tracking-wider text-brand font-semibold">
+        <div className="max-w-5xl mx-auto space-y-10 text-center">
+          <div className="space-y-4 max-w-2xl mx-auto">
+            <span className="text-xs font-mono uppercase tracking-wider text-rose-300 font-semibold">
               Independent Engineering
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-charcoal leading-tight">
+            <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-white leading-tight font-serif-display uppercase">
               Meet Nirvana. <br />
-              Your browsing. <br />
-              <span className="text-brand">Your space.</span>
+              Your browsing. Your space.
             </h2>
-            <p className="text-sm sm:text-base text-charcoal-soft leading-relaxed">
+            <p className="text-sm sm:text-base text-rose-100/90 leading-relaxed">
               We took the robust, battle-tested GeckoView engine maintained by Mozilla, forked it into our independent lab, redesigned the interface for single-handed mobile navigation, and stripped telemetry pipelines at the root.
             </p>
-
-            <div className="space-y-3 pt-2">
-              {[
-                {
-                  title: "Total Cookie Protection",
-                  desc: "Isolates cookies to the site where they were created, preventing cross-site tracking dossiers.",
-                  icon: ShieldCheck,
-                  iconColor: "text-[#F26522]",
-                },
-                {
-                  title: "Pre-Configured uBlock Origin",
-                  desc: "Deep integration with world-class open-source ad and script filtering.",
-                  icon: Puzzle,
-                  iconColor: "text-[#7C3AED]",
-                },
-                {
-                  title: "Delete On Quit Controls",
-                  desc: "Configurable purge of tabs, history, cookies, and cache the moment you close the app.",
-                  icon: EyeOff,
-                  iconColor: "text-[#E11D48]",
-                },
-              ].map((f, i) => {
-                const IconComp = f.icon;
-                return (
-                  <div key={i} className="p-4 rounded-2xl apple-card-light flex items-start gap-3.5">
-                    <div className="w-8 h-8 rounded-xl bg-black/[0.03] flex items-center justify-center shrink-0 mt-0.5">
-                      <IconComp className={`w-4 h-4 ${f.iconColor}`} />
-                    </div>
-                    <div>
-                      <div className="text-xs font-semibold text-charcoal">{f.title}</div>
-                      <div className="text-xs text-charcoal-muted leading-relaxed mt-0.5">{f.desc}</div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
-            <div className="pt-2">
-              <Link
-                href="/features/privacy"
-                className="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-brand hover:underline"
-              >
-                <span>Read our technical privacy transparency report</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
           </div>
 
-          <div className="lg:col-span-7 flex flex-col sm:flex-row items-center justify-center gap-6">
-            <PhoneMockup
-              src="/assets/screenshots/tracking-protection.jpeg"
-              alt="Enhanced Tracking Protection UI"
-              caption="Standard, Strict & Custom protection with Total Cookie Shield"
-            />
-            <PhoneMockup
-              src="/assets/screenshots/private-browsing.jpeg"
-              alt="Private Browsing Screen"
-              caption="True private mode: leaves no trace on device memory"
-            />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left pt-2">
+            {[
+              {
+                title: "Total Cookie Protection",
+                desc: "Isolates cookies to the site where they were created, preventing cross-site tracking dossiers.",
+                icon: ShieldCheck,
+                badge: "Strict Partitioning",
+              },
+              {
+                title: "Pre-Configured uBlock Origin",
+                desc: "Deep integration with world-class open-source ad and script filtering out of the box.",
+                icon: Puzzle,
+                badge: "0ms Intercept",
+              },
+              {
+                title: "Delete On Quit Controls",
+                desc: "Configurable purge of tabs, history, cookies, and cache the moment you close the app.",
+                icon: EyeOff,
+                badge: "Zero Persistence",
+              },
+            ].map((f, i) => {
+              const IconComp = f.icon;
+              return (
+                <div key={i} className="p-6 rounded-3xl liquid-glass border border-white/20 flex flex-col justify-between gap-4 shadow-xl">
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <div className="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-white">
+                        <IconComp className="w-5 h-5 text-white" />
+                      </div>
+                      <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/10 text-white/80 border border-white/15">
+                        {f.badge}
+                      </span>
+                    </div>
+                    <div className="text-base font-semibold text-white">{f.title}</div>
+                    <div className="text-xs text-rose-100/80 leading-relaxed">{f.desc}</div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="pt-2">
+            <Link
+              href="/features/privacy"
+              className="apple-btn-ghost px-6 py-3 rounded-full text-xs font-mono uppercase tracking-wider inline-flex items-center gap-2"
+            >
+              <span>Read our technical privacy transparency report</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
           </div>
         </div>
       </section>
@@ -361,29 +302,34 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Feature Card 1: Rich Visual for uBlock Origin (Dark Obsidian Card) */}
             <div className="lg:col-span-2 rounded-3xl apple-card-dark overflow-hidden flex flex-col justify-between p-7 sm:p-9 relative">
-              <div className="space-y-3 z-10 max-w-md">
+              <div className="space-y-4 z-10 max-w-lg">
                 <span className="text-[10px] font-mono font-medium px-2.5 py-1 rounded-full bg-orange-500/20 text-orange-300 border border-orange-500/30">
                   Pre-Configured Extension
                 </span>
-                <h4 className="text-2xl font-semibold tracking-tight text-white">
+                <h4 className="text-2xl sm:text-3xl font-semibold tracking-tight text-white">
                   Native uBlock Origin Content Blocking
                 </h4>
-                <p className="text-xs text-white/70 leading-relaxed">
-                  World-class ad, script, and cookie-wall mitigation enabled out-of-the-box. Intercepts thousands of invasive requests with zero latency.
+                <p className="text-sm text-white/70 leading-relaxed">
+                  World-class ad, script, and cookie-wall mitigation enabled out-of-the-box. Intercepts thousands of invasive requests with zero latency before network dispatch.
                 </p>
               </div>
 
-              <div className="relative w-full aspect-[16/9] mt-6 rounded-2xl overflow-hidden border border-white/10">
-                <Image
-                  src="/assets/card_ublock_shield.jpg"
-                  alt="uBlock Origin Filtration Telemetry Card"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 700px"
-                  className="object-cover object-center"
-                />
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
+                <div className="p-4 rounded-xl bg-white/5 border border-white/10 space-y-1">
+                  <div className="text-xs font-mono text-orange-300 font-semibold">0ms Overhead</div>
+                  <div className="text-xs text-white/60">Hardware-level fast filter matching</div>
+                </div>
+                <div className="p-4 rounded-xl bg-white/5 border border-white/10 space-y-1">
+                  <div className="text-xs font-mono text-emerald-300 font-semibold">EasyList + EasyPrivacy</div>
+                  <div className="text-xs text-white/60">Updated automatic blocklists</div>
+                </div>
+                <div className="p-4 rounded-xl bg-white/5 border border-white/10 space-y-1">
+                  <div className="text-xs font-mono text-cyan-300 font-semibold">Zero Telemetry</div>
+                  <div className="text-xs text-white/60">No user data leaves your device</div>
+                </div>
               </div>
 
-              <div className="pt-4 border-t border-white/10 mt-4 flex items-center justify-between text-xs text-white/60">
+              <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-white/60">
                 <span>Architecture: WebExtension API</span>
                 <Link href="/features/extensions" className="text-brand font-medium hover:underline flex items-center gap-1">
                   Extension details <ArrowRight className="w-3.5 h-3.5" />
@@ -391,12 +337,12 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Feature Card 2: Rich Visual for Total Cookie Protection (Variety 2: Sazzad Emerald Aurora) */}
+            {/* Feature Card 2: Total Cookie Protection (Variety 2: Sazzad Emerald Aurora) */}
             <div className="rounded-3xl sazzad-card overflow-hidden flex flex-col justify-between p-7 relative">
               <div className="sazzad-bg"></div>
               <div className="sazzad-aurora aurora-emerald"></div>
               <div className="sazzad-content flex flex-col justify-between h-full space-y-4">
-                <div className="space-y-2.5">
+                <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-[10px] font-mono font-medium px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
                       Cookie Isolation
@@ -411,14 +357,9 @@ export default function HomePage() {
                   </p>
                 </div>
 
-                <div className="relative w-full aspect-[4/3] my-2 rounded-xl overflow-hidden border border-black/[0.06] shadow-xs">
-                  <Image
-                    src="/assets/card_cookie_containment.jpg"
-                    alt="Cookie Partition Sandbox Vaults"
-                    fill
-                    sizes="400px"
-                    className="object-cover object-center"
-                  />
+                <div className="p-4 rounded-xl bg-black/[0.03] border border-black/[0.06] space-y-1.5 my-2">
+                  <div className="text-xs font-mono font-semibold text-charcoal">Partitioned Storage Jars</div>
+                  <div className="text-[11px] text-charcoal-muted leading-snug">Each origin receives a private, isolated cookie jar that cannot cross-communicate.</div>
                 </div>
 
                 <Link href="/features/protection" className="text-xs font-medium text-brand hover:underline flex items-center justify-between pt-2">
@@ -552,79 +493,78 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Horizontal UI Showcase */}
-          <div className="flex gap-5 overflow-x-auto pb-6 pt-2 no-scrollbar snap-x">
+          {/* Modern Minimalist Features Showcase */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                src: "/assets/screenshots/home.jpeg",
-                title: "Browser Home",
-                desc: "Shortcut dials, shield badge & noise-free cards",
+                icon: Shield,
+                title: "Browser Home & Shield",
+                desc: "Shortcut dials, shield badge & noise-free cards designed for distraction-free navigation.",
+                tag: "Clean Surface",
               },
               {
-                src: "/assets/screenshots/menu.jpeg",
+                icon: Layers,
                 title: "Bottom Sheet Menu",
-                desc: "Instant access to extensions, passwords & settings",
+                desc: "Instant thumb access to extensions, passwords, and security controls.",
+                tag: "Ergonomics",
               },
               {
-                src: "/assets/screenshots/extensions.jpeg",
+                icon: Puzzle,
                 title: "Extensions Hub",
-                desc: "uBlock Origin enabled by default with one-tap installs",
+                desc: "uBlock Origin enabled by default with one-tap installs for verified privacy addons.",
+                tag: "Add-ons",
               },
               {
-                src: "/assets/screenshots/customize.jpeg",
-                title: "Customization",
-                desc: "Aurora Borealis icon, address bar top/bottom placement",
+                icon: Sliders,
+                title: "Layout Customization",
+                desc: "Switch address bar top or bottom, and toggle between compact and expanded toolbars.",
+                tag: "Personalization",
               },
               {
-                src: "/assets/screenshots/search-engines.jpeg",
+                icon: Search,
                 title: "Search Switcher",
-                desc: "Direct queries in Google, Bing, DuckDuckGo & Wikipedia",
+                desc: "Direct queries in Google, Bing, DuckDuckGo & Wikipedia without profiling.",
+                tag: "Decoupled",
               },
               {
-                src: "/assets/screenshots/delete-data.jpeg",
-                title: "Delete Browsing Data",
-                desc: "Granular checkboxes for tabs, cookies, cache & permissions",
-              },
-              {
-                src: "/assets/screenshots/about-build.jpeg",
-                title: "About & Build Verification",
-                desc: "GeckoView 153.0.4, Android 16 target, MPL 2.0 notices",
+                icon: EyeOff,
+                title: "Granular Data Purging",
+                desc: "One-tap and automated checkboxes for tabs, cookies, cache, and site permissions.",
+                tag: "Total Purge",
               },
             ].map((item, i) => {
               const isEven = i % 2 === 0;
-              const blobColors = ["blob-orange", "blob-cyan", "blob-emerald", "blob-purple"];
-              const auroraColors = ["aurora-ruby", "aurora-lavender", "aurora-coral", "aurora-cyan"];
+              const IconComp = item.icon;
               return (
                 <div
                   key={i}
-                  className={`shrink-0 snap-start flex flex-col items-center p-5 rounded-3xl w-[285px] sm:w-[325px] relative overflow-hidden ${
+                  className={`p-7 rounded-3xl relative overflow-hidden flex flex-col justify-between ${
                     isEven ? "uiverse-blob-card" : "sazzad-card"
                   }`}
                 >
                   {isEven ? (
                     <>
                       <div className="card-bg-inner"></div>
-                      <div className={`blob ${blobColors[(i / 2) % blobColors.length]}`}></div>
+                      <div className="blob blob-red"></div>
                     </>
                   ) : (
                     <>
                       <div className="sazzad-bg"></div>
-                      <div className={`sazzad-aurora ${auroraColors[Math.floor(i / 2) % auroraColors.length]}`}></div>
+                      <div className="sazzad-aurora aurora-ruby"></div>
                     </>
                   )}
-                  <div className={isEven ? "card-content w-full" : "sazzad-content w-full"}>
-                    <div className="relative w-full aspect-[9/18] rounded-2xl overflow-hidden bg-[#111115] border border-black/10 shadow-sm">
-                      <Image
-                        src={item.src}
-                        alt={item.title}
-                        fill
-                        sizes="300px"
-                        className="object-cover object-top"
-                      />
+                  <div className={isEven ? "card-content space-y-4" : "sazzad-content space-y-4"}>
+                    <div className="flex items-center justify-between">
+                      <div className="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-600 border border-rose-500/20 flex items-center justify-center">
+                        <IconComp className="w-5 h-5" />
+                      </div>
+                      <span className="text-[11px] font-mono font-medium px-2.5 py-1 rounded-full bg-black/[0.04] text-charcoal-muted">
+                        {item.tag}
+                      </span>
                     </div>
-                    <div className="w-full text-left pt-4 space-y-1">
-                      <div className="text-sm font-semibold text-charcoal">{item.title}</div>
-                      <div className="text-xs text-charcoal-muted leading-relaxed">{item.desc}</div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-charcoal tracking-tight">{item.title}</h4>
+                      <p className="text-xs text-charcoal-muted mt-2 leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 </div>
@@ -638,8 +578,8 @@ export default function HomePage() {
           SCREEN 10: ERGONOMICS — BUILT FOR YOUR HAND
       ========================================================================= */}
       <section className="py-24 px-6 sm:px-12 bg-transparent border-b border-black/[0.06]">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-6 space-y-6">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <div className="space-y-4">
             <span className="text-xs font-mono uppercase tracking-wider text-brand font-semibold">
               Ergonomics
             </span>
@@ -647,52 +587,44 @@ export default function HomePage() {
               Built for your hand. <br />
               Not a desktop shrunk down.
             </h2>
-            <p className="text-sm sm:text-base text-charcoal-soft leading-relaxed">
+            <p className="text-sm sm:text-base text-charcoal-soft leading-relaxed max-w-2xl mx-auto">
               Modern smartphones are tall. Reaching the top of the display to tap an address bar causes thumb strain. In Nirvana, place the address bar at the bottom with a single toggle, keeping tabs and bookmarks within natural reach.
             </p>
+          </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              <div className="p-5 rounded-2xl uiverse-blob-card relative">
-                <div className="card-bg-inner"></div>
-                <div className="blob blob-orange"></div>
-                <div className="card-content">
-                  <Smartphone className="w-5 h-5 text-brand mb-2" />
-                  <div className="text-xs font-semibold text-charcoal">Bottom Toolbar Layout</div>
-                  <div className="text-xs text-charcoal-muted mt-1 leading-relaxed">
-                    Natural thumb reach for navigation, tab switcher, and quick search.
-                  </div>
-                </div>
-              </div>
-              <div className="p-5 rounded-2xl sazzad-card relative">
-                <div className="sazzad-bg"></div>
-                <div className="sazzad-aurora aurora-lavender"></div>
-                <div className="sazzad-content">
-                  <Layers className="w-5 h-5 text-[#7C3AED] mb-2" />
-                  <div className="text-xs font-semibold text-charcoal">Simple vs Expanded</div>
-                  <div className="text-xs text-charcoal-muted mt-1 leading-relaxed">
-                    Choose between a compact floating bar or full-width action dock.
-                  </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 text-left">
+            <div className="p-7 rounded-2xl uiverse-blob-card relative">
+              <div className="card-bg-inner"></div>
+              <div className="blob blob-orange"></div>
+              <div className="card-content space-y-2">
+                <Smartphone className="w-6 h-6 text-brand mb-2" />
+                <div className="text-base font-semibold text-charcoal">Bottom Toolbar Layout</div>
+                <div className="text-xs text-charcoal-muted leading-relaxed">
+                  Natural thumb reach for navigation, tab switcher, and quick search without hand gymnastics.
                 </div>
               </div>
             </div>
-
-            <div className="pt-2">
-              <Link
-                href="/features/customization"
-                className="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-brand hover:underline"
-              >
-                <span>Learn more about layout controls</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
+            <div className="p-7 rounded-2xl sazzad-card relative">
+              <div className="sazzad-bg"></div>
+              <div className="sazzad-aurora aurora-lavender"></div>
+              <div className="sazzad-content space-y-2">
+                <Layers className="w-6 h-6 text-[#7C3AED] mb-2" />
+                <div className="text-base font-semibold text-charcoal">Simple vs Expanded</div>
+                <div className="text-xs text-charcoal-muted leading-relaxed">
+                  Choose between a compact floating bar or full-width action dock tailored for single-handed usage.
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="lg:col-span-6 flex justify-center">
-            <PhoneMockup
-              src="/assets/screenshots/customize.jpeg"
-              alt="Toolbar & Icon Customization"
-              caption="Nirvana customization settings: Theme, Address bar position & Toolbar layout"
-            />
+          <div className="pt-2">
+            <Link
+              href="/features/customization"
+              className="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-brand hover:underline"
+            >
+              <span>Learn more about layout controls</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
           </div>
         </div>
       </section>

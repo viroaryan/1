@@ -5,22 +5,22 @@
 @tailwind utilities;
 
 :root {
-  --bg-rose-primary: #8B001E;
-  --bg-rose-deep: #700617;
-  --bg-rose-light: #A30D29;
+  --bg-rose-primary: #9E122D;
+  --bg-rose-deep: #850B22;
+  --bg-rose-light: #B81938;
   --text-white: #FFFFFF;
   --text-rose-soft: #FFE4E8;
   --text-rose-muted: #FFB8C4;
-  --brand-red: #E11D48;
-  --glass-border: rgba(255, 255, 255, 0.18);
-  --glass-bg: rgba(112, 6, 23, 0.65);
+  --brand-red: #F43F5E;
+  --glass-border: rgba(255, 255, 255, 0.22);
+  --glass-bg: rgba(133, 11, 34, 0.65);
   --font-serif: 'Cinzel', 'Instrument Serif', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 }
 
 html {
-  background-color: #8B001E;
+  background-color: #9E122D;
   color: #FFFFFF;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -31,16 +31,16 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: #8B001E;
+  background: #9E122D;
   color: #FFFFFF;
   overflow-x: hidden;
   selection-background-color: #FFFFFF;
-  selection-color: #8B001E;
+  selection-color: #9E122D;
   position: relative;
 }
 
 /* =========================================================================
-   Rose Red Ethereal Depth Mesh Background (Rich Velvet Glow)
+   Rose Red Ethereal Depth Mesh Background (Slightly Lighter Vibrant Velvet Glow)
 ========================================================================= */
 .aurora-bg-mesh {
   position: fixed;
@@ -51,11 +51,11 @@ body {
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(225, 29, 72, 0.45) 0%, transparent 70%),
-    radial-gradient(ellipse 70% 50% at 10% 40%, rgba(139, 0, 30, 0.6) 0%, transparent 60%),
-    radial-gradient(ellipse 70% 50% at 90% 60%, rgba(163, 13, 41, 0.5) 0%, transparent 60%),
-    radial-gradient(ellipse 80% 70% at 50% 110%, rgba(85, 4, 18, 0.8) 0%, transparent 70%),
-    linear-gradient(180deg, #8B001E 0%, #700617 50%, #5B0312 100%);
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(244, 63, 94, 0.45) 0%, transparent 70%),
+    radial-gradient(ellipse 70% 50% at 10% 40%, rgba(184, 25, 56, 0.5) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 90% 60%, rgba(200, 30, 65, 0.45) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 70% at 50% 110%, rgba(115, 8, 28, 0.75) 0%, transparent 70%),
+    linear-gradient(180deg, #A81532 0%, #9E122D 50%, #7A0A20 100%);
   background-attachment: fixed;
 }
 
