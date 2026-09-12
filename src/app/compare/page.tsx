@@ -189,24 +189,24 @@ export default function CompareMasterPage() {
   const renderBadge = (status: "yes" | "partial" | "no", text: string) => {
     if (status === "yes") {
       return (
-        <span className="inline-flex items-center gap-1.5 text-emerald-700 font-medium">
-          <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-          <span>{text}</span>
+        <span className="inline-flex items-center gap-1.5 text-emerald-300 font-medium">
+          <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+          <span className="text-emerald-100">{text}</span>
         </span>
       );
     }
     if (status === "partial") {
       return (
-        <span className="inline-flex items-center gap-1.5 text-amber-700 font-medium">
-          <Minus className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-          <span>{text}</span>
+        <span className="inline-flex items-center gap-1.5 text-amber-300 font-medium">
+          <Minus className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+          <span className="text-amber-100">{text}</span>
         </span>
       );
     }
     return (
-      <span className="inline-flex items-center gap-1.5 text-zinc-400">
-        <X className="w-3.5 h-3.5 text-zinc-400 shrink-0" />
-        <span>{text}</span>
+      <span className="inline-flex items-center gap-1.5 text-rose-200/70">
+        <X className="w-3.5 h-3.5 text-rose-300/60 shrink-0" />
+        <span className="text-rose-200/80">{text}</span>
       </span>
     );
   };

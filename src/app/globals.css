@@ -10,10 +10,11 @@
   --bg-rose-light: #B81938;
   --text-white: #FFFFFF;
   --text-rose-soft: #FFE4E8;
-  --text-rose-muted: #FFB8C4;
+  --text-rose-muted: #FFCCD5;
+  --text-muted: #FFD4DC;
   --brand-red: #F43F5E;
-  --glass-border: rgba(255, 255, 255, 0.22);
-  --glass-bg: rgba(133, 11, 34, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.25);
+  --glass-bg: rgba(110, 10, 30, 0.75);
   --font-serif: 'Cinzel', 'Instrument Serif', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
@@ -598,8 +599,8 @@ body {
 }
 
 /* =========================================================================
-   UIVERSE ROTTEN-PIG-19 PILL BUTTON SYSTEM (Refined Hermes High-Contrast)
-   High-Contrast Pure White Buttons with Rose Red Accents
+   UIVERSE ROTTEN-PIG-19 PILL BUTTON SYSTEM (Refined Tactile & Haptic Smoothness)
+   High-Contrast Pure White Buttons with Rose Red Accents & Micro-Physics
 ========================================================================= */
 
 /* Base Pill Button Architecture */
@@ -622,7 +623,13 @@ body {
   cursor: pointer;
   box-sizing: border-box;
   user-select: none;
-  transition: box-shadow 0.25s ease, color 0.25s ease, opacity 0.2s ease, border-color 0.25s ease;
+  will-change: transform, box-shadow;
+  transition: 
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    color 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .apple-btn-primary,
@@ -630,15 +637,20 @@ body {
   background-color: #FFFFFF;
   color: #8B001E;
   box-shadow: 
-    0 8px 24px -4px rgba(0, 0, 0, 0.35),
-    0 2px 6px 0 rgba(0, 0, 0, 0.15);
+    0 10px 28px -4px rgba(0, 0, 0, 0.4),
+    0 4px 10px 0 rgba(0, 0, 0, 0.2),
+    inset 0 1px 0.5px rgba(255, 255, 255, 0.9);
 }
 
 .apple-btn-ghost {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.12);
   color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 
+    0 8px 24px -4px rgba(0, 0, 0, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25);
 }
 
 /* Expanding Gradient Background Overlay */
@@ -658,17 +670,31 @@ body {
   z-index: -1;
 }
 
-/* Primary Button expands with soft rose tint */
+/* Primary Button expands with soft rose-peach highlight */
 .apple-btn-primary::before,
-.apple-btn-brand::before {
-  background: linear-gradient(90deg, #FFE4E8 0%, #FFCCD5 100%);
+.uiverse-pill-green::before {
+  background: linear-gradient(90deg, #0fd850 0%, #f9f047 100%);
 }
 
-.apple-btn-ghost::before {
-  background: rgba(255, 255, 255, 0.2);
+.apple-btn-brand::before,
+.uiverse-pill-orange::before {
+  background: linear-gradient(90deg, #ff512f 0%, #f09819 100%);
 }
 
-/* Hover Expansion State */
+.apple-btn-ghost::before,
+.uiverse-pill-cyan::before {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.15) 100%);
+}
+
+.uiverse-pill-purple::before {
+  background: linear-gradient(90deg, #7f00ff 0%, #e100ff 100%);
+}
+
+.uiverse-pill-coral::before {
+  background: linear-gradient(90deg, #f857a6 0%, #ff5858 100%);
+}
+
+/* Hover State - Smooth Expansion & Gentle Tactile Rise */
 .uiverse-pill-btn:hover::before,
 .apple-btn-primary:hover::before,
 .apple-btn-brand:hover::before,
@@ -677,89 +703,59 @@ body {
 }
 
 .apple-btn-primary:hover,
-.apple-btn-brand:hover {
+.uiverse-pill-green:hover {
+  transform: translateY(-2px);
+  color: #0b3d16;
   box-shadow: 
-    0 12px 32px -4px rgba(0, 0, 0, 0.45),
-    0 0 20px rgba(255, 255, 255, 0.4);
-  color: #700617;
+    0 16px 36px -6px rgba(0, 0, 0, 0.5),
+    0 0 24px rgba(15, 216, 80, 0.35);
 }
 
-.apple-btn-ghost:hover {
-  border-color: rgba(255, 255, 255, 0.6);
-  box-shadow: 0 8px 24px -2px rgba(0, 0, 0, 0.35);
-}
-
-.uiverse-pill-btn:hover::before,
-.apple-btn-primary:hover::before,
-.apple-btn-brand:hover::before,
-.apple-btn-ghost:hover::before {
-  width: 100%;
-}
-
-.uiverse-pill-btn:hover,
-.apple-btn-primary:hover,
 .apple-btn-brand:hover,
-.apple-btn-ghost:hover {
+.uiverse-pill-orange:hover {
+  transform: translateY(-2px);
+  color: #FFFFFF;
   box-shadow: 
-    6px 6px 14px rgba(0, 0, 0, 0.12),
-    -6px -6px 14px rgba(255, 255, 255, 0.95);
+    0 16px 36px -6px rgba(0, 0, 0, 0.5),
+    0 0 24px rgba(255, 81, 47, 0.4);
 }
 
+.apple-btn-ghost:hover,
+.uiverse-pill-cyan:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 
+    0 14px 32px -4px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+}
+
+.uiverse-pill-purple:hover {
+  transform: translateY(-2px);
+  color: #FFFFFF;
+  box-shadow: 
+    0 16px 36px -6px rgba(0, 0, 0, 0.5),
+    0 0 24px rgba(127, 0, 255, 0.4);
+}
+
+.uiverse-pill-coral:hover {
+  transform: translateY(-2px);
+  color: #FFFFFF;
+  box-shadow: 
+    0 16px 36px -6px rgba(0, 0, 0, 0.5),
+    0 0 24px rgba(248, 87, 166, 0.4);
+}
+
+/* Active Haptic Press State: Tactile Compression & Springback */
 .uiverse-pill-btn:active,
 .apple-btn-primary:active,
 .apple-btn-brand:active,
 .apple-btn-ghost:active {
-  opacity: 0.9;
+  transform: scale(0.96) translateY(1px);
+  transition-duration: 0.1s;
   box-shadow: 
-    2px 2px 5px rgba(0, 0, 0, 0.08),
-    -2px -2px 5px rgba(255, 255, 255, 0.85),
-    inset 1px 1px 2px rgba(0, 0, 0, 0.08);
-}
-
-/* Theme 1: Primary (Original Uiverse Electric Emerald to Lime-Yellow: #0fd850 -> #f9f047) */
-.apple-btn-primary::before,
-.uiverse-pill-green::before {
-  background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
-}
-.apple-btn-primary:hover,
-.uiverse-pill-green:hover {
-  color: #0b3d16;
-}
-
-/* Theme 2: Brand Nirvana (Warm Sunset Flame: #ff512f -> #f09819) */
-.apple-btn-brand::before,
-.uiverse-pill-orange::before {
-  background-image: linear-gradient(to right, #ff512f 0%, #f09819 100%);
-}
-.apple-btn-brand:hover,
-.uiverse-pill-orange:hover {
-  color: #ffffff;
-}
-
-/* Theme 3: Ghost / Neutral (Ice Azure to Lavender: #4facfe -> #00f2fe) */
-.apple-btn-ghost::before,
-.uiverse-pill-cyan::before {
-  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-}
-.apple-btn-ghost:hover,
-.uiverse-pill-cyan:hover {
-  color: #043857;
-}
-
-/* Theme 4: Cyber Violet (Electric Violet to Fuchsia: #7f00ff -> #e100ff) */
-.uiverse-pill-purple::before {
-  background-image: linear-gradient(to right, #7f00ff 0%, #e100ff 100%);
-}
-.uiverse-pill-purple:hover {
-  color: #ffffff;
-}
-
-/* Theme 5: Sunrise Coral (Coral to Peach: #f857a6 -> #ff5858) */
-.uiverse-pill-coral::before {
-  background-image: linear-gradient(to right, #f857a6 0%, #ff5858 100%);
-}
-.uiverse-pill-coral:hover {
-  color: #ffffff;
+    0 4px 12px -2px rgba(0, 0, 0, 0.4),
+    inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -768,14 +764,22 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.375rem;
-  padding: 0.25rem 0.625rem;
+  padding: 0.25rem 0.75rem;
   border-radius: 9999px;
   font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  background-color: #FFFFFF;
-  border: 1px solid rgba(17, 17, 25, 0.08);
-  color: #303036;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  background: rgba(255, 255, 255, 0.12) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+.apple-badge *,
+.apple-badge svg,
+.apple-badge span {
+  color: #FFFFFF !important;
 }
 
 /* Subtle Diffused Mist Glow */
@@ -1753,6 +1757,127 @@ body {
   z-index: 3;
   width: 100%;
   height: 100%;
+}
+
+/* =========================================================================
+   UNIVERSAL HIGH-CONTRAST CARD TYPOGRAPHY & SURFACE ENFORCEMENT
+   Transforms legacy white cards into radiant rose-velvet liquid glass
+   with crystal-clear high-contrast white & soft-rose typography
+========================================================================= */
+
+/* Any container with bg-white rendered as a card or pill */
+main .bg-white:not(.apple-btn-primary):not(.apple-btn-brand):not(.uiverse-pill-btn):not(.logo-emblem):not(img):not(svg) {
+  background: rgba(115, 8, 26, 0.72) !important;
+  backdrop-filter: blur(20px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(140%) !important;
+  border-color: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
+  box-shadow: 
+    0 16px 40px -10px rgba(0, 0, 0, 0.45),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25) !important;
+}
+
+/* Ensure solid white buttons keep crisp crimson/dark text and never turn white */
+.apple-btn-primary,
+.apple-btn-primary *,
+.apple-btn-brand,
+.apple-btn-brand * {
+  color: #8B001E !important;
+}
+.apple-btn-primary:hover,
+.apple-btn-primary:hover * {
+  color: #0b3d16 !important;
+}
+.apple-btn-brand:hover,
+.apple-btn-brand:hover * {
+  color: #FFFFFF !important;
+}
+.apple-btn-ghost,
+.apple-btn-ghost * {
+  color: #FFFFFF !important;
+}
+
+/* Sub-containers with bg-zinc-*, bg-black/* */
+main [class*="bg-zinc-"] {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  color: #FFFFFF !important;
+}
+main [class*="bg-zinc-"] * {
+  color: #FFFFFF !important;
+}
+main [class*="border-zinc-"] {
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}
+main [class*="divide-zinc-"] > * + * {
+  border-color: rgba(255, 255, 255, 0.14) !important;
+}
+main [class*="bg-black/"],
+main [class*="bg-black/"] * {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #FFFFFF !important;
+}
+main [class*="border-black/"] {
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+/* Universal Typography within cards and surfaces */
+.uiverse-blob-card .text-charcoal,
+.sazzad-card .text-charcoal,
+.apple-card-light .text-zinc-900,
+.apple-card-light .text-charcoal,
+.apple-card-dark .text-white,
+.liquid-glass .text-white,
+main .text-charcoal,
+main .text-zinc-900,
+main .text-zinc-800,
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6,
+main th {
+  color: #FFFFFF !important;
+}
+
+.uiverse-blob-card .text-charcoal-muted,
+.sazzad-card .text-charcoal-muted,
+.apple-card-light .text-zinc-600,
+.apple-card-light .text-zinc-500,
+.apple-card-light .text-charcoal-muted,
+.apple-card-dark .text-white\/70,
+.liquid-glass .text-rose-100\/80,
+main .text-charcoal-muted,
+main .text-zinc-600,
+main .text-zinc-500,
+main td {
+  color: #FFE4E8 !important;
+}
+
+.uiverse-blob-card .text-charcoal-soft,
+.sazzad-card .text-charcoal-soft,
+.apple-card-light .text-zinc-700,
+.apple-card-light .text-charcoal-soft,
+main .text-charcoal-soft,
+main .text-zinc-700,
+main p {
+  color: #FFF0F2 !important;
+}
+
+.uiverse-blob-card .text-charcoal-faded,
+.sazzad-card .text-charcoal-faded,
+.apple-card-light .text-zinc-400,
+main .text-charcoal-faded,
+main .text-zinc-400 {
+  color: #FFCCD5 !important;
+}
+
+/* Code blocks inside cards */
+main code {
+  color: #FFFFFF !important;
+  background-color: rgba(0, 0, 0, 0.35) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
 }
 
 

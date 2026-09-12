@@ -106,7 +106,38 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* =========================================================================
+          HERO ARTWORK: ZEN MEDITATION & DIGITAL CALM (16:9 SEAMLESS BLEND)
+      ========================================================================= */}
+      <section className="relative py-12 sm:py-20 px-4 sm:px-8 max-w-6xl mx-auto overflow-hidden">
+        <div className="relative w-full aspect-[16/9] max-w-5xl mx-auto rounded-[2.5rem] overflow-hidden shadow-2xl">
+          <Image
+            src="/assets/art/art_zen_meditation.jpg"
+            alt="Zen Meditation — Digital Silence & Mindful Computing"
+            fill
+            sizes="(max-width: 1280px) 100vw, 1200px"
+            className="object-cover object-center"
+            priority
+          />
+          {/* Seamless Vignette Blending: Feathered edges melt into rose-red background */}
+          <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_80px_40px_rgba(158,18,45,0.75)] sm:shadow-[inset_0_0_120px_60px_rgba(158,18,45,0.85)]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#9E122D] via-transparent to-[#9E122D]/60 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#9E122D]/70 via-transparent to-[#9E122D]/70 pointer-events-none" />
 
+          {/* Minimalist Floated Label */}
+          <div className="absolute bottom-6 sm:bottom-10 left-6 sm:left-10 z-10 space-y-1.5 max-w-md">
+            <span className="text-[10px] font-mono tracking-widest uppercase px-3 py-1 rounded-full bg-black/40 backdrop-blur-md text-white/90 border border-white/20">
+              Mindful Architecture
+            </span>
+            <h3 className="text-xl sm:text-3xl font-serif-display text-white drop-shadow-md">
+              Restoring Digital Sanctuary.
+            </h3>
+            <p className="text-xs sm:text-sm text-white/80 font-normal leading-relaxed drop-shadow">
+              A serene, distraction-free environment engineered to protect human focus from manipulative algorithms.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* =========================================================================
           SCREEN 02 & 03: THE PROBLEM — DIGITAL ATMOSPHERE AUDIT
@@ -188,20 +219,62 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          SCREEN 04: SILENCE — LESS NOISE. MORE WEB.
+          SCREEN 04: SILENCE — LESS NOISE. MORE WEB. (WITH SEAMLESS BLENDED OWL ART)
       ========================================================================= */}
-      <section className="py-28 sm:py-36 px-6 sm:px-12 text-center flex flex-col items-center justify-center bg-transparent border-b border-black/[0.06]">
-        <div className="max-w-3xl mx-auto space-y-5">
-          <span className="text-xs font-mono uppercase tracking-wider text-brand font-semibold">
-            The Calm Computing Manifesto
-          </span>
-          <h2 className="text-4xl sm:text-6xl lg:text-7xl font-semibold tracking-tight text-charcoal leading-none">
-            LESS NOISE. <br />
-            <span className="text-charcoal-faded font-light italic">MORE WEB.</span>
-          </h2>
-          <p className="text-base sm:text-lg text-charcoal-soft font-normal max-w-xl mx-auto pt-2 leading-relaxed">
-            Nirvana strips away the friction. Speed is not just raw benchmarks — speed is the cognitive calm of a page that loads exactly what you requested, and nothing else.
-          </p>
+      <section className="py-28 sm:py-36 px-6 sm:px-12 bg-transparent border-b border-black/[0.06] overflow-hidden">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          {/* Left Narrative Manifesto */}
+          <div className="lg:col-span-7 space-y-6 text-left">
+            <span className="text-xs font-mono uppercase tracking-wider text-rose-300 font-semibold px-3 py-1 rounded-full bg-white/10 border border-white/20">
+              The Calm Computing Manifesto
+            </span>
+            <h2 className="text-4xl sm:text-6xl lg:text-7xl font-semibold tracking-tight text-white font-serif-display leading-none">
+              LESS NOISE. <br />
+              <span className="text-white/70 font-light italic">MORE WEB.</span>
+            </h2>
+            <p className="text-base sm:text-lg text-rose-100/90 font-normal leading-relaxed">
+              Nirvana strips away the friction. Speed is not just raw benchmarks — speed is the cognitive calm of a page that loads exactly what you requested, and nothing else.
+            </p>
+            <p className="text-sm sm:text-base text-rose-200/80 leading-relaxed font-light">
+              Like a silent observer in the night, your browser should remain completely silent, vigilant against intrusive data trackers, and utterly invisible to commercial networks.
+            </p>
+
+            <div className="pt-4 flex flex-wrap gap-4 items-center">
+              <div className="p-4 rounded-2xl bg-white/10 border border-white/20 backdrop-blur-md space-y-1">
+                <div className="text-sm font-semibold text-white">Zero Ambient Noise</div>
+                <div className="text-xs text-rose-100/80">No clickbait feeds, notification pings, or background ad-bids.</div>
+              </div>
+              <div className="p-4 rounded-2xl bg-white/10 border border-white/20 backdrop-blur-md space-y-1">
+                <div className="text-sm font-semibold text-white">Pure Attention</div>
+                <div className="text-xs text-rose-100/80">Every pixel dedicated to the article or tool you chose to open.</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Seamless Blended Art: Vigilant Owl (9:16) */}
+          <div className="lg:col-span-5 flex justify-center">
+            <div className="relative w-full max-w-[340px] aspect-[9/16] rounded-3xl overflow-hidden shadow-2xl">
+              <Image
+                src="/assets/art/art_owl.jpg"
+                alt="Vigilant White & Crimson Owl — The Silent Guardian"
+                fill
+                sizes="(max-width: 768px) 100vw, 400px"
+                className="object-cover object-center"
+              />
+              {/* Seamless Edge Blending into Rose Carmine Canvas */}
+              <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_60px_30px_rgba(158,18,45,0.7)]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#9E122D] via-transparent to-[#9E122D]/40 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#9E122D]/50 via-transparent to-[#9E122D]/50 pointer-events-none" />
+
+              <div className="absolute bottom-5 left-5 right-5 z-10 text-left">
+                <span className="text-[10px] font-mono tracking-wider uppercase px-2.5 py-1 rounded-full bg-black/40 backdrop-blur-md text-white border border-white/20">
+                  Silent Watcher
+                </span>
+                <div className="text-sm font-semibold text-white mt-1 drop-shadow">Total Vigilance</div>
+                <div className="text-[11px] text-white/80 drop-shadow">Watching over your privacy around the clock.</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -575,56 +648,84 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          SCREEN 10: ERGONOMICS — BUILT FOR YOUR HAND
+          SCREEN 10: ERGONOMICS — BUILT FOR YOUR HAND (WITH SEAMLESS DETECTIVE ART)
       ========================================================================= */}
-      <section className="py-24 px-6 sm:px-12 bg-transparent border-b border-black/[0.06]">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          <div className="space-y-4">
-            <span className="text-xs font-mono uppercase tracking-wider text-brand font-semibold">
-              Ergonomics
-            </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-charcoal leading-tight">
-              Built for your hand. <br />
-              Not a desktop shrunk down.
-            </h2>
-            <p className="text-sm sm:text-base text-charcoal-soft leading-relaxed max-w-2xl mx-auto">
-              Modern smartphones are tall. Reaching the top of the display to tap an address bar causes thumb strain. In Nirvana, place the address bar at the bottom with a single toggle, keeping tabs and bookmarks within natural reach.
-            </p>
-          </div>
+      <section className="py-24 px-6 sm:px-12 bg-transparent border-b border-black/[0.06] overflow-hidden">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          {/* Left Seamless Blended Art: Detective in Black Hat (9:16) */}
+          <div className="lg:col-span-5 flex justify-center order-2 lg:order-1">
+            <div className="relative w-full max-w-[340px] aspect-[9/16] rounded-3xl overflow-hidden shadow-2xl">
+              <Image
+                src="/assets/art/art_detective.png"
+                alt="The Digital Detective — Uncovering Surveillance Traps"
+                fill
+                sizes="(max-width: 768px) 100vw, 400px"
+                className="object-cover object-center"
+              />
+              {/* Seamless Edge Blending into Rose Carmine Canvas */}
+              <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_60px_30px_rgba(158,18,45,0.7)]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#9E122D] via-transparent to-[#9E122D]/40 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#9E122D]/50 via-transparent to-[#9E122D]/50 pointer-events-none" />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 text-left">
-            <div className="p-7 rounded-2xl uiverse-blob-card relative">
-              <div className="card-bg-inner"></div>
-              <div className="blob blob-orange"></div>
-              <div className="card-content space-y-2">
-                <Smartphone className="w-6 h-6 text-brand mb-2" />
-                <div className="text-base font-semibold text-charcoal">Bottom Toolbar Layout</div>
-                <div className="text-xs text-charcoal-muted leading-relaxed">
-                  Natural thumb reach for navigation, tab switcher, and quick search without hand gymnastics.
-                </div>
-              </div>
-            </div>
-            <div className="p-7 rounded-2xl sazzad-card relative">
-              <div className="sazzad-bg"></div>
-              <div className="sazzad-aurora aurora-lavender"></div>
-              <div className="sazzad-content space-y-2">
-                <Layers className="w-6 h-6 text-[#7C3AED] mb-2" />
-                <div className="text-base font-semibold text-charcoal">Simple vs Expanded</div>
-                <div className="text-xs text-charcoal-muted leading-relaxed">
-                  Choose between a compact floating bar or full-width action dock tailored for single-handed usage.
-                </div>
+              <div className="absolute bottom-5 left-5 right-5 z-10 text-left">
+                <span className="text-[10px] font-mono tracking-wider uppercase px-2.5 py-1 rounded-full bg-black/40 backdrop-blur-md text-white border border-white/20">
+                  Surveillance Sleuth
+                </span>
+                <div className="text-sm font-semibold text-white mt-1 drop-shadow">Inspector Matrix</div>
+                <div className="text-[11px] text-white/80 drop-shadow">Detecting hidden tracking pixels & fingerprinting attempts.</div>
               </div>
             </div>
           </div>
 
-          <div className="pt-2">
-            <Link
-              href="/features/customization"
-              className="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-brand hover:underline"
-            >
-              <span>Learn more about layout controls</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
+          {/* Right Content: Hand Ergonomics */}
+          <div className="lg:col-span-7 space-y-6 text-left order-1 lg:order-2">
+            <div className="space-y-4">
+              <span className="text-xs font-mono uppercase tracking-wider text-rose-300 font-semibold px-3 py-1 rounded-full bg-white/10 border border-white/20">
+                Single-Handed Ergonomics
+              </span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-white font-serif-display leading-tight">
+                Built for your hand. <br />
+                <span className="text-white/70 font-light">Not a desktop shrunk down.</span>
+              </h2>
+              <p className="text-sm sm:text-base text-rose-100/90 leading-relaxed">
+                Modern smartphones are tall. Reaching the top of the display to tap an address bar causes thumb strain. In Nirvana, place the address bar at the bottom with a single toggle, keeping tabs and bookmarks within natural reach.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div className="p-6 rounded-2xl uiverse-blob-card relative">
+                <div className="card-bg-inner"></div>
+                <div className="blob blob-orange"></div>
+                <div className="card-content space-y-2">
+                  <Smartphone className="w-5 h-5 text-brand mb-1" />
+                  <div className="text-sm font-semibold text-white">Bottom Toolbar Layout</div>
+                  <div className="text-xs text-rose-100/80 leading-relaxed">
+                    Natural thumb reach for navigation, tab switcher, and quick search without hand gymnastics.
+                  </div>
+                </div>
+              </div>
+              <div className="p-6 rounded-2xl sazzad-card relative">
+                <div className="sazzad-bg"></div>
+                <div className="sazzad-aurora aurora-lavender"></div>
+                <div className="sazzad-content space-y-2">
+                  <Layers className="w-5 h-5 text-[#7C3AED] mb-1" />
+                  <div className="text-sm font-semibold text-white">Simple vs Expanded</div>
+                  <div className="text-xs text-rose-100/80 leading-relaxed">
+                    Choose between a compact floating bar or full-width action dock tailored for single-handed usage.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-2">
+              <Link
+                href="/features/customization"
+                className="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-white hover:text-rose-200 underline"
+              >
+                <span>Learn more about layout controls</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -651,54 +752,84 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          SCREEN 16: OPEN SOURCE STORY — BUILT ON OPEN SOURCE
+          SCREEN 16: OPEN SOURCE STORY — BUILT ON OPEN SOURCE (WITH STIPPLE MAN ART)
       ========================================================================= */}
-      <section className="py-24 px-6 sm:px-12 bg-transparent border-b border-black/[0.06]">
-        <div className="max-w-5xl mx-auto rounded-3xl sazzad-card p-8 sm:p-12 text-left space-y-8 relative">
+      <section className="py-24 px-6 sm:px-12 bg-transparent border-b border-black/[0.06] overflow-hidden">
+        <div className="max-w-6xl mx-auto rounded-3xl sazzad-card p-8 sm:p-12 text-left relative">
           <div className="sazzad-bg"></div>
           <div className="sazzad-aurora aurora-coral"></div>
-          <div className="sazzad-content space-y-8">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-black/[0.06] pb-6">
-              <div>
-                <span className="text-xs font-mono uppercase tracking-wider text-brand font-semibold">
-                  Standing on Giants
-                </span>
-                <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight text-charcoal mt-1">
-                  Built on Open Source
-                </h3>
-              </div>
-              <Link
-                href="/mozilla-attribution"
-                className="px-4 py-2 rounded-full border border-black/[0.08] text-xs font-mono uppercase tracking-wider text-charcoal hover:bg-black/[0.03] transition-colors inline-flex items-center gap-1.5"
-              >
-                Mozilla Attribution <ChevronRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
+          <div className="sazzad-content">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+              {/* Left Column: Text & Open Source Lineage */}
+              <div className="lg:col-span-7 space-y-6">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-6">
+                  <div>
+                    <span className="text-xs font-mono uppercase tracking-wider text-rose-300 font-semibold px-3 py-1 rounded-full bg-white/10 border border-white/20">
+                      Standing on Giants
+                    </span>
+                    <h3 className="text-2xl sm:text-4xl font-semibold tracking-tight text-white font-serif-display mt-2">
+                      Built on Open Source
+                    </h3>
+                  </div>
+                  <Link
+                    href="/mozilla-attribution"
+                    className="px-4 py-2 rounded-full border border-white/20 text-xs font-mono uppercase tracking-wider text-white hover:bg-white/10 transition-colors inline-flex items-center gap-1.5 shrink-0"
+                  >
+                    Mozilla Attribution <ChevronRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
 
-          <div className="space-y-4 text-sm sm:text-base text-charcoal-soft leading-relaxed">
-            <p>
-              Nirvana Browser is based on the <strong>Firefox open-source codebase</strong>. We are deeply grateful to Mozilla and the thousands of Firefox contributors worldwide whose open-source work makes further independent browser development possible.
-            </p>
-            <p>
-              Our team takes the upstream GeckoView engine, modifies the browser UI/UX for single-handed mobile ergonomics, minimizes telemetry where technically possible, and introduces unique calm privacy defaults.
-            </p>
-          </div>
+                <div className="space-y-4 text-sm sm:text-base text-rose-100/90 leading-relaxed">
+                  <p>
+                    Nirvana Browser is based on the <strong>Firefox open-source codebase</strong>. We are deeply grateful to Mozilla and the thousands of Firefox contributors worldwide whose open-source work makes further independent browser development possible.
+                  </p>
+                  <p>
+                    Our team takes the upstream GeckoView engine, modifies the browser UI/UX for single-handed mobile ergonomics, minimizes telemetry where technically possible, and introduces unique calm privacy defaults.
+                  </p>
+                </div>
 
-          {/* Upstream vs Nirvana Separation Card */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-            <div className="p-5 rounded-2xl bg-black/[0.02] border border-black/[0.05] space-y-2">
-              <div className="text-xs font-semibold text-charcoal">Upstream Foundation</div>
-              <div className="text-xs text-charcoal-muted leading-relaxed">
-                Mozilla Firefox codebase, GeckoView rendering engine, SpiderMonkey JavaScript runtime, and multi-process architecture under Mozilla Public License 2.0.
+                {/* Upstream vs Nirvana Separation Card */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                  <div className="p-5 rounded-2xl bg-black/20 border border-white/10 space-y-2">
+                    <div className="text-xs font-semibold text-white">Upstream Foundation</div>
+                    <div className="text-xs text-rose-200/80 leading-relaxed">
+                      Mozilla Firefox codebase, GeckoView rendering engine, SpiderMonkey JavaScript runtime under MPL 2.0.
+                    </div>
+                  </div>
+                  <div className="p-5 rounded-2xl bg-white/10 border border-white/20 space-y-2">
+                    <div className="text-xs font-semibold text-white">Nirvana Independent Craft</div>
+                    <div className="text-xs text-rose-200/80 leading-relaxed">
+                      UI & ergonomics redesign, telemetry minimization, custom app icon system, and independent distribution.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column: Seamless Blended Art - The Independent Engineer / Thinker (9:16) */}
+              <div className="lg:col-span-5 flex justify-center">
+                <div className="relative w-full max-w-[320px] aspect-[9/16] rounded-3xl overflow-hidden shadow-2xl">
+                  <Image
+                    src="/assets/art/art_stipple_man.jpg"
+                    alt="The Independent Engineer — Focused Human Intellect"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 360px"
+                    className="object-cover object-center"
+                  />
+                  {/* Seamless Edge Blending into Rose Carmine Canvas */}
+                  <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_60px_30px_rgba(158,18,45,0.75)]" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#9E122D] via-transparent to-[#9E122D]/40 pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#9E122D]/50 via-transparent to-[#9E122D]/50 pointer-events-none" />
+
+                  <div className="absolute bottom-5 left-5 right-5 z-10 text-left">
+                    <span className="text-[10px] font-mono tracking-wider uppercase px-2.5 py-1 rounded-full bg-black/50 backdrop-blur-md text-white border border-white/20">
+                      Independent Craft
+                    </span>
+                    <div className="text-sm font-semibold text-white mt-1 drop-shadow">Human Ingenuity</div>
+                    <div className="text-[11px] text-white/80 drop-shadow">Software engineered for humans, not advertising bots.</div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="p-5 rounded-2xl bg-brand/5 border border-brand/20 space-y-2">
-              <div className="text-xs font-semibold text-brand">Nirvana Independent Work</div>
-              <div className="text-xs text-charcoal-muted leading-relaxed">
-                UI & ergonomics redesign, telemetry minimization, custom app icon system, bottom toolbar implementation, and independent distribution.
-              </div>
-            </div>
-          </div>
           </div>
         </div>
       </section>
@@ -990,52 +1121,79 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          SCREEN 21 & 22: FINAL DOWNLOAD CTA
+          SCREEN 21 & 22: FINAL DOWNLOAD CTA (WITH SEAMLESS POLAR BEAR IN RED WAVES ART)
       ========================================================================= */}
-      <section className="relative py-32 sm:py-44 px-6 sm:px-12 bg-transparent text-center flex flex-col items-center justify-center overflow-hidden">
-        <div className="absolute w-[700px] h-[350px] atmospheric-bloom opacity-40 pointer-events-none" />
+      <section className="relative py-32 sm:py-40 px-6 sm:px-12 bg-transparent text-center flex flex-col items-center justify-center overflow-hidden">
+        <div className="absolute w-[800px] h-[450px] atmospheric-bloom opacity-35 pointer-events-none" />
 
-        <div className="relative max-w-2xl mx-auto space-y-6">
-          <div className="w-16 h-16 mx-auto relative mb-3 bg-white p-2 rounded-2xl border border-black/[0.08] shadow-xs flex items-center justify-center">
-            <Image
-              src="/assets/logo.png"
-              alt="Nirvana Emblem"
-              width={48}
-              height={48}
-              className="object-contain"
-            />
+        <div className="relative max-w-5xl mx-auto space-y-12">
+          {/* Seamless Blended Polar Bear in Red Waves Artwork (9:16) */}
+          <div className="flex justify-center">
+            <div className="relative w-full max-w-[340px] aspect-[9/16] rounded-3xl overflow-hidden shadow-2xl">
+              <Image
+                src="/assets/art/art_polar_bear.jpg"
+                alt="The White Polar Bear navigating Crimson Waves — Resilient Privacy"
+                fill
+                sizes="(max-width: 768px) 100vw, 400px"
+                className="object-cover object-center"
+              />
+              {/* Seamless Edge Blending into Rose Carmine Canvas */}
+              <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_70px_35px_rgba(158,18,45,0.8)]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#9E122D] via-transparent to-[#9E122D]/40 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#9E122D]/50 via-transparent to-[#9E122D]/50 pointer-events-none" />
+
+              <div className="absolute bottom-5 left-5 right-5 z-10 text-left">
+                <span className="text-[10px] font-mono tracking-wider uppercase px-2.5 py-1 rounded-full bg-black/40 backdrop-blur-md text-white border border-white/20">
+                  Resilient Sanctuary
+                </span>
+                <div className="text-sm font-semibold text-white mt-1 drop-shadow">Pure Independence</div>
+                <div className="text-[11px] text-white/80 drop-shadow">Navigating the turbulent ad-tech ocean with total calm.</div>
+              </div>
+            </div>
           </div>
 
-          <h2 className="text-4xl sm:text-6xl font-semibold tracking-tight text-charcoal leading-tight">
-            Ready for a <br />
-            quieter web?
-          </h2>
+          <div className="max-w-2xl mx-auto space-y-6">
+            <div className="w-16 h-16 mx-auto relative mb-3 bg-white p-2 rounded-2xl border border-white/20 shadow-lg flex items-center justify-center">
+              <Image
+                src="/assets/logo.png"
+                alt="Nirvana Emblem"
+                width={48}
+                height={48}
+                className="object-contain"
+              />
+            </div>
 
-          <p className="text-base sm:text-lg text-charcoal-soft font-normal max-w-lg mx-auto">
-            Experience mobile browsing stripped of noise, advertisements, and surveillance telemetry.
-          </p>
+            <h2 className="text-4xl sm:text-6xl font-semibold tracking-tight text-white font-serif-display uppercase leading-tight">
+              Ready for a <br />
+              quieter web?
+            </h2>
 
-          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3.5">
-            <a
-              href="https://play.google.com/store/apps/details?id=org.nirvana"
-              target="_blank"
-              rel="noreferrer"
-              className="apple-btn-primary px-8 py-4 rounded-full text-xs font-medium tracking-wide inline-flex items-center gap-2.5 shadow-xs"
-            >
-              <Download className="w-4 h-4" />
-              <span>Download for Android</span>
-            </a>
+            <p className="text-base sm:text-lg text-rose-100/90 font-normal max-w-lg mx-auto leading-relaxed">
+              Experience mobile browsing stripped of noise, advertisements, and surveillance telemetry.
+            </p>
 
-            <Link
-              href="/download"
-              className="apple-btn-ghost px-7 py-4 rounded-full text-xs font-mono uppercase tracking-wider"
-            >
-              Direct APK & SHA256
-            </Link>
-          </div>
+            <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="https://play.google.com/store/apps/details?id=org.nirvana"
+                target="_blank"
+                rel="noreferrer"
+                className="apple-btn-primary px-8 py-4 rounded-full text-xs font-mono uppercase tracking-wider inline-flex items-center gap-2.5 shadow-md"
+              >
+                <Download className="w-4 h-4" />
+                <span>Download for Android</span>
+              </a>
 
-          <div className="pt-8 text-xs font-mono text-charcoal-muted">
-            Free forever · Open Source · Android 8.0 through Android 16
+              <Link
+                href="/download"
+                className="apple-btn-ghost px-7 py-4 rounded-full text-xs font-mono uppercase tracking-wider"
+              >
+                Direct APK & SHA256
+              </Link>
+            </div>
+
+            <div className="pt-8 text-xs font-mono text-rose-200/80">
+              Free forever · Open Source · Android 8.0 through Android 16
+            </div>
           </div>
         </div>
       </section>
